@@ -1,5 +1,7 @@
 {
   "name": "boxingApplication",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
