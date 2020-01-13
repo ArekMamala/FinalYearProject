@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { SQLite, SQLiteObject } from "@ionic-native/sqlite/ngx";
-import { DatabaseService } from '../services/database.service';
+import { DatabaseService, Dev } from "../services/database.service";
+import { Observable } from "rxjs";
 
 @Component({
   selector: "app-tab2",
@@ -8,18 +9,43 @@ import { DatabaseService } from '../services/database.service';
   styleUrls: ["tab2.page.scss"]
 })
 export class Tab2Page implements OnInit {
+  developers: Dev[] = [];
+  products: Observable<any[]>;
 
-  constructor(private db: DatabaseService){ }
-
-
-
+  developer = {};
+  product = {};
+ 
+  selectedView = 'devs';
+  
+  constructor(private db: DatabaseService) {}
 
   ngOnInit() {
     this.db.getDatabaseState().subscribe(ready => {
-      if (ready){
-      
+      if (ready) {
+        this.db.getDevs().subscribe(devs => {
+          console.log("devs changes: ", devs);
+          this.developers = devs;
+        });
+        this.products = this.db.getProducts();
       }
-    })
+    });
   }
-  
+  addDeveloper() {
+    let skills = this.developer["skills"].split(",");
+    skills = skills.map(skill => skill.trim());
+
+    this.db
+      .addDeveloper(this.developer["name"], skills, this.developer["img"])
+      .then(_ => {
+        this.developer = {};
+      });
+  }
+
+  addProduct() {
+    this.db
+      .addProduct(this.product["name"], this.product["creator"])
+      .then(_ => {
+        this.product = {};
+      });
+  }
 }

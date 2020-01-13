@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Sign-Up/Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-content">
+  <form [formGroup]="otp_verification" (ngSubmit)="userInfo()">
+  <ion-card>
+  <h3>Sign-up</h3>
+  <ion-list>
+    <ion-item>
+      <ion-input type="text" placeholder="Name Input"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="tel" placeholder="Telephone Number Input"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="email" placeholder="Email Input"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="password" placeholder="Password Input"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="height" placeholder="Height Input"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="weight" placeholder="Weight Input"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-input type="reach" placeholder="Arm Reach Input"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button color="primary">Sign Up</ion-button>
+</ion-card>
+</form>
+<ion-card>
+  <h5>Already have an account? Login below</h5>
+  <ion-button color="danger">Login</ion-button>
+  <button ion-button block (click)="setValue()">Set Value</button>
+  <button ion-button block (click)="getValue()">Get Value</button>
+</ion-card>
+</ion-content>
