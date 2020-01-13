@@ -2,10 +2,8 @@ import { NgModule } from "@angular/core";
 import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
 
 const routes: Routes = [
-  {
-    path: "",
-    loadChildren: () => import("./tabs/tabs.module").then(m => m.TabsPageModule)
-  },
+  
+  { path: '', redirectTo: 'developers', pathMatch: 'full' },
   {
     path: 'developers',
     loadChildren: () => import('./pages/developers/developers.module').then( m => m.DevelopersPageModule)
