@@ -1,13 +1,14 @@
-import { Component, OnInit } from "@angular/core";
-import { DatabaseService, Dev } from "../services/database.service";
-import { Observable } from "rxjs";
-
+import { DatabaseService, Dev } from './../../services/database.service';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+ 
 @Component({
-  selector: "app-tab2",
-  templateUrl: "tab2.page.html",
-  styleUrls: ["tab2.page.scss"]
+  selector: 'app-developers',
+  templateUrl: './developers.page.html',
+  styleUrls: ['./developers.page.scss'],
 })
-export class Tab2Page implements OnInit {
+export class DevelopersPage implements OnInit {
+ 
   developers: Dev[] = [];
  
   products: Observable<any[]>;

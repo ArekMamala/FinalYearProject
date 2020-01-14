@@ -6,4 +6,14 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <div full><h1>X: {{x}}</h1></div>
+  <div full><h1>Y: {{y}}</h1></div>
+  <div full><h1>Z: {{z}}</h1></div>
+  <div full><h1>Timestamp: {{timestamp}}</h1></div>
+
+  <button ion-button full (click)= "start()">Start Listening</button>
+  <button ion-button full (click)= "stop()">Stop Listening</button>
+
+</ion-content>
+ 
