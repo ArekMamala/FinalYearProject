@@ -26,7 +26,6 @@
     "@ionic-native/sqlite-porter": "^5.19.1",
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^4.7.1",
-<<<<<<< HEAD
     "@ionic/storage": "^2.2.0",
     "cordova-browser": "^5.0.4",
     "cordova-plugin-device": "^2.0.2",
@@ -36,14 +35,9 @@
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-statusbar": "^2.4.2",
     "cordova-plugin-whitelist": "^1.3.3",
-=======
-    "cordova-android": "^6.2.2",
-    "cordova-browser": "6.0.0",
-    "cordova-ios": "5.1.1",
-    "cordova-plugin-device-motion": "^2.0.1",
->>>>>>> 159b1049e7082aec3cb4a71d30b76759d4c34cfa
     "cordova-sqlite-storage": "^4.0.0",
     "core-js": "^2.5.4",
+    "firebase": "^7.6.2",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "uk.co.workingedge.cordova.plugin.sqliteporter": "^1.1.1",
@@ -85,31 +79,17 @@
   "cordova": {
     "plugins": {
       "cordova-plugin-device-motion": {},
-<<<<<<< HEAD
       "cordova-sqlite-storage": {},
       "uk.co.workingedge.cordova.plugin.sqliteporter": {},
-=======
->>>>>>> 159b1049e7082aec3cb4a71d30b76759d4c34cfa
       "cordova-plugin-whitelist": {},
       "cordova-plugin-statusbar": {},
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
-<<<<<<< HEAD
       "cordova-plugin-ionic-keyboard": {}
     },
     "platforms": [
       "browser"
-=======
-      "cordova-plugin-ionic-keyboard": {},
-      "cordova-sqlite-storage": {},
-      "uk.co.workingedge.cordova.plugin.sqliteporter": {}
-    },
-    "platforms": [
-      "browser",
-      "android",
-      "ios"
->>>>>>> 159b1049e7082aec3cb4a71d30b76759d4c34cfa
     ]
   }
 }

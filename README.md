@@ -16,3 +16,7 @@ FinalYearProject - Arkadiusz - Usman - Sammar
 
 * ionic integrations enable cordova --add
 
+## Enable Cordova
+
+* npm install firebase --save
+* npm install -g firebase-tools
