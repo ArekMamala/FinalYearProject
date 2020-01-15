@@ -39,6 +39,7 @@
     "core-js": "^2.5.4",
     "firebase": "^7.6.2",
     "rxjs": "~6.5.1",
+    "shelljs": "^0.8.3",
     "tslib": "^1.9.0",
     "uk.co.workingedge.cordova.plugin.sqliteporter": "^1.1.1",
     "zone.js": "~0.9.1"
