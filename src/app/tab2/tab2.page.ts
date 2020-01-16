@@ -6,7 +6,7 @@ import { Observable } from "rxjs";
 // https://www.youtube.com/watch?v=5e7k8T8D4Lo
 import * as firebase from "firebase";
 import { snapshotToArray } from "../../app/environment";
-import { NavController } from "@ionic/angular";
+import { NavController, AlertController } from "@ionic/angular";
 
 @Component({
   selector: "app-tab2",
@@ -18,7 +18,7 @@ export class Tab2Page {
   ref = firebase.database().ref("items/");
   inputText: string = "";
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private alertCtrl: AlertController) {
     this.ref.on("value", resp => {
       this.items = snapshotToArray(resp);
     });
@@ -28,12 +28,53 @@ export class Tab2Page {
     if (item !== undefined && item !== null) {
       let newItem = this.ref.push();
       newItem.set(item);
-      this.inputText = '';
+      this.inputText = "";
     }
   }
 
+  async deleteItem(key) {
+    firebase
+      .database()
+      .ref("items/" + key)
+      .remove();
+  }
 
+  editItem() {
+    const alert = document.createElement("ion-alert");
+    alert.header = "Login";
+    alert.inputs = [
+      {
+        name: "name2",
+        id: "name2-id",
+        placeholder: "Email/Username"
+      },
+      {
+        name: "name3",
+        type: "password",
+        placeholder: "Password"
+      }
+    ];
+    alert.buttons = [
+      {
+        text: "Cancel",
+        role: "cancel",
+        cssClass: "secondary",
+        handler: () => {
+          console.log("Confirm Cancel");
+        }
+      },
+      {
+        text: "Ok",
+        handler: () => {
+          
+          console.log("Confirm Ok");
+        }
+      }
+    ];
 
+    document.body.appendChild(alert);
+    return alert.present();
+  }
 
   /* This is for local storage (DO NOT NEED ANYMORE)
   developers: Dev[] = [];

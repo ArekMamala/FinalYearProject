@@ -42,7 +42,7 @@
 </ion-card>
 <ion-card>
   <h5>Already have an account? Login below</h5>
-  <ion-button color="danger">Login</ion-button>
+  <ion-button (click)="editItem()" color="danger">Login</ion-button>
   <br>
   User information for testing
   <ion-list *ngFor="let item of items">
