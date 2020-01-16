@@ -25,3 +25,12 @@ FinalYearProject - Arkadiusz - Usman - Sammar
 
 * ionic cordova plugin add cordova-plugin-geolocation
 * npm install @ionic-native/geolocation
+
+
+## Workout routine to implement
+
+On home tab ( Use cards )
+* 5 workouts that genereate randomly each use
+* in each workout 3 types ;Beginner Intermediate Pro
+* Explination for each workout in relation to boxing 
+* After workout test puch per minute
