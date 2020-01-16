@@ -35,7 +35,7 @@ export class Tab3Page {
     try {
       var option: DeviceMotionAccelerometerOptions = 
       {
-        frequency: 2000
+        frequency: 500
       };
       this.id = this.deviceMotion.watchAcceleration(option).subscribe((acc: DeviceMotionAccelerationData)=>
       {
@@ -43,6 +43,12 @@ export class Tab3Page {
         this.y =  acc.y;
         this.z =  acc.z;
         this.timestamp = "" + acc.timestamp;
+      
+        if ((this.zStart - this.z >= 4) ) {
+          this.punch += 1;       
+       }
+       console.log(this.punch);
+  
       });
 
       var ters:number;
@@ -50,14 +56,9 @@ export class Tab3Page {
       ters = this.zStart - this.z;
       test2 = this.zStart - this.z;
 
-      console.log(ters, test2);
-
-    
-      if ((this.zStart - this.z >= 2)||(this.zStart - this.z <= -2) ) {
-
-        this.punch + 1;       
-     }
-
+      console.log(""+ters, "test "+test2);
+      console.log(this.punch);
+      
     } catch (error) {
       alert("Error "+ error);
     }

@@ -20,3 +20,8 @@ FinalYearProject - Arkadiusz - Usman - Sammar
 
 * npm install firebase --save
 * npm install -g firebase-tools
+
+## Glocation add and intall
+
+* ionic cordova plugin add cordova-plugin-geolocation
+* npm install @ionic-native/geolocation
