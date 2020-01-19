@@ -1,43 +1,72 @@
 
 <ion-header>
-  <ion-toolbar color ="primary">
-    <ion-title>
-      Home
+  <ion-toolbar color ="dark">
+    <ion-title text-center>
+      Pro-Box
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-toolbar color = "dark">
-  <ion-searchbar></ion-searchbar>
-</ion-toolbar>
+<ion-content>
+  <section text-center margin-bottom>
+    <ion-icon style="font-size: 5em; color: white;" name="person"></ion-icon>
+    <h1 style="font-size: 1.4em; color: white;" no-margin>Welcome, <br>
+    Usman</h1>
+  </section>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <ion-card text-center padding color="primary">
+          <ion-icon style="font-size: 5em;" name="person"></ion-icon>
+          <h2>Profile</h2>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card text-center padding color="primary">
+          <ion-icon style="font-size: 5em;" name="trophy"></ion-icon>
+          <h2>Workouts</h2>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <ion-card text-center padding color="primary">
+          <ion-icon style="font-size: 5em;" name="videocam"></ion-icon>
+          <h2>Record A Workout</h2>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card text-center padding color="primary">
+          <ion-icon style="font-size: 5em;" name="apps"></ion-icon>
+          <h2>Connected Apps</h2>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
 
-<ion-content class ="card-background-page">
+      <ion-col col-6>
+        <ion-card text-center padding color="primary">
+          <ion-icon style="font-size: 5em;" name="logo-facebook"></ion-icon>
+          <h2>Social Media</h2>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card text-center padding color="primary">
+          <ion-icon style="font-size: 5em;" name="settings"></ion-icon>
+          <h2>App Settings</h2>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-    <ion-card>
-      <img src = "/assets/home-background.jpg"/>
-      <div class="card-title">Introduction</div>
-      <div class="card-subtitle">est. since 2019</div>
-    </ion-card>
+  <div class="iframe-container">
+    <iframe padding width="956" height="538" [src]="sanitize(vid)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
 
-    <ion-card>
-      <img src = "/assets/fitness-girl.jpg"/>
-      <div class="card-title">Introduction</div>
-      <div class="card-subtitle">est. since 2019</div>
-    </ion-card>
+  
+  
 
-    <ion-card>
-      <img src = "/assets/home-background.jpg"/>
-      <div class="card-title">Introduction</div>
-      <div class="card-subtitle">est. since 2019</div>
-    </ion-card>
-
-    <ion-fab right top>
-      <button ion-fab color="primary"><ion-icon name="add"></ion-icon></button>
-      <ion-fab-list side="left">
-        <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
-        <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
-        <button ion-fab><ion-icon name="logo-youtube"></ion-icon></button>
-        <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
-      </ion-fab-list>
-    </ion-fab>
   </ion-content>
+
+
+      <!--img src = "/assets/home-background.jpg"/-->

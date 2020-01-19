@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
 import { IonicModule } from '@ionic/angular';
-import { DeveloperPageRoutingModule } from './developer-routing.module';
-import { DeveloperPage } from './developer.page';
+
+import { WorkoutsPageRoutingModule } from './workouts-routing.module';
+
+import { WorkoutsPage } from './workouts.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DeveloperPageRoutingModule
+    WorkoutsPageRoutingModule
   ],
-  declarations: [DeveloperPage]
+  declarations: [WorkoutsPage]
 })
-export class DeveloperPageModule {}
+export class WorkoutsPageModule {}
