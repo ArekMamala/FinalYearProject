@@ -8,33 +8,57 @@ import { DeviceMotion, DeviceMotionAccelerationData, DeviceMotionAccelerometerOp
 })
 export class Tab3Page {
 
-  x:string;
-  y:string;
-  z:string;
+  x:number;
+  y:number;
+  z:number;
   timestamp:string;
+
+  xStart:number;
+  yStart:number;
+  zStart:number;
+  punch: number;
 
   id: any;
 
   constructor(public deviceMotion: DeviceMotion) { 
-    this.x = "-";
-    this.y = "-";
-    this.z = "-";
+    this.x = 0;
+    this.y = 0;
+    this.z = 0;
     this.timestamp = "-";
+    this.xStart = 0;
+    this.yStart = 0;
+    this.zStart = 0;
+    this.punch = 0 ;
   }
 
   start(){
     try {
       var option: DeviceMotionAccelerometerOptions = 
       {
-        frequency: 200
+        frequency: 500
       };
       this.id = this.deviceMotion.watchAcceleration(option).subscribe((acc: DeviceMotionAccelerationData)=>
       {
-        this.x = ""+ acc.x;
-        this.y = ""+ acc.y;
-        this.z = ""+ acc.z;
+        this.x =  acc.x;
+        this.y =  acc.y;
+        this.z =  acc.z;
         this.timestamp = "" + acc.timestamp;
+      
+        if ((this.zStart - this.z >= 4) ) {
+          this.punch += 1;       
+       }
+       console.log(this.punch);
+  
       });
+
+      var ters:number;
+      var test2:number ;
+      ters = this.zStart - this.z;
+      test2 = this.zStart - this.z;
+
+      console.log(""+ters, "test "+test2);
+      console.log(this.punch);
+      
     } catch (error) {
       alert("Error "+ error);
     }
@@ -43,10 +67,28 @@ export class Tab3Page {
 
   stop(){
     this.id.unsubscribe();
-    this.x = "";
-    this.y = "";
-    this.z = "";
+    this.x = 0;
+    this.y = 0;
+    this.z = 0;
+    this.punch = 0;
     this.timestamp = "";
+
+  }
+
+  startingPosition(){
+    try {
+      
+      this.id = this.deviceMotion.watchAcceleration().subscribe((acc: DeviceMotionAccelerationData)=>
+      {
+        this.xStart = acc.x;
+        this.yStart = acc.y;
+        this.zStart = acc.z;
+      });
+
+    } catch (error) {
+      alert("Error "+ error);
+    }
+
 
   }
 

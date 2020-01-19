@@ -1,72 +1,32 @@
-
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Developers</ion-title>
+  <ion-toolbar>
+    <ion-title>
+      Sign-Up/Login
+    </ion-title>
   </ion-toolbar>
 </ion-header>
- 
-<ion-content padding>
- 
-  <ion-segment [(ngModel)]="selectedView">
-    <ion-segment-button value="devs">
-      <ion-label>Developer</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="products">
-      <ion-label>Products</ion-label>
-    </ion-segment-button>
-  </ion-segment>
- 
-  <div [ngSwitch]="selectedView">
-    <div *ngSwitchCase="'devs'">
-      <ion-item>
-        <ion-label position="stacked">What\'s your name?</ion-label>
-        <ion-input [(ngModel)]="developer.name" placeholder="Developer Name"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="stacked">What are your special skills (comma separated)?</ion-label>
-        <ion-input [(ngModel)]="developer.skills" placeholder="Special Skills"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="stacked">Your image URL</ion-label>
-        <ion-input [(ngModel)]="developer.img" placeholder="https://..."></ion-input>
-      </ion-item>
-      <ion-button expand="block" (click)="addDeveloper()">Add Developer Info</ion-button>
- 
-      <ion-list>
-        <ion-item button *ngFor="let dev of developers" [routerLink]="['/', 'developers', dev.id]">
-          <ion-avatar slot="start">
-            <img [src]="dev.img">
-          </ion-avatar>
-          <ion-label>
-            <h2>{{ dev.name }}</h2>
-            <p>{{ dev.skills }}</p>
-          </ion-label>
-        </ion-item>
-      </ion-list>
-    </div>
- 
-    <div *ngSwitchCase="'products'">
-      <ion-item>
-        <ion-label position="stacked">Product name</ion-label>
-        <ion-input [(ngModel)]="product.name" placeholder="Name"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="stacked">Creator?</ion-label>
-        <ion-select [(ngModel)]="product.creator">
-          <ion-select-option *ngFor="let dev of developers" [value]="dev.id">{{ dev.name }}</ion-select-option>
-        </ion-select>
-      </ion-item>
-      <ion-button expand="block" (click)="addProduct()">Add Product</ion-button>
- 
-      <ion-list>
-        <ion-item *ngFor="let prod of products | async">
-          <ion-label>
-            <h2>{{ prod.name }}</h2>
-            <p>Created by: {{ prod.creator }}</p>
-          </ion-label>
-        </ion-item>
-      </ion-list>
-    </div>
-  </div>
- 
+
+<ion-content class="ion-content">
+  <ion-card [hidden]=isHidden>
+  <h3>Sign-up</h3>
+  
+  <ion-list>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="inputText" placeholder="Username Input"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" [(ngModel)]="inputPassword"  placeholder="Password Input"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button color="primary" (click)="addUser()">Sign Up</ion-button>
+</ion-card>
+<ion-card [hidden]=isHidden>
+  <h5>Already have an account? Login below</h5>
+  <ion-button (click)="logIn()" color="danger">Login</ion-button>
+</ion-card>
+<ion-card [hidden]=showInfo>
+  <ion-button (click)="logOut()">Log Out</ion-button>
+  User information
+</ion-card>
 </ion-content>
