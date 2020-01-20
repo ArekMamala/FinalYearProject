@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { DomSanitizer } from "@angular/platform-browser"
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
+import { Router } from '@angular/router';
+import { Tab2Page } from '../tab2/tab2.page';
 
 @Component({
   selector: 'app-tab1',
@@ -9,9 +11,7 @@ import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
 })
 export class Tab1Page {
   vid = 'https://www.youtube.com/embed/fiutY4ojZUQ?rel=0;&autoplay=1';
-  constructor(private dom: DomSanitizer) {
-
-
+  constructor(private dom: DomSanitizer, private router: Router) {
   }
 
   sanitize(vid){
