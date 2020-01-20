@@ -12,6 +12,10 @@ import { AppComponent } from "./app.component";
 import { SQLite } from "@ionic-native/sqlite/ngx";
 import { SQLitePorter } from "@ionic-native/sqlite-porter/ngx";
 import { HttpClientModule } from "@angular/common/http";
+// For firebase database
+import { firebaseConfig } from "./environment";
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +24,9 @@ import { HttpClientModule } from "@angular/common/http";
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule
   ],
   providers: [
     StatusBar,

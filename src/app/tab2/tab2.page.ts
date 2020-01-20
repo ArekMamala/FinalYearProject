@@ -1,12 +1,13 @@
-import { Component, OnInit } from "@angular/core";
-import { SQLite, SQLiteObject } from "@ionic-native/sqlite/ngx";
-import { DatabaseService, Dev } from "../services/database.service";
-import { Observable } from "rxjs";
-// This os for online storage
+import { Component } from "@angular/core";
+// This is for online storage
 // https://www.youtube.com/watch?v=5e7k8T8D4Lo
 import * as firebase from "firebase";
 import { snapshotToArray } from "../../app/environment";
 import { NavController, AlertController } from "@ionic/angular";
+// This is for user login
+// https://www.youtube.com/watch?v=Q8zcieAWn3g
+import { AngularFireAuth } from '@angular/fire/auth';
+import { auth } from 'firebase/app';
 
 @Component({
   selector: "app-tab2",
@@ -17,39 +18,40 @@ export class Tab2Page {
   items = [];
   ref = firebase.database().ref("items/");
   inputText: string = "";
+  inputPassword: string = "";
+  isHidden = false;
+  showInfo = true;
 
-  constructor(public navCtrl: NavController, private alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, private alertCtrl: AlertController, public afAuth: AngularFireAuth) {
     this.ref.on("value", resp => {
       this.items = snapshotToArray(resp);
     });
   }
 
-  addItem(item) {
-    if (item !== undefined && item !== null) {
-      let newItem = this.ref.push();
-      newItem.set(item);
-      this.inputText = "";
-    }
+  async addUser(){
+  const {inputText, inputPassword } = this
+  try {
+    const res = await this.afAuth.auth.createUserWithEmailAndPassword(inputText + '@fitness.com', inputPassword)
+    console.log(res)
+  } catch (error) {
+    console.dir(error)
   }
+} 
 
-  async deleteItem(key) {
-    firebase
-      .database()
-      .ref("items/" + key)
-      .remove();
-  }
-
-  editItem() {
+  logIn() {
+    const { inputText, inputPassword} = this
     const alert = document.createElement("ion-alert");
     alert.header = "Login";
     alert.inputs = [
       {
-        name: "name2",
-        id: "name2-id",
+        name: "username",
+        id: "username",
+        type: "email",
         placeholder: "Email/Username"
       },
       {
-        name: "name3",
+        name: "password",
+        id: "password",  
         type: "password",
         placeholder: "Password"
       }
@@ -65,8 +67,14 @@ export class Tab2Page {
       },
       {
         text: "Ok",
-        handler: () => {
-          
+        handler: async data => {
+          try {
+          const res = await this.afAuth.auth.signInWithEmailAndPassword(data.username + '@fitness.com', data.password)
+          this.isHidden = true;
+          this.showInfo = false;
+        } catch (err) {
+          console.dir(err)
+        }
           console.log("Confirm Ok");
         }
       }
@@ -74,6 +82,11 @@ export class Tab2Page {
 
     document.body.appendChild(alert);
     return alert.present();
+  }
+
+  logOut(){
+    this.showInfo = true;
+    this.isHidden = false;
   }
 
   /* This is for local storage (DO NOT NEED ANYMORE)

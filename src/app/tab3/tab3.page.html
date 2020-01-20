@@ -8,37 +8,49 @@
 
 <ion-content>
   <div full>
-    <h1>X: {{x}}</h1>
+    <h1>Date: {{date}}</h1>
   </div>
   <div full>
-    <h1>Y: {{y}}</h1>
-  </div>
-  <div full>
-    <h1>Z: {{z}}</h1>
-  </div>
-  <div full>
-    <h1>Timestamp: {{timestamp}}</h1>
-  </div>
-
-  <button ion-button full (click)="start()">Start Listening</button>
-  <button ion-button full (click)="stop()">Stop Listening</button>
-  <button ion-button full (click)="startingPosition()">Starting Position</button>
-
-  <div full>
-    <h1>Starting X: {{xStart}}</h1>
-  </div>
-  <div full>
-    <h1>Starting Y: {{yStart}}</h1>
-  </div>
-  <div full>
-    <h1>Starting Z: {{zStart}}</h1>
+    <h1>Time: {{time}}</h1>
   </div>
   <div full>
     <h1>Puches: {{punch}}</h1>
   </div>
+  <div full>
+    <h1>Number Of Jabs: {{jab}}</h1>
+  </div>
+  <div full>
+    <h1>Number Of ppercuts: {{uppercut}}</h1>
+  </div>
+  <div full>
+    <h1> {{punchName}}</h1>
+  </div>
+
+  <ion-button color="primary" (click)="start()">Start Listening</ion-button>
+  <ion-button color="primary" (click)="stop()">Stop Listening</ion-button>
+  <ion-button color="primary" (click)="startingPosition()">Starting Position</ion-button>
+
+  <h2>Varaiables for testing </h2>
+  <div full>
+    <h1>X: {{x | number:'1.2-2'}}</h1>
+  </div>
+  <div full>
+    <h1>Y: {{y | number:'1.2-2'}}</h1>
+  </div>
+  <div full>
+    <h1>Z: {{z | number:'1.2-2'}}</h1>
+  </div>
 
   <div full>
-    <h1>Starting Z: {{ters}}</h1>
+    <h1>Starting X: {{xStart | number:'1.2-2'}}</h1>
   </div>
+  <div full>
+    <h1>Starting Y: {{yStart | number:'1.2-2'}}</h1>
+  </div>
+  <div full>
+    <h1>Starting Z: {{zStart| number:'1.2-2'}}</h1>
+  </div>
+
+
 
 </ion-content>
