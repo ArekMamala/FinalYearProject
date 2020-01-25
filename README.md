@@ -44,3 +44,7 @@ On home tab ( Use cards )
 
 found 2 high severity vulnerabilities
   run `npm audit fix` to fix them, or `npm audit` for details
+
+## gyroscope
+* ionic cordova plugin add cordova-plugin-gyroscope
+* npm install --save @ionic-native/gyroscope@4
