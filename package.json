@@ -29,7 +29,6 @@
     "@ionic-native/sqlite": "^5.19.1",
     "@ionic-native/sqlite-porter": "^5.19.1",
     "@ionic-native/status-bar": "^5.0.0",
-    "@ionic-native/youtube-video-player": "^5.19.1",
     "@ionic/angular": "^4.7.1",
     "@ionic/storage": "^2.2.0",
     "@mauron85/cordova-plugin-background-geolocation": "^3.1.0",
@@ -102,7 +101,6 @@
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-ionic-keyboard": {},
-      "cordova-plugin-geolocation": {},
       "cordova-plugin-gyroscope": {}
     },
     "platforms": [
