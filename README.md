@@ -1,4 +1,5 @@
-# BSc in Computing in Software Development <br> Year 4 <br> Applied Project and Minor Dissertation
+# Galway Mayo Institute of Technology <br> BSc in Computing in Software Development <br> Applied Project and Minor Dissertation
+###### Authors: <br> Sammar Tahir <br> Usman Sattar <br> Arkadiusz Mamala
 
 **Student Number(s):**
 - G00347526
@@ -48,32 +49,34 @@ This phone application is an alternative to the wearable device. The application
 Whilst two members of the team are constructing the application. One person is going to specifically manage the database. They will have the responsibility to create the AWS account and link it up to the database. Overall, they are responsible for the whole database section of this project and to link it up to the application, that is works efficiently. 
 
 ## Imports 
-#### sqlite
-
-* ionic cordova plugin add cordova-sqlite-storage
-* npm install @ionic-native/sqlite
-
-#### sqliteb porter
-
-* ionic cordova plugin add uk.co.workingedge.cordova.plugin.sqliteporter
-* npm install @ionic-native/sqlite-porter
 
 #### Enable Cordova
-
-* ionic integrations enable cordova --add
+`ionic integrations enable cordova --add`
 
 #### Enable Cordova
-
-* npm install firebase --save
-* npm install -g firebase-toolsso
+`npm install firebase --save`
+`npm install -g firebase-toolsso`
 
 #### Glocation add and intall
+`ionic cordova plugin add cordova-plugin-geolocation`
+`npm install @ionic-native/geolocation`
 
-* ionic cordova plugin add cordova-plugin-geolocation
-* npm install @ionic-native/geolocation
+
+#### Enable angular with firebase
+`npm install firebase @angular/fire --save`
+
+#### Gyroscope add and install
+`ionic cordova plugin add cordova-plugin-gyroscope`
+`npm install @ionic-native/gyroscope`
 
 
-#### Workout routine to implement
+##### Run this if you have any errors with .json file types
+**NB**
+
+found 2 high severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+  
+##### Workout routine to implement
 
 On home tab ( Use cards )
 * 5 workouts that genereate randomly each use
@@ -81,21 +84,6 @@ On home tab ( Use cards )
 * Explination for each workout in relation to boxing 
 * After workout test puch per minute
 
-#### Enable angular with firebase
-* npm install firebase @angular/fire --save
-
-
-##### Run this if you have any errors with .json file types
-"NB"
-
-found 2 high severity vulnerabilities
-  run `npm audit fix` to fix them, or `npm audit` for details
-
-#### Gyroscope add and install
-
-ionic cordova plugin add cordova-plugin-gyroscope
-npm install @ionic-native/gyroscope
-
-#### Overleaf
+##### Overleaf
 
 https://www.overleaf.com/8379312238yysgybdjsctf
