@@ -8,6 +8,7 @@ import { NavController, AlertController } from "@ionic/angular";
 // https://www.youtube.com/watch?v=Q8zcieAWn3g
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
+import { UserService } from '../user.service';
 
 @Component({
   selector: "app-tab2",
@@ -22,7 +23,8 @@ export class Tab2Page {
   isHidden = false;
   showInfo = true;
 
-  constructor(public navCtrl: NavController, private alertCtrl: AlertController, public afAuth: AngularFireAuth) {
+  constructor(public navCtrl: NavController, private alertCtrl: AlertController, 
+    public afAuth: AngularFireAuth, public user: UserService) {
     this.ref.on("value", resp => {
       this.items = snapshotToArray(resp);
     });
@@ -31,7 +33,14 @@ export class Tab2Page {
   async addUser(){
   const {inputText, inputPassword } = this
   try {
+    //Using @fitness to trick firebase into thinking that the username is an email address
     const res = await this.afAuth.auth.createUserWithEmailAndPassword(inputText + '@fitness.com', inputPassword)
+    
+    // Adding this user to the user.service https://youtu.be/W5GD6gwYC18?t=412
+    if(res.user){
+      
+    }
+    
     console.log(res)
     this.showAlert("Welcome","Thank you for signing up!")
   } catch (error) {

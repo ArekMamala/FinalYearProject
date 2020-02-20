@@ -16,6 +16,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { firebaseConfig } from "./environment";
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { UserService } from './user.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,9 +33,10 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     StatusBar,
     SplashScreen,
     DeviceMotion,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    SQLite,
-    SQLitePorter
+    { provide: RouteReuseStrategy,
+      useClass: IonicRouteStrategy,
+    },
+    UserService
   ],
   bootstrap: [AppComponent]
 })
