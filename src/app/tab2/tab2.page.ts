@@ -33,10 +33,21 @@ export class Tab2Page {
   try {
     const res = await this.afAuth.auth.createUserWithEmailAndPassword(inputText + '@fitness.com', inputPassword)
     console.log(res)
+    this.showAlert("Welcome","Thank you for signing up!")
   } catch (error) {
+    this.showAlert("Error", error.message)
     console.dir(error)
   }
 } 
+
+  async showAlert(header: string, message: string){
+    const alert = await this.alertCtrl.create({
+      header,
+      message,
+      buttons: ["Confirm"]
+    })
+    await alert.present()
+  }
 
   logIn() {
     const { inputText, inputPassword} = this
@@ -70,9 +81,11 @@ export class Tab2Page {
         handler: async data => {
           try {
           const res = await this.afAuth.auth.signInWithEmailAndPassword(data.username + '@fitness.com', data.password)
+          this.showAlert("Welcome", "Are you ready to start your workout?")
           this.isHidden = true;
           this.showInfo = false;
         } catch (err) {
+          this.showAlert("Error", err.message)
           console.dir(err)
         }
           console.log("Confirm Ok");

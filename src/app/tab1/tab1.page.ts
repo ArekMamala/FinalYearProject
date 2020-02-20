@@ -10,7 +10,6 @@ import { Tab2Page } from '../tab2/tab2.page';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  vid = 'https://www.youtube.com/embed/fiutY4ojZUQ?rel=0;&autoplay=1';
   constructor(private dom: DomSanitizer, private router: Router) {
   }
 
