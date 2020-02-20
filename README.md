@@ -47,5 +47,5 @@ found 2 high severity vulnerabilities
 
 ## Gyroscope add and install
 
-ionic cordova plugin add cordova-plugin-gyroscope
-npm install @ionic-native/gyroscope
+* ionic cordova plugin add cordova-plugin-gyroscope
+* npm install @ionic-native/gyroscope
