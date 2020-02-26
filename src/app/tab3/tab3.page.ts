@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { DeviceMotion, DeviceMotionAccelerationData, DeviceMotionAccelerometerOptions } from '@ionic-native/device-motion/ngx';
+import { DeviceOrientation, DeviceOrientationCompassHeading} from "@ionic-native/device-orientation/ngx";
+
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
@@ -26,7 +28,12 @@ export class Tab3Page {
   id: any;
   idStartingPosition: any; 
 
-  constructor(public deviceMotion: DeviceMotion) { 
+  watch:any;
+  magneticHeading:any ="";
+  trueheading:any =""
+  
+
+  constructor(public deviceMotion: DeviceMotion, public deviceOrientation:DeviceOrientation) { 
     this.x = 0;
     this.y = 0;
     this.z = 0;
@@ -35,6 +42,26 @@ export class Tab3Page {
     this.yStart = 0;
     this.zStart = 0;
     this.punch = 0 ;
+
+  }
+
+
+  startWatching(){
+    this.watch = this.deviceOrientation.watchHeading().subscribe((heading)=>{
+      this.trueheading = heading.trueHeading;
+      this.magneticHeading = heading.magneticHeading;
+      this.timestamp = new Date(heading.timestamp).toString();
+    },(err)=>{
+      alert(JSON.stringify(err));
+    })
+  }
+
+
+  stopwatching(){
+    if (this.watch!= null) {
+      this.watch.unsubscribe();
+    }
+
   }
 
   start(){

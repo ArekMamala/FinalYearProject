@@ -5,6 +5,7 @@ import { RouteReuseStrategy } from "@angular/router";
 import { IonicModule, IonicRouteStrategy } from "@ionic/angular";
 import { SplashScreen } from "@ionic-native/splash-screen/ngx";
 import { DeviceMotion } from "@ionic-native/device-motion/ngx";
+import { DeviceOrientation } from "@ionic-native/device-orientation/ngx";
 
 import { StatusBar } from "@ionic-native/status-bar/ngx";
 import { AppRoutingModule } from "./app-routing.module";
@@ -17,8 +18,6 @@ import { HttpClientModule } from "@angular/common/http";
 import { firebaseConfig } from "./environment";
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-
-
 
 @NgModule({
   declarations: [AppComponent],
@@ -35,6 +34,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     StatusBar,
     SplashScreen,
     DeviceMotion,
+    DeviceOrientation,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     SQLite,
     SQLitePorter

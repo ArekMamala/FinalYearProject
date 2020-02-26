@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content>
-  <div full>
+  <!--<div full>
     <h1>X: {{x}}</h1>
   </div>
   <div full>
@@ -40,5 +40,12 @@
   <div full>
     <h1>Starting Z: {{ters}}</h1>
   </div>
+!-->
+  <ion-label>MAGNETION HEADING = {{magneticHeading}}</ion-label><br/><br/>
+  <ion-label>TRUE HEADING = {{trueHeading}}</ion-label><br/><br/>
+  <ion-label>TIMESTAMP = {{timestamp}}</ion-label><br/>
+    
+  <ion-button (click) = "startWatching()" expand="full">start watching</ion-button><br/><br/>
+  <ion-button (click) = "stopWatching()" expand="full">stop watching</ion-button>
 
 </ion-content>
