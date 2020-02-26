@@ -9,6 +9,9 @@ import { NavController, AlertController } from "@ionic/angular";
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
 import { UserService } from '../user.service';
+import { Router } from '@angular/router';
+// Access the user setting eg. photos, extra information
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: "app-tab2",
@@ -18,38 +21,44 @@ import { UserService } from '../user.service';
 export class Tab2Page {
   items = [];
   ref = firebase.database().ref("items/");
-  inputText: string = "";
+  username: string = "";
   inputPassword: string = "";
   isHidden = false;
   showInfo = true;
 
-  constructor(public navCtrl: NavController, private alertCtrl: AlertController, 
-    public afAuth: AngularFireAuth, public user: UserService) {
+  constructor(public navCtrl: NavController, private alertCtrl: AlertController,
+    public afAuth: AngularFireAuth, public user: UserService, public router: Router,
+    public afstore: AngularFirestore) {
     this.ref.on("value", resp => {
       this.items = snapshotToArray(resp);
     });
   }
 
-  async addUser(){
-  const {inputText, inputPassword } = this
-  try {
-    //Using @fitness to trick firebase into thinking that the username is an email address
-    const res = await this.afAuth.auth.createUserWithEmailAndPassword(inputText + '@fitness.com', inputPassword)
-    
-    // Adding this user to the user.service https://youtu.be/W5GD6gwYC18?t=412
-    if(res.user){
-      
-    }
-    
-    console.log(res)
-    this.showAlert("Welcome","Thank you for signing up!")
-  } catch (error) {
-    this.showAlert("Error", error.message)
-    console.dir(error)
-  }
-} 
+  async addUser() {
+    const { username, inputPassword } = this
+    try {
+      //Using @fitness to trick firebase into thinking that the username is an email address
+      const res = await this.afAuth.auth.createUserWithEmailAndPassword(username + '@fitness.com', inputPassword)
 
-  async showAlert(header: string, message: string){
+      // Adding this user to the user.service https://youtu.be/W5GD6gwYC18?t=412
+      if (res.user) {
+        this.user.setUser({
+          username,
+          uid: res.user.uid
+        })
+
+      }
+
+      console.log(res)
+      this.showAlert("Welcome", "Thank you for signing up!")
+      this.router.navigate(['/tabs'])
+    } catch (error) {
+      this.showAlert("Error", error.message)
+      console.dir(error)
+    }
+  }
+
+  async showAlert(header: string, message: string) {
     const alert = await this.alertCtrl.create({
       header,
       message,
@@ -59,7 +68,7 @@ export class Tab2Page {
   }
 
   logIn() {
-    const { inputText, inputPassword} = this
+    const { username, inputPassword } = this
     const alert = document.createElement("ion-alert");
     alert.header = "Login";
     alert.inputs = [
@@ -71,7 +80,7 @@ export class Tab2Page {
       },
       {
         name: "password",
-        id: "password",  
+        id: "password",
         type: "password",
         placeholder: "Password"
       }
@@ -89,24 +98,40 @@ export class Tab2Page {
         text: "Ok",
         handler: async data => {
           try {
-          const res = await this.afAuth.auth.signInWithEmailAndPassword(data.username + '@fitness.com', data.password)
-          this.showAlert("Welcome", "Are you ready to start your workout?")
-          this.isHidden = true;
-          this.showInfo = false;
-        } catch (err) {
-          this.showAlert("Error", err.message)
-          console.dir(err)
-        }
+            const res = await this.afAuth.auth.signInWithEmailAndPassword(data.username + '@fitness.com', data.password)
+            this.showAlert("Welcome", "Are you ready to start your workout?")
+            this.isHidden = true;
+            this.showInfo = false;
+
+            // Creating a document and assigning value username
+            this.afstore.doc('user/${res.user.uid}').set({
+              username
+            })
+
+            // Setting service
+            if (res.user) {
+              this.user.setUser({
+                username,
+                uid: res.user.uid
+              })
+              this.router.navigate(['/tabs'])
+            }
+          } catch (err) {
+            this.showAlert("Error", err.message)
+            console.dir(err)
+          }
           console.log("Confirm Ok");
         }
       }
     ];
 
+
+
     document.body.appendChild(alert);
     return alert.present();
   }
 
-  logOut(){
+  logOut() {
     this.showInfo = true;
     this.isHidden = false;
   }
