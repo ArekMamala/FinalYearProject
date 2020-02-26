@@ -8,9 +8,10 @@ import { NavController, AlertController } from "@ionic/angular";
 // https://www.youtube.com/watch?v=Q8zcieAWn3g
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
+// This is for user information handling
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
-// Access the user setting eg. photos, extra information
+// This is for user folder
 import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
@@ -21,10 +22,15 @@ import { AngularFirestore } from '@angular/fire/firestore';
 export class Tab2Page {
   items = [];
   ref = firebase.database().ref("items/");
+  // Username
   username: string = "";
+  // Password
   inputPassword: string = "";
+  // LogIn/Sign Up card
   isHidden = false;
+  // User Information
   showInfo = true;
+
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController,
     public afAuth: AngularFireAuth, public user: UserService, public router: Router,
@@ -34,11 +40,17 @@ export class Tab2Page {
     });
   }
 
+  // This method below is for adding users to the database
   async addUser() {
     const { username, inputPassword } = this
     try {
       //Using @fitness to trick firebase into thinking that the username is an email address
       const res = await this.afAuth.auth.createUserWithEmailAndPassword(username + '@fitness.com', inputPassword)
+
+      // Creating a document and assigning value username
+      this.afstore.doc('user/${res.user.uid}').set({
+        username
+      })
 
       // Adding this user to the user.service https://youtu.be/W5GD6gwYC18?t=412
       if (res.user) {
@@ -48,16 +60,18 @@ export class Tab2Page {
         })
 
       }
-
       console.log(res)
       this.showAlert("Welcome", "Thank you for signing up!")
+      // This should take the user to a diffrent page to config profile
       this.router.navigate(['/tabs'])
     } catch (error) {
+      // Throws error
       this.showAlert("Error", error.message)
       console.dir(error)
     }
   }
 
+  // Basic method that shows popup alertbox
   async showAlert(header: string, message: string) {
     const alert = await this.alertCtrl.create({
       header,
@@ -67,8 +81,12 @@ export class Tab2Page {
     await alert.present()
   }
 
+
+  // Method to allow the user to logIn 
   logIn() {
     const { username, inputPassword } = this
+    // Long way of creating alertbox
+    // Please use other method
     const alert = document.createElement("ion-alert");
     alert.header = "Login";
     alert.inputs = [
@@ -96,17 +114,17 @@ export class Tab2Page {
       },
       {
         text: "Ok",
+        // This is for handling data 
         handler: async data => {
           try {
+            // Getting information from user
+            // This is using firebase auth to check if logIn is correct
             const res = await this.afAuth.auth.signInWithEmailAndPassword(data.username + '@fitness.com', data.password)
             this.showAlert("Welcome", "Are you ready to start your workout?")
+            // This hides the register card
             this.isHidden = true;
+            // This shows user information (you can do this on different page if you want)
             this.showInfo = false;
-
-            // Creating a document and assigning value username
-            this.afstore.doc('user/${res.user.uid}').set({
-              username
-            })
 
             // Setting service
             if (res.user) {
@@ -114,9 +132,11 @@ export class Tab2Page {
                 username,
                 uid: res.user.uid
               })
+              // Use this to bring user to homepage
               this.router.navigate(['/tabs'])
             }
           } catch (err) {
+            // Shows error if user make a mistake
             this.showAlert("Error", err.message)
             console.dir(err)
           }
@@ -125,55 +145,16 @@ export class Tab2Page {
       }
     ];
 
-
-
     document.body.appendChild(alert);
     return alert.present();
   }
 
+  // Method for the user logging out have not fully done this yet. So far basic 
   logOut() {
+    // Hiding the user info
     this.showInfo = true;
+    // Showing the logIn and sign up
     this.isHidden = false;
   }
 
-  /* This is for local storage (DO NOT NEED ANYMORE)
-  developers: Dev[] = [];
-  products: Observable<any[]>;
-
-  developer = {};
-  product = {};
- 
-  selectedView = 'devs';
-  
-  constructor(private db: DatabaseService) {}
-
-  ngOnInit() {
-    this.db.getDatabaseState().subscribe(ready => {
-      if (ready) {
-        this.db.getDevs().subscribe(devs => {
-          console.log("devs changes: ", devs);
-          this.developers = devs;
-        });
-        this.products = this.db.getProducts();
-      }
-    });
-  }
-  addDeveloper() {
-    let skills = this.developer["skills"].split(",");
-    skills = skills.map(skill => skill.trim());
-
-    this.db
-      .addDeveloper(this.developer["name"], skills, this.developer["img"])
-      .then(_ => {
-        this.developer = {};
-      });
-  }
-
-  addProduct() {
-    this.db
-      .addProduct(this.product["name"], this.product["creator"])
-      .then(_ => {
-        this.product = {};
-      });
-  } */
 }

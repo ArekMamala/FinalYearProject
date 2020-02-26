@@ -7,6 +7,10 @@
 </ion-header>
 
 <ion-content class="ion-content">
+  <!-- Using cards because it is an easier way of displaying information withour messing with full page.
+  Show hide certain cards and will make sure others working on project don't mess with your cards.-->
+
+  <!--This card is for signing up-->
   <ion-card [hidden]=isHidden>
     <h3>Sign-up</h3>
 
@@ -20,11 +24,17 @@
     </ion-list>
 
     <ion-button color="primary" (click)="addUser()">Sign Up</ion-button>
+  
+  <!--This card is for logging in if user already has an account-->
   </ion-card>
+  <!-- Notice how I can hide both cards when I don't want the user to see them-->
   <ion-card [hidden]=isHidden>
     <h5>Already have an account? Login below</h5>
     <ion-button (click)="logIn()" color="danger">Login</ion-button>
   </ion-card>
+
+  <!-- This card will display user information and allow the user to logout-->
+  <!-- Log out isn't fully complete yet-->
   <ion-card [hidden]=showInfo>
     <ion-button (click)="logOut()">Log Out</ion-button>
     User information
