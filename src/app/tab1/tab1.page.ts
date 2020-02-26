@@ -13,6 +13,24 @@ export class Tab1Page {
   constructor(private dom: DomSanitizer, private router: Router) {
   }
 
+  slider = [
+    {
+      title: '',
+      description: '',
+      image: "assets/slide4.jpg"
+    },
+    {
+      title: '',
+      description: '',
+      image: "assets/slide2.jpg"
+    },
+    {
+      title: '',
+      description: '',
+      image: "assets/slide3.jpg"
+    }
+  ];
+
   sanitize(vid){
     return this.dom.bypassSecurityTrustResourceUrl(vid);
   }

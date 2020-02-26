@@ -17,6 +17,7 @@ import { firebaseConfig } from "./environment";
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { UserService } from './user.service';
+import { Calendar, CalendarOriginal } from '@ionic-native/calendar';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,7 +29,7 @@ import { UserService } from './user.service';
     HttpClientModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule
-  ],
+  ],  
   providers: [
     StatusBar,
     SplashScreen,
@@ -36,7 +37,9 @@ import { UserService } from './user.service';
     { provide: RouteReuseStrategy,
       useClass: IonicRouteStrategy,
     },
-    UserService
+    UserService,
+    CalendarOriginal
+    
   ],
   bootstrap: [AppComponent]
 })
