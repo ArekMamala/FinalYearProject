@@ -38,7 +38,7 @@
     "cordova-browser": "^5.0.4",
     "cordova-common": "^3.2.1",
     "cordova-ios": "^5.1.1",
-    "cordova-plugin-calendar": "^5.1.5",
+    "cordova-plugin-calendar": "5.1.5",
     "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-device-motion": "^2.0.1",
