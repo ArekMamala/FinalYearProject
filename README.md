@@ -86,4 +86,6 @@ On home tab ( Use cards )
 
 ##### Overleaf
 
+* ionic cordova plugin add cordova-plugin-gyroscope
+* npm install @ionic-native/gyroscope
 https://www.overleaf.com/8379312238yysgybdjsctf

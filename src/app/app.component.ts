@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import * as firebase from 'firebase';
 import { firebaseConfig } from './environment';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
