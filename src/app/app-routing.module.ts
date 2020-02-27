@@ -9,7 +9,11 @@ const routes: Routes = [
   {
     path: 'exercises',
     loadChildren: () => import('./exercises/exercises.module').then( m => m.ExercisesPageModule)
+  },  {
+    path: 'cal-details',
+    loadChildren: () => import('./cal-details/cal-details.module').then( m => m.CalDetailsPageModule)
   }
+
 
 ];
 @NgModule({

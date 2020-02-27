@@ -20,17 +20,28 @@
     <ion-label>Exercises</ion-label>
   </ion-segment-button>
 
-  <!--ion-segment-button value="javascript">
-    <ion-label>Health Tips</ion-label>
-  </ion-segment-button-->
 </ion-segment>
 
-<ion-content>
-  <section text-center margin-bottom>
+
+  <ion-content padding>
+    <ion-slides pager = "true">
+      <ion-slide *ngFor="let slide of slider">
+        <img [src]="slide.image"/>
+        <h2 [innerHTML] = "slide.title"></h2>
+        <p [innerHTML] = "slide.description"></p>
+      </ion-slide>
+    </ion-slides>
+
+    <ion-button>
+      Button
+    </ion-button>
+
+  
+  <!--section text-center margin-bottom>
     <ion-icon style="font-size: 5em; color: white;" name="person"></ion-icon>
     <h1 style="font-size: 1.4em; color: white;" no-margin>Welcome, <br>
     Usman</h1>
-  </section>
+  </section-->
   
     <!--ion-row-->
       <!--ion-col col-6>

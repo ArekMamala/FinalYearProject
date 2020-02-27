@@ -18,6 +18,9 @@ import { HttpClientModule } from "@angular/common/http";
 import { firebaseConfig } from "./environment";
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { UserService } from './user.service';
+import { Calendar, CalendarOriginal } from '@ionic-native/calendar';
+import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,16 +31,19 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     AppRoutingModule,
     HttpClientModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
     DeviceMotion,
-    DeviceOrientation,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    SQLite,
-    SQLitePorter
+    { provide: RouteReuseStrategy,
+      useClass: IonicRouteStrategy,
+    },
+    UserService,
+    CalendarOriginal
+    
   ],
   bootstrap: [AppComponent]
 })
