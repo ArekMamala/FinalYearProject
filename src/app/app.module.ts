@@ -42,6 +42,7 @@ import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestor
       useClass: IonicRouteStrategy,
     },
     UserService,
+    //CalendarOriginal
     DeviceOrientation
     
   ],

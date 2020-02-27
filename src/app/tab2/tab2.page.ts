@@ -94,7 +94,7 @@ export class Tab2Page {
         name: "username",
         id: "username",
         type: "email",
-        placeholder: "Email/Username"
+        placeholder: "Username"
       },
       {
         name: "password",

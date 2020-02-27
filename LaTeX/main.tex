@@ -79,7 +79,19 @@ Neural networks are a set of algorithms, modeled loosely after the human brain, 
 With these tools, we can train the model to recognize the type of punches:\\
 \textit{Jab\\hook\\Uppercut}
 
-Using tensorflow with python to do this project. Tensorflow is a symbolic math library which can be used for machine learning. Keras is used to make the neural network. Numpy and pyplot is used to plot the data.
+Using tensorflow with python to do this project. Tensorflow is a symbolic math library which can be used for machine learning. Keras is used to make the neural network. Numpy and pyplot is used to plot the data. Before making the data set for machine learning we'd need to learn of the core core concepts of making data-sets. This is how to shape your data and how to get it ready for training. To understand the layout of data-sets I used some examples online and decided to use the well know the iris data-set. This data-set collects data points from a hundred and fifty different samples of flower. It uses the petal length/width and the sepal length/width and sorts them into three types of iris.\\
+\begin{verbatim}
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+iris
+
+'data': array([[5.1, 3.5, 1.4, 0.2],
+               [4.9, 3. , 1.4, 0.2],
+               [4.7, 3.2, 1.3, 0.2],
+               [4.6, 3.1, 1.5, 0.2],
+\end{verbatim}
+I wanted to do something similar to this using the x,y,z axis on the device and the accelerometer and sorting them into the three types of punches the device would register. I've learnt that by training a neural network with these values and telling it the type of punch it is I can then build a neural network than can reference from new values what type of punch is thrown. The dataset that I'm going to make will contain four values and the type of punch it should be. The punch will be classified as 0, 1 or 2.
 
 \section*{How is physics applied to boxing}
 Physics occurs in punching because of energy. Person uses energy in order for a punch to be carried out. That is why, as well as energy we need momentum, work, power, and velocity. Before a boxer punches, he has potential energy which is stored energy. Once, the boxer begins to punch potential energy turns into kinetic energy.
