@@ -69,6 +69,11 @@ Whilst two members of the team are constructing the application. One person is g
 `ionic cordova plugin add cordova-plugin-gyroscope`
 `npm install @ionic-native/gyroscope`
 
+#### capacitor
+* npm install --save @capacitor/core @capacitor/cli
+* usefull link for the capacitor explaining it and steps
+* https://capacitor.ionicframework.com/docs/getting-started/
+
 
 ##### Run this if you have any errors with .json file types
 **NB**
@@ -89,3 +94,14 @@ On home tab ( Use cards )
 * ionic cordova plugin add cordova-plugin-gyroscope
 * npm install @ionic-native/gyroscope
 https://www.overleaf.com/8379312238yysgybdjsctf
+
+##### To run on adroid phone 
+
+1. Setup Envirement variables
+  * ANDROID_HOME
+  * JAVA_HOME
+2. Run on phone
+  * Connect Device via USB
+  * Run command 
+    * ionic cordova  run android --device
+  

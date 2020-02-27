@@ -19,7 +19,7 @@ import { firebaseConfig } from "./environment";
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { UserService } from './user.service';
-import { Calendar, CalendarOriginal } from '@ionic-native/calendar';
+import {  CalendarOriginal } from '@ionic-native/calendar';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
@@ -42,7 +42,7 @@ import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestor
       useClass: IonicRouteStrategy,
     },
     UserService,
-    CalendarOriginal
+    DeviceOrientation
     
   ],
   bootstrap: [AppComponent]
