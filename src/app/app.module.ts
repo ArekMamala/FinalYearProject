@@ -7,6 +7,9 @@ import { SplashScreen } from "@ionic-native/splash-screen/ngx";
 import { DeviceMotion } from "@ionic-native/device-motion/ngx";
 import { DeviceOrientation } from "@ionic-native/device-orientation/ngx";
 
+// Vibration
+import { Vibration } from '@ionic-native/vibration/ngx';
+
 import { StatusBar } from "@ionic-native/status-bar/ngx";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -42,8 +45,8 @@ import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestor
       useClass: IonicRouteStrategy,
     },
     UserService,
-    //CalendarOriginal
-    DeviceOrientation
+    DeviceOrientation,
+    Vibration
     
   ],
   bootstrap: [AppComponent]

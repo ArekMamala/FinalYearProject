@@ -1,1 +1,25 @@
+#progress-circle {
+    transform: rotate(-90deg);
+}
 
+.timer-text{
+    transform: rotate(90deg);
+    transform-origin: center;
+    font-size: 36px;
+    text-anchor: middle;
+    font-weight: 600;
+    fill: #333;
+}
+
+.timerDisplay{
+    display: flex;
+    justify-content: center;
+}
+
+.timerDetails{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

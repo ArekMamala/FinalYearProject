@@ -105,3 +105,7 @@ https://www.overleaf.com/8379312238yysgybdjsctf
   * Run command 
     * ionic cordova  run android --device
   
+
+#### Vibration 
+ionic cordova plugin add cordova-plugin-vibration
+npm install @ionic-native/vibration

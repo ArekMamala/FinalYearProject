@@ -7,7 +7,57 @@
 </ion-header>
 
 <ion-content>
-  <!--<div full>
+  <div class="timerDetails">
+  <label >
+    <div class="text">Time Of Workout</div>
+    <div class = "test">
+    <select (change)="selectChangeHandler($event)">
+      <option value="5">5 minutes</option>
+      <option value="10">10 minutes</option>
+      <option value="15">15 minutes</option>     
+    </select>
+  </div>
+  </label>
+  <p><span>You selected: </span><b>{{selectedTime}}</b></p>
+  </div>
+  <div class="timerDisplay">
+  <svg
+    id="progress-circle"
+    width = "50vh"
+    height="50vh"
+    viewbox="0 0 200 200"
+    >
+    <linearGradient id ="linearColors1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color = "#ddd6f3"></stop>
+      <stop offset="100%" stop-color = "#faaca8"></stop>
+    </linearGradient>
+    
+    <circle
+      cx = "50%"
+      cy = "50%"
+      [attr.r]="circleR"
+      fill="none"
+      stroke="#f3f3f3"
+      stroke-width="12"   
+    />
+    <circle
+      cx = "50%"
+      cy = "50%"
+      [attr.r]="circleR"
+      fill="none"
+      stroke="url(#linearColors1)"
+      stroke-width="12"  
+      stroke-linecap="round"
+      [attr.stroke-dasharray]="circleDasharray"
+      [attr.stroke-dashoffset]="percentageOffset(percent | async )"
+      
+    />
+    <text x= "50%" y = "55%" class="timer-text">{{time | async }}</text>
+  </svg>
+  </div>
+ 
+
+  <div full>
     <h1>X: {{x}}</h1>
   </div>
   <div full>
@@ -40,12 +90,14 @@
   <div full>
     <h1>Starting Z: {{ters}}</h1>
   </div>
-!-->
+
   <ion-label>MAGNETION HEADING = {{magneticHeading}}</ion-label><br/><br/>
   <ion-label>TRUE HEADING = {{trueHeading}}</ion-label><br/><br/>
   <ion-label>TIMESTAMP = {{timestamp}}</ion-label><br/>
-    
-  <ion-button (click) = "startWatching()" expand="full">start watching</ion-button><br/><br/>
-  <ion-button (click) = "stopWatching()" expand="full">stop watching</ion-button>
+ 
 
 </ion-content>
+<ion-footer class="footer">
+  <ion-button *ngIf="state === 'stop'" expand="block" color="primary" (click)="startTimer(selectedTime)">Start Timer</ion-button>
+  <ion-button *ngIf="state === 'start'" expand="block" color="primary" (click)="stopTimer()">Stop Timer</ion-button>
+</ion-footer>
