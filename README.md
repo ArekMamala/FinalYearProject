@@ -107,5 +107,19 @@ https://www.overleaf.com/8379312238yysgybdjsctf
   
 
 #### Vibration 
-ionic cordova plugin add cordova-plugin-vibration
-npm install @ionic-native/vibration
+* ionic cordova plugin add cordova-plugin-vibration
+* npm install @ionic-native/vibration
+
+#### Calendar
+* ionic cordova plugin add cordova-plugin-calendar
+* npm install @ionic-native/calendar
+
+#### Lazy Loading Design Pattern 
+* consists of 2 components 
+  * indexComponent for login/signup & welcome 
+  page
+  * Home Component
+    * for the other pages such as 
+      * application-page, profile & workout
+* for more information visit this link below 
+  * https://www.9lessons.info/2019/05/angular-routing-with-lazy-loading.html

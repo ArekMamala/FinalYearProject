@@ -1,0 +1,77 @@
+<ion-toolbar color ="dark">
+  <ion-title text-center>
+    Pro-Box
+  </ion-title>
+</ion-toolbar>
+
+<ion-content padding>
+  <ion-slides pager = "true">
+    <ion-slide *ngFor="let slide of slider">
+      <img [src]="slide.image"/>
+      <h2 [innerHTML] = "slide.title"></h2>
+      <p [innerHTML] = "slide.description"></p>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-button>
+    Button
+  </ion-button>
+
+
+<!--section text-center margin-bottom>
+  <ion-icon style="font-size: 5em; color: white;" name="person"></ion-icon>
+  <h1 style="font-size: 1.4em; color: white;" no-margin>Welcome, <br>
+  Usman</h1>
+</section-->
+
+  <!--ion-row-->
+    <!--ion-col col-6>
+      <ion-card text-center padding color="primary">
+        <ion-icon style="font-size: 5em;" name="person"></ion-icon>
+        <h2>Profile</h2>
+      </ion-card>
+    </!--ion-col>
+    <ion-col col-6>
+      <ion-card text-center padding color="primary">
+        <ion-icon style="font-size: 5em;" name="trophy"></ion-icon>
+        <h2>Workouts</h2>
+      </ion-card>
+    </ion-col>
+  </ion-row-->
+  <ion-grid>
+  <ion-row>
+    <ion-col col-6>
+      <ion-card text-center padding color="primary">
+        <ion-icon style="font-size: 5em;" name="videocam"></ion-icon>
+        <h2>Record A Workout</h2>
+      </ion-card>
+    </ion-col>
+    <ion-col col-6>
+      <ion-card text-center padding color="primary">
+        <ion-icon style="font-size: 5em;" name="apps"></ion-icon>
+        <h2>Connected Apps</h2>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+
+    <ion-col col-6>
+      <ion-card text-center padding color="primary">
+        <ion-icon style="font-size: 5em;" name="logo-facebook"></ion-icon>
+        <h2>Social Media</h2>
+      </ion-card>
+    </ion-col>
+    <ion-col col-6>
+      <ion-card text-center padding color="primary">
+        <ion-icon style="font-size: 5em;" name="settings"></ion-icon>
+        <h2>App Settings</h2>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<div class="iframe-container">
+  <iframe padding width="956" height="538"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</ion-content>
+
