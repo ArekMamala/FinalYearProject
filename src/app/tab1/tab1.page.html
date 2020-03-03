@@ -6,6 +6,12 @@
   </ion-toolbar>
 </ion-header>
 
+<section text-center margin-bottom>
+  <ion-icon style="font-size: 5em; color: black;" name="person"></ion-icon>
+  <h1 style="font-size: 1.4em; color: black;" no-margin>Welcome<br>
+  </h1>
+</section>
+
 <!-- Segment with default selection -->
 <ion-segment (ionChange)="segmentChanged($event)" value="javascript">
   <ion-segment-button [routerLink]="['/tabs','tab2']">
@@ -31,6 +37,7 @@
         <p [innerHTML] = "slide.description"></p>
       </ion-slide>
     </ion-slides>
+    <br><br><br><br>
 
     <ion-card color="light">
       <ion-card-header>
@@ -45,11 +52,12 @@
     <ion-card-content>
       In this we will write intro for workouts
     </ion-card-content>
+    <img src="assets/boxing-stats.jpg">
     </ion-card>
 
     
     
-    <div class = "horizontal-cards">
+    <!--div class = "horizontal-cards"-->
 
       <ion-card color="light">
         <ion-card-header>
@@ -84,60 +92,10 @@
       <img src="assets/meals.jpg">
       </ion-card>
 
-    </div>
+    <!--/div-->
 
   
-  <!--section text-center margin-bottom>
-    <ion-icon style="font-size: 5em; color: white;" name="person"></ion-icon>
-    <h1 style="font-size: 1.4em; color: white;" no-margin>Welcome, <br>
-    Usman</h1>
-  </section-->
-  
-    <!--ion-row-->
-      <!--ion-col col-6>
-        <ion-card text-center padding color="primary">
-          <ion-icon style="font-size: 5em;" name="person"></ion-icon>
-          <h2>Profile</h2>
-        </ion-card>
-      </!--ion-col>
-      <ion-col col-6>
-        <ion-card text-center padding color="primary">
-          <ion-icon style="font-size: 5em;" name="trophy"></ion-icon>
-          <h2>Workouts</h2>
-        </ion-card>
-      </ion-col>
-    </ion-row-->
-    <ion-grid>
-    <ion-row>
-      <ion-col col-6>
-        <ion-card text-center padding color="primary">
-          <ion-icon style="font-size: 5em;" name="videocam"></ion-icon>
-          <h2>Record A Workout</h2>
-        </ion-card>
-      </ion-col>
-      <ion-col col-6>
-        <ion-card text-center padding color="primary">
-          <ion-icon style="font-size: 5em;" name="apps"></ion-icon>
-          <h2>Connected Apps</h2>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-    <ion-row>
 
-      <ion-col col-6>
-        <ion-card text-center padding color="primary">
-          <ion-icon style="font-size: 5em;" name="logo-facebook"></ion-icon>
-          <h2>Social Media</h2>
-        </ion-card>
-      </ion-col>
-      <ion-col col-6>
-        <ion-card text-center padding color="primary">
-          <ion-icon style="font-size: 5em;" name="settings"></ion-icon>
-          <h2>App Settings</h2>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
 
   <div class="iframe-container">
     <iframe padding width="956" height="538" [src]="sanitize(vid)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
