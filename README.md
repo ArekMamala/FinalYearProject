@@ -109,3 +109,9 @@ https://www.overleaf.com/8379312238yysgybdjsctf
 #### Vibration 
 ionic cordova plugin add cordova-plugin-vibration
 npm install @ionic-native/vibration
+
+
+### Font Installations
+npm i @fortawesome/angular-fontawesome @fortawesome/fontawesome-free
+npm i @fortawesome/angular-fontawesome @fortawesome/fontawesome-svg-core
+npm i @fortawesome/free-regular-svg-icons
