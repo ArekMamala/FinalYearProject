@@ -31,8 +31,6 @@ export class WelcomePage {
   isHidden = false;
   // User Information
   showInfo = true;
-  // Users email to display on screen
-  //fireBaseUser = firebase.auth().currentUser.email;
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController,
     public afAuth: AngularFireAuth, public user: UserService, public router: Router,
@@ -48,8 +46,8 @@ export class WelcomePage {
     try {
       //Using @fitness to trick firebase into thinking that the username is an email address
       const res = await this.afAuth.auth.createUserWithEmailAndPassword(username + '@fitness.com', inputPassword)
-      
-     // Creating a document and assigning value username
+
+      // Creating a document and assigning value username
       this.afstore.doc('user/${res.user.uid}').set({
         username
       })
@@ -96,7 +94,7 @@ export class WelcomePage {
         name: "username",
         id: "username",
         type: "email",
-        placeholder: "Username"
+        placeholder: "Email/Username"
       },
       {
         name: "password",
@@ -127,8 +125,6 @@ export class WelcomePage {
             this.isHidden = true;
             // This shows user information (you can do this on different page if you want)
             this.showInfo = false;
-            // Check if users email is correct
-            //console.log(this.fireBaseUser);
 
             // Setting service
             if (res.user) {

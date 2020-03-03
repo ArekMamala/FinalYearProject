@@ -12,6 +12,7 @@ export class ApplicationPagePage  {
   constructor(private dom: DomSanitizer, private router: Router) {
   }
 
+
   slider = [
     {
       title: '',
@@ -33,5 +34,7 @@ export class ApplicationPagePage  {
   sanitize(vid){
     return this.dom.bypassSecurityTrustResourceUrl(vid);
   }
+
+  
 
 }

@@ -4,6 +4,13 @@
   </ion-title>
 </ion-toolbar>
 
+<section text-center margin-bottom>
+  <ion-icon style="font-size: 5em; color: black;" name="person"></ion-icon>
+  <h1 style="font-size: 1.4em; color: black;" no-margin>Welcome<br>
+  </h1>
+</section>
+
+
 <ion-content padding>
   <ion-slides pager = "true">
     <ion-slide *ngFor="let slide of slider">
@@ -12,66 +19,68 @@
       <p [innerHTML] = "slide.description"></p>
     </ion-slide>
   </ion-slides>
+  <br><br><br><br>
 
-  <ion-button>
-    Button
-  </ion-button>
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>
+      Workouts
+    </ion-card-title>
+    <ion-card-subtitle>
+      Advanced, simple and sweet
+    </ion-card-subtitle>
+  </ion-card-header>
 
+  <ion-card-content>
+    In this we will write intro for workouts
+  </ion-card-content>
+  <img src="assets/boxing-stats.jpg">
+  </ion-card>
 
-<!--section text-center margin-bottom>
-  <ion-icon style="font-size: 5em; color: white;" name="person"></ion-icon>
-  <h1 style="font-size: 1.4em; color: white;" no-margin>Welcome, <br>
-  Usman</h1>
-</section-->
+  
+  
+  <!--div class = "horizontal-cards"-->
 
-  <!--ion-row-->
-    <!--ion-col col-6>
-      <ion-card text-center padding color="primary">
-        <ion-icon style="font-size: 5em;" name="person"></ion-icon>
-        <h2>Profile</h2>
-      </ion-card>
-    </!--ion-col>
-    <ion-col col-6>
-      <ion-card text-center padding color="primary">
-        <ion-icon style="font-size: 5em;" name="trophy"></ion-icon>
-        <h2>Workouts</h2>
-      </ion-card>
-    </ion-col>
-  </ion-row-->
-  <ion-grid>
-  <ion-row>
-    <ion-col col-6>
-      <ion-card text-center padding color="primary">
-        <ion-icon style="font-size: 5em;" name="videocam"></ion-icon>
-        <h2>Record A Workout</h2>
-      </ion-card>
-    </ion-col>
-    <ion-col col-6>
-      <ion-card text-center padding color="primary">
-        <ion-icon style="font-size: 5em;" name="apps"></ion-icon>
-        <h2>Connected Apps</h2>
-      </ion-card>
-    </ion-col>
-  </ion-row>
-  <ion-row>
+    <ion-card color="light">
+      <ion-card-header>
+        <ion-card-title>
+        Workouts
+      </ion-card-title>
+      <ion-card-subtitle>
+        Advanced, simple and sweet
+      </ion-card-subtitle>
+    </ion-card-header>
 
-    <ion-col col-6>
-      <ion-card text-center padding color="primary">
-        <ion-icon style="font-size: 5em;" name="logo-facebook"></ion-icon>
-        <h2>Social Media</h2>
-      </ion-card>
-    </ion-col>
-    <ion-col col-6>
-      <ion-card text-center padding color="primary">
-        <ion-icon style="font-size: 5em;" name="settings"></ion-icon>
-        <h2>App Settings</h2>
-      </ion-card>
-    </ion-col>
-  </ion-row>
-</ion-grid>
+    <ion-card-content>
+      In this we will write intro for workouts
+    </ion-card-content>
+
+    <img src="assets/fitness-girl.jpg">
+    </ion-card>
+
+    <ion-card color="light">
+      <ion-card-header>
+        <ion-card-title>
+        Meal Preperations
+      </ion-card-title>
+      <ion-card-subtitle>
+        Advanced, simple and sweet
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      In this we will write intro for workouts
+    </ion-card-content>
+    <img src="assets/meals.jpg">
+    </ion-card>
+
+  <!--/div-->
 
 <div class="iframe-container">
-  <iframe padding width="956" height="538"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe padding width="956" height="538" [src]="sanitize(vid)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-</ion-content>
 
+
+
+
+</ion-content>
