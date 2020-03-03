@@ -25,6 +25,9 @@ import { UserService } from './user.service';
 import {  CalendarOriginal } from '@ionic-native/calendar';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 
+
+import {FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
