@@ -9,3 +9,11 @@ import gzip
 
 # NEED TO MAKE DATABASE FOR THIS TO WORK
 
+jab = 0
+uppercut = 1
+hook = 2
+
+
+
+
+
