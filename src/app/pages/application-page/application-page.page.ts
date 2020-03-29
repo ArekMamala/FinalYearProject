@@ -9,7 +9,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./application-page.page.scss'],
 })
 export class ApplicationPagePage  {
+  wkClicked(){
+    this.router.navigate(['workouts.page'])
+  }
+
+
+
   constructor(private dom: DomSanitizer, private router: Router) {
+    
+
+
   }
 
 
@@ -17,23 +26,21 @@ export class ApplicationPagePage  {
     {
       title: '',
       description: '',
-      image: "assets/slide4.jpg"
+      image: "assets/Opener.jpg"
     },
     {
       title: '',
       description: '',
-      image: "assets/slide2.jpg"
+      image: "assets/MealPrep.jpg"
     },
     {
       title: '',
       description: '',
-      image: "assets/slide3.jpg"
+      image: "assets/TrainingImg.jpg"
     }
   ];
 
-  sanitize(vid){
-    return this.dom.bypassSecurityTrustResourceUrl(vid);
-  }
+  
 
   
 

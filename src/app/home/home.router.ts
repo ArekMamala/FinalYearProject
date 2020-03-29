@@ -21,6 +21,11 @@ const routes: Routes = [
             path:'applicationPage',
             loadChildren:() => import('../pages/application-page/application-page.module').then(
                 m => m.ApplicationPagePageModule)
+        },
+        {
+            path:'workoutsPage',
+            loadChildren:() => import('../pages/workouts/workouts.module').then(
+                m => m.WorkoutsPageModule)
         }
     ]
   }
