@@ -123,11 +123,3 @@ https://www.overleaf.com/8379312238yysgybdjsctf
       * application-page, profile & workout
 * for more information visit this link below 
   * https://www.9lessons.info/2019/05/angular-routing-with-lazy-loading.html
-ionic cordova plugin add cordova-plugin-vibration
-npm install @ionic-native/vibration
-
-
-### Font Installations
-npm i @fortawesome/angular-fontawesome @fortawesome/fontawesome-free
-npm i @fortawesome/angular-fontawesome @fortawesome/fontawesome-svg-core
-npm i @fortawesome/free-regular-svg-icons

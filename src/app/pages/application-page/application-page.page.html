@@ -12,6 +12,7 @@
 
 
 <ion-content padding>
+
   <ion-slides pager = "true">
     <ion-slide *ngFor="let slide of slider">
       <img [src]="slide.image"/>
@@ -75,12 +76,4 @@
     </ion-card>
 
   <!--/div-->
-
-<div class="iframe-container">
-  <iframe padding width="956" height="538" [src]="sanitize(vid)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-
-
-
 </ion-content>

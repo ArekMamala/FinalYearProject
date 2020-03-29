@@ -26,8 +26,9 @@ import { Calendar } from '@ionic-native/calendar/ngx';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 
 
-import {FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
+import { WorkoutPage } from './pages/workout/workout.page';
+import {HomePageModule} from './home/home.module';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -38,7 +39,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
     HttpClientModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    HomePageModule
+
   ],
   providers: [
     StatusBar,
@@ -49,8 +52,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
     },
     UserService,
     DeviceOrientation,
-    Vibration,    
-    Calendar
+    Vibration,
+    Calendar,
+    WorkoutPage
   ],
   bootstrap: [AppComponent]
 })
