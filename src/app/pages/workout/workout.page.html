@@ -10,9 +10,17 @@
     <div class="text">Time Of Workout</div>
     <div class = "test">
     <select (change)="selectChangeHandler($event)">
+      <option value="1">1 minutes</option>
+      <option value="2">2 minutes</option>
+      <option value="3">3 minutes</option> 
+      <option value="4">4 minutes</option>
       <option value="5">5 minutes</option>
-      <option value="10">10 minutes</option>
-      <option value="15">15 minutes</option>     
+      <option value="6">6 minutes</option> 
+      <option value="7">7 minutes</option>
+      <option value="8">8 minutes</option>
+      <option value="9">9 minutes</option>   
+      <option value="10">10 minutes</option>     
+  
     </select>
   </div>
   </label>
@@ -54,43 +62,41 @@
   </svg>
   </div>
  
-  <div full>
-    <h1>Puches: {{punch}}</h1>
-  </div>
-  <div full>
-    <h1>Jabs: {{jab}}</h1>
-  </div>
-  <div full>
+  <div full class="punchDetails" [hidden]=isShown>
+    <h1>Punches: {{punch}}</h1>
+     <h1>Jabs: {{jab}}</h1>
+    <h1>Uppercuts: {{uppercut}}</h1>
     <h1>{{punchName}}</h1>
   </div>
-
-  <div full>
+<!--
+  <div full class="punchDetails">
     <h1>X: {{x}}</h1>
   </div>
-  <div full>
+  <div full class="punchDetails">
     <h1>Y: {{y}}</h1>
   </div>
-  <div full>
+  <div full class="punchDetails">
     <h1>Z: {{z}}</h1>
-  </div>
- 
+  </div>-->
+
+ <!--
   <button ion-button full (click)="start()">Start Listening</button>
   <button ion-button full (click)="stop()">Stop Listening</button>
   <button ion-button full (click)="startingPosition()">Starting Position</button>
-
-  <div full>
+  
+  <div full class="punchDetails">
     <h1>Starting X: {{xStart}}</h1>
   </div>
-  <div full>
+  <div full class="punchDetails">
     <h1>Starting Y: {{yStart}}</h1>
   </div>
-  <div full>
+  <div full class="punchDetails">
     <h1>Starting Z: {{zStart}}</h1>
   </div>
-  <div full>
+  <div full class="punchDetails">
     <h1>Starting TH: {{thStart}}</h1>
   </div>
-  <div full>
+  <div full class="punchDetails">
     <h1>Starting MH: {{mhStart}}</h1>
   </div>
   
@@ -102,10 +108,22 @@
   <ion-label>MAGNETION HEADING = {{magneticHeading}}</ion-label><br/><br/>
   <ion-label>TRUE HEADING = {{trueheading}}</ion-label><br/><br/>
   <ion-label>TIMESTAMP = {{timestamp}}</ion-label><br/>
- 
+  <ion-label>{{totalTime}}</ion-label><br/>
+-->
+
+<ion-card class="punchDetails" [hidden]=isHidden > 
+  <div full >
+    <h2>Workout Feedback</h2>
+    <h3>date: {{ timestamp }} </h3>
+    <h3>Total punches today: {{ totalPunches }} </h3>
+    <h3>Average punches per minute: {{ punchespermin }} </h3>
+    <h3>Number of jabs Today: {{ totJabs }} </h3>
+    <h3>number of Uppecuts Today: {{ totUppercuts }} </h3>
+  </div>
+</ion-card>
 
 </ion-content>
 <ion-footer class="footer">
-  <ion-button *ngIf="state === 'stop'" expand="block" color="primary" (click)="startTimer(selectedTime)">Start Timer</ion-button>
-  <ion-button *ngIf="state === 'start'" expand="block" color="primary" (click)="stopTimer()">Stop Timer</ion-button>
+  <ion-button *ngIf="state === 'stop'" expand="block" color="primary" (click)="start()" >Start Timer</ion-button>
+  <ion-button *ngIf="state === 'start'" expand="block" color="primary" (click)="stop()">Stop Timer</ion-button>
 </ion-footer>

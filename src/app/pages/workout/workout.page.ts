@@ -32,6 +32,16 @@ export class WorkoutPage  {
   punchName: string;
   test: number;
 
+  totalTime: number;
+  totalPunches: number;
+  punchespermin: number;
+  totJabs: number;
+  totUppercuts: number;
+
+  isHidden = true;
+  isShown = false
+  count: boolean = false;
+
   id: any;
   idStartingPosition: any; 
 
@@ -45,7 +55,7 @@ export class WorkoutPage  {
   timer: number;
   interval;
   state: 'start'| 'stop' = 'stop';
-  selectedTime: number = 5;
+  selectedTime: number = 1;
   circleR = circleR;
   circleDasharray = circleDasharray;
 
@@ -57,13 +67,21 @@ export class WorkoutPage  {
     this.xStart = 0;
     this.yStart = 0;
     this.zStart = 0;
-    this.punch = 0 ;
     this.thStart = 0;
     this.mhStart = 0;
     this.jab=0;
-    
-
+    this.punch = 0;
+    this.uppercut = 0;
+    this.totalPunches = this.totpunches();
+    this.totalTime = 0;
   }
+
+    getTotalTime(time: number){
+      this.totalTime += time;
+      return this.totalTime;
+      console.log(this.totalTime);
+    }
+
   selectChangeHandler (event: any) {
     //update the ui
     this.selectedTime = event.target.value;
@@ -77,6 +95,8 @@ export class WorkoutPage  {
     this.interval = setInterval(()=> {
       this.updateTimeValue()
     }, 1000);
+    
+    this.getTotalTime(duration);
   }
 
   stopTimer(){
@@ -109,16 +129,24 @@ export class WorkoutPage  {
     if (this.timer < -1) {
       this.startTimer(this.selectedTime);
       this.vibration.vibrate([1000, 500, 1000]);
+      this.stop();
     } 
 
-    
   }
 
   start(){
+    
+    this.isHidden = true;
+    this.isShown = false;
+    
+    this.startTimer(this.selectedTime);
+    this.startingPosition();
+    this.resetValues();
+    
     try {
       var option: DeviceMotionAccelerometerOptions = 
       {
-        frequency: 1000
+        frequency: 250
       };
       this.id = this.deviceMotion.watchAcceleration(option).subscribe((acc: DeviceMotionAccelerationData)=>
       {
@@ -126,11 +154,28 @@ export class WorkoutPage  {
         this.y =  acc.y;
         this.z =  acc.z;      
         
-        if ((this.zStart - this.z >= 3) && ((this.thStart - this.trueheading >= 50) || (this.thStart - this.trueheading <= 220)) ) {
+
+        if (((this.zStart - this.z >= 6) && (this.yStart - this.y >= 8 )) && (( this.z >=-14  && this.z <=-6 ))) {
           this.punch += 1;   
           this.jab+=1; 
           this.punchName = "JAB";   
-       }
+        }else if ((this.y >=-1  && this.y <= 3) && ( this.x >=-12  && this.x <=-8 )) {
+          this.punch += 1;   
+          this.uppercut+=1; 
+          this.punchName = "UPPERCUT";   
+        }
+
+/*
+        if ((this.zStart - this.z >= 6) && (this.yStart - this.y >= 8) ) {
+          this.punch += 1;   
+          this.jab+=1; 
+          this.punchName = "JAB";   
+        }else if ((this.xStart - this.x <= 6) && (this.yStart - this.y >= 7 )) {
+          this.punch += 1;   
+          this.uppercut+=1; 
+          this.punchName = "UPPERCUT";   
+        }  
+*/
        console.log(this.punch);
   
       });
@@ -156,15 +201,37 @@ export class WorkoutPage  {
     },(err)=>{
       alert(JSON.stringify(err));
     })
-
   }
 
-  stop(){
-    this.id.unsubscribe();
+  totpunches(){
+    this.totalPunches = this.punch;
+    console.log(" total punches " + this.totalPunches);
+    return this.totalPunches ;
+  } 
+
+  punchesPerTime(){
+    this.punchespermin = this.totalPunches / this.selectedTime;
+    console.log(" punches per minute "+ this.selectedTime + " " + this.punchespermin);
+    return this.punchespermin; 
+  } 
+  
+  allJabs(){
+    this.totJabs += this.jab; 
+    console.log("all jabs "+this.jab);
+    return this.totJabs;
+  }
+
+  allUppercuts(){
+    this.totUppercuts += this.uppercut; 
+    console.log("all uppercuts "+ this.uppercut);
+    return this.totUppercuts;
+  }
+
+  resetValues(){
+    
     this.x = 0;
     this.y = 0;
     this.z = 0;
-    this.punch = 0;
     this.timestamp = "";
     this.xStart = 0;
     this.yStart = 0;
@@ -173,6 +240,26 @@ export class WorkoutPage  {
     this.uppercut = 0;
     this.hook = 0;
     this.punchName = "";
+    this.punch =0;
+    this.totalTime = 0;
+    this.totalPunches = 0;
+    this.punchespermin =0;
+    this.totJabs = 0;
+    this.totUppercuts = 0; 
+
+
+  }
+  stop(){
+    this.totpunches();
+    this.punchesPerTime();
+    this.allJabs();
+    this.allUppercuts();
+    this.stopTimer();
+
+    this.isHidden = false;
+    this.isShown = true;
+
+    this.id.unsubscribe();
 
     if (this.watch!= null || this.id != null) {
       this.watch.unsubscribe();
@@ -184,12 +271,13 @@ export class WorkoutPage  {
 
   startingPosition() {
     try {
+      
       var startReload: DeviceMotionAccelerometerOptions =
       {
         frequency: 500000000
       };
 
-      this.watch = this.deviceOrientation.watchHeading().subscribe((heading)=>{
+      this.watch = this.deviceOrientation.watchHeading(startReload).subscribe((heading)=>{
         this.thStart = heading.trueHeading;
         this.mhStart = heading.magneticHeading;
       });

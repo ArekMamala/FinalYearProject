@@ -23,3 +23,16 @@
     justify-content: center;
     flex-direction: column;
 }
+
+.punchDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.punchName{
+    display: flex;
+    justify-content: center;
+    color: red;
+}

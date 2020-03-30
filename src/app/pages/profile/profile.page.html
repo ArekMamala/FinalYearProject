@@ -7,9 +7,46 @@
 <ion-content>
   <ion-card >
     <ion-button (click)="logOut()">Log Out</ion-button>
-    User information
-    <div full>
-      <h1> {{fireBaseUser}}</h1>
-    </div>
+      User information
+      <h1>Username: {{fireBaseUser}}</h1>
+      </ion-card>
+
+  <ion-card *ngFor = "let ev of events">
+    <ion-card-header>
+      {{ ev.title }}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list no-lines >
+        <ion-item>
+          <ion-icon name="calendar"></ion-icon> Start: {{ ev.startDate}}
+        </ion-item>
+  
+        <ion-item>
+          <ion-icon name="calendar"></ion-icon> End: {{ ev.endDate }}
+        </ion-item>
+  
+        <ion-item>
+          <ion-icon name="locate"></ion-icon> Start: {{ ev.location}}
+        </ion-item>
+  
+      </ion-list>
+    </ion-card-content>
+  
   </ion-card>
+
+  <ion-list>
+    <ion-item *ngFor="let cal of calendars" tappable>
+      <button ion-button  (click)="addEvent(cal)">
+        <ion-icon name="add"></ion-icon>
+        Add Event
+      </button>
+      {{cal.name}}
+      <p>{{cal.type}}</p>
+    </ion-item>
+  </ion-list>
+
+  
 </ion-content>
+<ion-footer class="footer">
+  <ion-button  expand="block" color="primary" (click)="updateValues()">updateValues</ion-button>
+</ion-footer>
