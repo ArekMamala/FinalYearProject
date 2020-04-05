@@ -19,6 +19,10 @@ const routes: Routes = [
   },  {
     path: 'day1',
     loadChildren: () => import('./day1/day1.module').then( m => m.Day1PageModule)
+  },
+  {
+    path: 'meals',
+    loadChildren: () => import('./meals/meals.module').then( m => m.MealsPageModule)
   }
 
 

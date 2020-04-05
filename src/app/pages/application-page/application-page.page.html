@@ -1,7 +1,12 @@
 <ion-toolbar color ="dark">
   <ion-title text-center>
-    Pro-Box
+    <div class="w3-container w3-center w3-allerta">
+    <p class="w3-large">PRO-BOX</p>
+    </div>
   </ion-title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </ion-toolbar>
 
 <section text-center margin-bottom>
@@ -25,10 +30,10 @@
   <ion-card color="white">
     <ion-tab-button href="workouts">
     <ion-card-header>
-      <ion-card-title>
+      <ion-card-title style="text-align: center;">
         Workouts
       </ion-card-title>
-      <ion-card-subtitle>
+      <ion-card-subtitle style="color: darkolivegreen;">
         Fast | Convenient | Affordable
       </ion-card-subtitle>
     </ion-card-header>
@@ -39,36 +44,30 @@
 </ion-tab-button>
 </ion-card>
 
-  
-  
- 
 
-    <ion-card color="white">
-      <ion-card-header>
-        <ion-card-title>
-        Meal Preperations
+<div class ="center">
+  <div class="w3-panel w3-sand w3-leftbar">
+    <p><i class="fa fa-quote-right w3-xxlarge w3-opacity"></i><br>
+    <i class="w3-serif w3-xlarge">Those who fail to plan, plan to fail</i></p>
+    <p>Winston Churchill</p>
+  </div> 
+  </div>
+
+  
+  <ion-card color="white">
+    <ion-tab-button href="meals">
+    <ion-card-header>
+      <ion-card-title style="text-align: center;">
+        7 Day Meal Plan
       </ion-card-title>
-      <ion-card-subtitle>
-        Advanced, simple and sweet
+      <ion-card-subtitle style="color: darkred;">
+        Healthy | Nutritional | Lifestyle
       </ion-card-subtitle>
     </ion-card-header>
-
     <ion-card-content>
-      In this we will write intro for workouts
-    </ion-card-content>
-    <img src="assets/meals.jpg">
-    </ion-card>
-
-  <!--/div-->
-<<<<<<< HEAD
-
-<!--div class="iframe-container">
-  <iframe padding width="956" height="538" [src]="sanitize(vid)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div-->
-
-
-
-
-=======
->>>>>>> e454e3eb7edb52b5271c48af6f4cb2811ac0a3ca
+      This months diet is next month's body.
+  </ion-card-content>
+  <img src="assets/eat-smart.png">
+</ion-tab-button>
+</ion-card>
 </ion-content>
