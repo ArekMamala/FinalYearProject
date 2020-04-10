@@ -19,16 +19,50 @@
 \\
 https://github.com/ArekMamala/FinalYearProject
 
-\textbf{Acknowledgements}
+\subsection*{Abstract}
+\\
+Sports and technology are two words which praise one another and have been endeavouring all through the earlier decades. With such exceptional increment in technology with sports it prospects on to becoming the apex of current life use. 
+As such, why not apply such concept of technology with sports working hand in hand and build an everyday application for any ordinary persons usage.
+
+The main objective that we set for ourselves as designers and developers of this projects was to see if we could train the application using machine learning in an Angular environment, while passing 
+data to and from the application remotely using Keras in conjunction with Jupyter Notebooks, to achieve a successful calculation and reading of the users hand movement, ie. a jab punch.
+
+The ultimate goal of our Final Year project is develop a four tier application using Keras machine learning, our own server deployed on the cloud, an online database and using the angular and ionic development environment.
+We set out to create and deploy an android application on the official Android store, we had decided this project should consist of three main sections. 
+First and foremost it should have a valid log in and sign up options that should be connected to a database which stores and hashes the users information due to the security reason. 
+Secondly there should be a workout and meal plan available to the user which shall be stored and loaded from a database that is deployed in a server on the cloud.
+The third part of the application will consist of a workout section, the section lets the user practice specific workouts, the applicant will be timed and results will be printed out after every workout. 
+The idea of the user having the choice to log in for their results and in formations of all completed exercises are going to be downloaded from the database.
+
+\section*{Authors}
+\\
+The authors of this project are Usman Sattar, Sammar Tahir and
+Arkadiusz Mamala, who are three fourth year students studying for a
+Bachelors of Science Honours Degree in Computing in Software
+Development in the GMIT Dublin Road campus.
+    
+\subsection*{Acknowledgements}
 \\
 The authors would like to thank our supervisors Gerard Harrison, Martin Kenirons and Kevin O’Brien for the time and effort they put into helping us with our project, as well as all of the tips and troubleshooting assistance they supplied. 
 We would also like to thank the lecturers and faculty of the GMIT Dublin Road campus, in particular Dr. John Healy, whom we found to be a constant source of useful information on programming practices, life in industry and linking the nuances of technology and modern life to ancient Greek parables.
 
 \section{Introduction}
 For our project we wanted to make a wearable wristband that allows a user to keep track of how many punches hit an object, tracking the speed of movement and calculating the beats per minute whilst continuously punching . We also want to connect the wristband to a laptop/phone so the user is able to get all his information tracked and displayed in an elegant and sleek app.
-\\
-\textbf{Reason for Choosing Project:}
 
+\subsection{Overview}
+This chapter will outline the context and scope of the project. It
+will explain the objectives we had for the project and therefore the specifications for the software, additionally as detail our initial ideas and thoughts
+behind the look and it’s implementation.
+
+\subsection{Ideas}
+At the beginning of 4Th and the last year in Software Development, we were given the task of coming up with an idea worthy and suitable for a level 8 final year project, we knew that whatever we needed to come up with must have certain requirements, using multiple different technologies, languages and it had to challenge our own knowledge and skills that we learned in previous years.
+
+Our breakthrough had come few weeks into to college year, we had been practicing for a community event it had been a 5 kilometers run or walk, every time we'd exercise we would compare our results on mobile devices or fitbits, it was at that point we came across to the thought of connecting sports and technology and style an application in this current area. 
+
+We knew that running was the foremost popular exercise which was technologized therefore it had been a path we didn't want to travel down. Finally after long discussions we decided to develop a boxing related project counting punches and coming back with results.
+We needed to find the right environment for this application, due to reasons such as the fact that we had the option to use angular and ionic in previous years modules we had never really delved into the environment in much detail, and thus we were very interested in the environment and learning much more of it
+
+\subsection{Reason for Choosing Project}
 The reasons that we decided to develop this application is because we find this idea very interesting. Sports is a topic that we are all involved in inside of college and out. We came up with this idea when we were at a boxing class when we couldn't decide who had more power. It’s a project that we feel will challenge us in developing it and get it working the way we have designed it.
 \\
 \textbf{The technologies we plan on using are:}
@@ -39,8 +73,8 @@ The reasons that we decided to develop this application is because we find this 
 \item{Javascript/C+}
 \item{Google Drive}
 \end{itemize}
-\subsection*{Architecture}
 
+\subsection{The Application}
 The application on the phone is going to work with user control. The application is going to count punches, update data sheet, calculate the BPM of user while punching. This app is going to be an alternative to the research of the wearable device.
 \\
 \textbf{User will have three options within the application:}
@@ -50,23 +84,16 @@ The application on the phone is going to work with user control. The application
 \item Open data log sheet to view their history. To view their progression.
 \end{itemize}
 
-\subsection*{Work Allocation}
-We are allocating this project into three sections.
-\textbf{First Step:}
+\subsection{Scope}
+\subsection{Objectives}
+\subsection{Chapter Summaries}
+\subsection{GitHub Repository Summaries}
 
-Firstly we are going to start our research. We are going to deeply research in how this wearable device is going to work and what it takes to develop this new piece of technology. We need to understand what language is going to be used in constructing this. We need to know what sensors are required and how all data is going to be recorded.
-\\
-\textbf{Second Step:}
 
-During the term our research is going to be a piece of document in how this wearable device can be achieved and possible drawing and animations of how it may work. But to back up our research, we need a physical piece that we can show and present. So we as a group decided to construct an application that is downloadable on mobile phone. This phone application is an alternative to the wearable device. The application is going to record the number of punches. The application is going to record and store data. For example is it going to store the number of punches under a certain amount of time.
-\\
-\textbf{Third Step:}
-
-Whilst two members of the team are constructing the application. One person is going to specifically manage the database. They will have the responsibility to create the AWS account and link it up to the database. Overall, they are responsible for the whole database section of this project and to link it up to the application, that is works efficiently.
 
 \section{Research}
 
-\subsection*{Artificial Neural Network}
+\subsection{Artificial Neural Network}
 In the oxford dictionary it says, “artificial intelligence is an area of study concerned with making computers copy intelligent human behaviour \cite{knowles2006oxford}.” If you google the question that I just asked, you’ll get something like “the theory and development of computer systems able to perform tasks normally requiring human intelligence, such as visual perception, speech recognition, decision-making, and translation between languages.”
 
 To really understand what Artificial intelligence (AI) is, we first must know what Intelligence is. When people talk about intelligence, they identify it with “the ability to solve hard problems.” Some people say it’s “Maybe it is too early
@@ -107,7 +134,7 @@ iris
 \end{verbatim}
 I wanted to do something similar to this using the x,y,z axis on the device and the accelerometer and sorting them into the three types of punches the device would register. I've learnt that by training a neural network with these values and telling it the type of punch it is I can then build a neural network than can reference from new values what type of punch is thrown. The dataset that I'm going to make will contain four values and the type of punch it should be. The punch will be classified as 0, 1 or 2.
 
-\section*{How is physics applied to boxing}
+\subsection*{How is physics applied to boxing}
 Physics occurs in punching because of energy. Person uses energy in order for a punch to be carried out. That is why, as well as energy we need momentum, work, power, and velocity. Before a boxer punches, he has potential energy which is stored energy. Once, the boxer begins to punch potential energy turns into kinetic energy.
 
 Boxing is more than the brutal beating up of one another; it is a sport that applies many physics laws. If a fighter uses physics correctly, he will likely get the victory; but if he does not, he will probably lose.
@@ -126,7 +153,37 @@ What is Velocity? The speed of something in a given direction.
 
 \includegraphics[scale=.3]{Velocity.jpeg}
 
+\section{Methodology}
+\subsection{Wrok allocation}
+We are allocating this project into three sections.
+\textbf{First Step:}
 
+Firstly we are going to start our research. We are going to deeply research in how this wearable device is going to work and what it takes to develop this new piece of technology. We need to understand what language is going to be used in constructing this. We need to know what sensors are required and how all data is going to be recorded.
+\\
+\textbf{Second Step:}
+
+During the term our research is going to be a piece of document in how this wearable device can be achieved and possible drawing and animations of how it may work. But to back up our research, we need a physical piece that we can show and present. So we as a group decided to construct an application that is downloadable on mobile phone. This phone application is an alternative to the wearable device. The application is going to record the number of punches. The application is going to record and store data. For example is it going to store the number of punches under a certain amount of time.
+\\
+\textbf{Third Step:}
+
+Whilst two members of the team are constructing the application. One person is going to specifically manage the database. They will have the responsibility to create the AWS account and link it up to the database. Overall, they are responsible for the whole database section of this project and to link it up to the application, that is works efficiently.
+
+\subsection{Deployment}
+We decided to android for developing our application. We choose android because the ease of use and developing. Android is one of many mobile operating systems based on the Linux kernel. Android was announced in Sept 2008 and has now become one of the most popular mobile operating system. Developing an app for android is simple using android studio and ionic. This is why we also choose ionic for our application. 
+
+To deploy an app in the play store we'd need to;
+\\
+* Understand the Developer Program: \\https://play.google.com/about/developer-content-policy/
+
+Following these guidelines we keep us in good standing with google play store and most importantly keep our users safe and protected. An example of this would be, our app should only request permissions that are only used for core features of the app while keeping clear of what personal data we use.
+\\
+* Test against the quality guidelines:\\ https://developer.android.com/docs/quality-guidelines
+
+This will be tested with our test cases.
+ 
+\section{System Design}
+
+\section{Conclusion}
 
 % references section
 \bibliographystyle{plain}
