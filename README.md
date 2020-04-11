@@ -70,9 +70,17 @@ While two members of the team are constructing the application, one person is go
 `npm install @ionic-native/gyroscope`
 
 #### capacitor
-* npm install --save @capacitor/core @capacitor/cli
-* usefull link for the capacitor explaining it and steps
-* https://capacitor.ionicframework.com/docs/getting-started/
+`npm install --save @capacitor/core @capacitor/cli`
+usefull link for the capacitor explaining it and steps: https://capacitor.ionicframework.com/docs/getting-started/
+
+
+#### Vibration 
+`ionic cordova plugin add cordova-plugin-vibration`
+`npm install @ionic-native/vibration`
+
+#### Calendar
+`ionic cordova plugin add cordova-plugin-calendar`
+`npm install @ionic-native/calendar`
 
 
 ##### Run this if you have any errors with .json file types
@@ -90,10 +98,16 @@ On home tab ( Use cards )
 * After workout test puch per minute
 
 ##### Overleaf
-
-* ionic cordova plugin add cordova-plugin-gyroscope
-* npm install @ionic-native/gyroscope
 https://www.overleaf.com/8379312238yysgybdjsctf
+We should now do work under the following heading:
+* Introduction
+* Methodolgy
+* Technology Review 
+* System Design
+* System Evaluation
+* Conclusion
+<br>
+Please add what you written for to the wiki and add what you are writing about the project section. This is to ensure that we all keep track of what work we do. Please also update the laTeX files when adding information to overleaf.
 
 ##### To run on adroid phone 
 
@@ -104,15 +118,6 @@ https://www.overleaf.com/8379312238yysgybdjsctf
   * Connect Device via USB
   * Run command 
     * ionic cordova  run android --device
-  
-
-#### Vibration 
-* ionic cordova plugin add cordova-plugin-vibration
-* npm install @ionic-native/vibration
-
-#### Calendar
-* ionic cordova plugin add cordova-plugin-calendar
-* npm install @ionic-native/calendar
 
 #### Lazy Loading Design Pattern 
 * consists of 2 components 

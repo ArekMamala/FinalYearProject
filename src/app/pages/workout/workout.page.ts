@@ -146,7 +146,7 @@ export class WorkoutPage  {
     try {
       var option: DeviceMotionAccelerometerOptions = 
       {
-        frequency: 250
+        frequency: 170
       };
       this.id = this.deviceMotion.watchAcceleration(option).subscribe((acc: DeviceMotionAccelerationData)=>
       {
@@ -155,7 +155,7 @@ export class WorkoutPage  {
         this.z =  acc.z;      
         
 
-        if (((this.zStart - this.z >= 6) && (this.yStart - this.y >= 8 )) && (( this.z >=-14  && this.z <=-6 ))) {
+        if ( (( this.z >=-13  && this.z <=-7 ))) {
           this.punch += 1;   
           this.jab+=1; 
           this.punchName = "JAB";   
