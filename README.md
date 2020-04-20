@@ -50,6 +50,10 @@ While two members of the team are constructing the application, one person is go
 
 ## Imports 
 
+#### MYSQL Imports
+`npm install mysql`
+`npm install cors`
+
 #### Enable Cordova
 `ionic integrations enable cordova --add`
 
