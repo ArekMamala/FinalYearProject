@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>day2</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <table *ngFor="let post of posts">
+    <tr class="test">
+      <th>Exercise</th>
+      <th>Sets</th>
+      <th>Reps</th>
+      <th>Rest</th>
+    </tr>
+    <tr class="test">
+      <td>{{post.exercise}}</td>
+      <td>{{post.sets}}</td>
+      <td>{{post.reps}}</td>
+      <td>{{post.rest}}</td>
+    </tr>
+  </table>
+
+</ion-content>

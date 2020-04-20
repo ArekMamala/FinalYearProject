@@ -15,7 +15,7 @@ var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'workouts'
+    database: 'workout'
 });
 
 // Connecting to the database
@@ -43,8 +43,29 @@ app.use(function (req, res, next) {
     next();
 });
 
+// Getting information from the database
+app.get('/api/day1', function (req, res){
+  days = 'Day-1';
+  sql = 'SELECT * FROM workouts WHERE days = ' + connection.escape(days);
+  connection.query(sql, function (error, results, fields) {
+      if (error) throw error;
+      console.log(results);
+      res.json(results);
+  });
+})
 
-var Workout1 = {
+app.get('/api/day2', function (req, res){
+  days = 'Day-2';
+  sql = 'SELECT * FROM workouts WHERE days = ' + connection.escape(days);
+  connection.query(sql, function (error, results, fields) {
+      if (error) throw error;
+      console.log(results);
+      res.json(results);
+  });
+})
+
+
+/*var Workout1 = {
     getWorkout: function (callback) {
       // run query
       return connection.query('SELECT * FROM workoutone', callback);
@@ -63,6 +84,26 @@ var Workout1 = {
   });
 
 
+
+  var Workout2 = {
+    getWorkout: function (callback) {
+      // run query
+      return connection.query('SELECT * FROM workouttwo', callback);
+    }
+  }
+  
+  // function to get data from accom table
+  app.get('/api/workout', function (req, res) {
+    Workout2.getWorkout(function (err, data) {
+      if (err) res.status(400).send(err)
+  
+      // Complete - send callback
+      res.send(data);
+      console.log(data);
+    });
+  });
+
+*/
 // Listing to port number 8081 @ http://localhost:8081/
 app.listen(8081, function () {
     console.log('connected to port 8081')

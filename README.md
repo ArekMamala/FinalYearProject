@@ -50,7 +50,7 @@ While two members of the team are constructing the application, one person is go
 
 ## Imports 
 
-#### MYSQL Imports
+#### Server/MYSQL
 `npm install mysql`
 `npm install cors`
 

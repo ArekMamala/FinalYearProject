@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../services/post.service';
 import { Router } from '@angular/router';
+import { Post } from 'src/post.model';
 
 @Component({
   selector: 'app-day1',
@@ -10,13 +11,21 @@ import { Router } from '@angular/router';
 export class Day1Page implements OnInit {
   posts: any = [];
 
-  constructor(private api: PostService, private router: Router) { }
+  constructor(private ps: PostService) { }
+    //private api: PostService, private router: Router
 
   ngOnInit() {
-    this.api.getPostsData().subscribe(data => {
-      this.posts = data;
-      console.log(this.posts)
-    });
-  }
+    //this.api.getPostsData().subscribe(data => {
+     // this.posts = data;
+      //console.log(this.posts)
+    //});
+  //}
+
+//}
+
+this.ps.getPostsDataDay2().subscribe(data => {
+  this.posts = data;
+});
+}
 
 }

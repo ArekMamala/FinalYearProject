@@ -29,6 +29,11 @@ import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestor
 import { WorkoutPage } from './pages/workout/workout.page';
 import {HomePageModule} from './home/home.module';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatInputModule } from '@angular/material/input';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -40,7 +45,11 @@ import {HomePageModule} from './home/home.module';
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    HomePageModule
+    HomePageModule,
+    BrowserAnimationsModule,
+      MatExpansionModule, MatInputModule,
+      FormsModule,
+      ReactiveFormsModule
 
   ],
   providers: [

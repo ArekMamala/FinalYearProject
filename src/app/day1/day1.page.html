@@ -3,19 +3,80 @@
     <ion-title>Day 1</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
+
+
+  <table *ngFor="let post of posts">
+    <tr class="test">
+      <th>Exercise</th>
+      <th>Sets</th>
+      <th>Reps</th>
+      <th>Rest</th>
+    </tr>
+    <tr class="test">
+      <td>{{post.days}}</td>
+      <td>{{post.exercise}}</td>
+      <td>{{post.set}}</td>
+      <td>{{post.rep}}</td>
+      <td>{{post.rest}}</td>
+    </tr>
+  </table>
+
+
+
+<!--mat-expansion-panel [expanded]="false" >
+    
+  <mat-expansion-panel-header> 
+    <br><br> {{ post.exercise }} &nbsp; &nbsp; {{ post.sets }}
+  </mat-expansion-panel-header>
+
+
   
-  <ion-item *ngFor="let post of posts"><!-- calls functions -->
-  <!--mat-expansion-panel [expanded]="false" *ngFor="let post of posts"--> 
-  <p>{{ post.exercise }}</p>    
-  <br><br>
-  <p>{{ post.sets }}</p>
-  <p>{{ post.reps }}</p>
-  <p>{{ post.rest }}</p>
-  </ion-item>
-   
+ 
+
+  
+</mat-expansion-panel-->
 </ion-content>
+
+  
+
+  
+  <!--ion-item *ngFor="let post of posts"--><!--calls functions -->
+  <!--mat-expansion-panel [expanded]="false" *ngFor="let post of posts"--> 
+  <!--p>{{ post.exercise }}  {{ post.sets }}</p>    
+  <br><br>
+  
+  <p>{{ post.reps }}</p>
+  <p>{{ post.rest }}</p-->
+
+    <!--ion-row style="border-bottom: groove;">
+      <ion-col col-4>
+      <ion-label> <b> {{ post.exercise }}</b></ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-row style="border-bottom: groove;">
+    <ion-col col-4>
+      <ion-label >{{ post.sets }}</ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-row style="border-bottom: groove;">
+      <ion-col col-4>
+      <ion-label >{{ post.reps }}</ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-row style="border-bottom: groove;">
+    <ion-col col-4>
+      <ion-label >{{ post.rest }}</ion-label>
+    </ion-col>
+  </ion-row>
+  
+  </ion-item-->
+
+
+  
 
 
 
