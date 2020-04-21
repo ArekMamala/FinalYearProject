@@ -10,12 +10,24 @@ export class PostService {
 
   constructor(private http: HttpClient) { }
 
-  getPostsData(): Observable<any> {
+  getPostsDataDay1(): Observable<any> {
     return this.http.get("http://localhost:8081/api/day1");
   }
 
   getPostsDataDay2(): Observable<any> {
     return this.http.get("http://localhost:8081/api/day2");
+  }
+
+  getPostsDataDay4(): Observable<any> {
+    return this.http.get("http://localhost:8081/api/day4");
+  }
+
+  getPostsDataDay5(): Observable<any> {
+    return this.http.get("http://localhost:8081/api/day5");
+  }
+
+  getPostsDataDay7(): Observable<any> {
+    return this.http.get("http://localhost:8081/api/day7");
   }
 
   private posts: Post[] = [];

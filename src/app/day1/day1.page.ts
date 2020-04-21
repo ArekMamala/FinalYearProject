@@ -23,7 +23,7 @@ export class Day1Page implements OnInit {
 
 //}
 
-this.ps.getPostsDataDay2().subscribe(data => {
+this.ps.getPostsDataDay1().subscribe(data => {
   this.posts = data;
 });
 }

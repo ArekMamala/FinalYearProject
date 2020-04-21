@@ -64,6 +64,36 @@ app.get('/api/day2', function (req, res){
   });
 })
 
+app.get('/api/day4', function (req, res){
+  days = 'Day-4';
+  sql = 'SELECT * FROM workouts WHERE days = ' + connection.escape(days);
+  connection.query(sql, function (error, results, fields) {
+      if (error) throw error;
+      console.log(results);
+      res.json(results);
+  });
+})
+
+app.get('/api/day5', function (req, res){
+  days = 'Day-5';
+  sql = 'SELECT * FROM workouts WHERE days = ' + connection.escape(days);
+  connection.query(sql, function (error, results, fields) {
+      if (error) throw error;
+      console.log(results);
+      res.json(results);
+  });
+})
+
+app.get('/api/day7', function (req, res){
+  days = 'Day-7';
+  sql = 'SELECT * FROM workouts WHERE days = ' + connection.escape(days);
+  connection.query(sql, function (error, results, fields) {
+      if (error) throw error;
+      console.log(results);
+      res.json(results);
+  });
+})
+
 
 /*var Workout1 = {
     getWorkout: function (callback) {

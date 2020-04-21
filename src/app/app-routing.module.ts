@@ -27,6 +27,26 @@ const routes: Routes = [
   {
     path: 'day2',
     loadChildren: () => import('./day2/day2.module').then( m => m.Day2PageModule)
+  },
+  {
+    path: 'day3',
+    loadChildren: () => import('./day3/day3.module').then( m => m.Day3PageModule)
+  },
+  {
+    path: 'day4',
+    loadChildren: () => import('./day4/day4.module').then( m => m.Day4PageModule)
+  },
+  {
+    path: 'day5',
+    loadChildren: () => import('./day5/day5.module').then( m => m.Day5PageModule)
+  },
+  {
+    path: 'day6',
+    loadChildren: () => import('./day6/day6.module').then( m => m.Day6PageModule)
+  },
+  {
+    path: 'day7',
+    loadChildren: () => import('./day7/day7.module').then( m => m.Day7PageModule)
   }
 
 
