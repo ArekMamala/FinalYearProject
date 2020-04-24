@@ -6,6 +6,7 @@
 \usepackage{xcolor,graphicx}
 \usepackage{ragged2e}
 \usepackage[left=2.5cm,right=2.5cm,top=2cm,bottom=3cm]{geometry}
+\usepackage{listings}
 
 \include{thesis.preamble}
 
@@ -214,6 +215,30 @@ What is Velocity? The speed of something in a given direction.
 \newpage
 \subsection{Tensorflow, Firebase}
 \newpage
+\subsection{MYSQL}
+MySQL is a relational database management system based on SQL – Structured Query Language. The application is used for a wide range of purposes, including data warehousing, e-commerce, and logging applications. There are many versions of MySQL, we chose to use version 5.7.24.
+
+In this project we use MySQL to store information about workout tips and meal plans. Users are able to view our seven day workout plan and meal plan through our homepage. The information is stored within the database and pulled when requested by user.
+First we create the database locally through WampServer. WAMP is an acronym that stands for “Windows, Apache, MySQL, and PHP.” After creating and naming our database, we create a table within the database. 
+This table is important as we need to pull information from this table. As you see this table has five columns. But the first column is unique, we are pulling information by the unique ID days. For example only workouts for Day-1 shall be printed out to the page that requests information about it.
+\begin{center}
+\includegraphics[scale=.7]{images/workouts-table.PNG}
+\end{center}
+\subsubsection{How is this information displayed on web-page}
+Within our project, we created a JavaScript file called "server.js". Within the JavaScript file we create a secure connection between the server and WAMP.
+\begin{lstlisting}
+var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'workout'
+});
+\end{lstlisting}
+We are establishing a connection with our database above. Below we will show you how to pull information from AWS (Amazon Web Services). Basically, our database will be stored on a cloud where it will be available to everyone to view, whereas on the local machine only the creater of the database can view it now.
+
+\newpage
+
+
 \subsection{Android}
 
 Android is a mobile device operating system developed mostly by Google. This was and still is the first reliable threat to the IPhone market.
@@ -238,7 +263,7 @@ The main reason that the revenue of iOS platform is much higher is due to the co
 \includegraphics[scale=.4]{images/androidvsios.png}
 \end{center}
 
-\subsubsection{}
+\subsubsection{Android Framework}
 
 Creating the current software program we required a framework to develop and deploy an android application for the purpose of testing and customer use.\\
 
@@ -255,8 +280,99 @@ Verdict on the application's platform was completed and our decision was made. W
 \subsection{Deploying on the App Store}
 \newpage
 \subsection{Wearable Devices}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\vspace{5mm} %5mm vertical space
+The availability and ownership of fitness devices and fitness applications has largely increased. Flurry an American mobile analytics, monetization, and advertising company founded in 2005 had completed a recent study on app users.
+They have announced that the usage of health applications are growing 87 percent faster than the entire mobile industry.
+
+One particular area of the mobile health market that is rapidly increasing are wearable devices. With Google Fit, Apple HealthKit, Samsung Gear and many other devices these accessories empower the customers in controlling, managing and tracking their fitness lives.\cite{rhodes2014accessing}\\
+
+One of many objectives assigned to this project was to deploy the application on to wearable fitness device. 
+For this to happen it was necessary for us to research and come up with reasonable options for a device and explore them in more details.
+
+The option that we decide to use in the testing of our application must be able to determine users movements with sensors such as accelerometer also needs to be capable of receiving, collecting and sending data to a software program.\\
+
+Options that we had came up with were 
+\begin{itemize}
+    \item Mobile Phone 
+    \item Fit Bit
+    \item Accelerometer chip
+    \item Activity trackers
+\end{itemize}
+
+It was concluded that the application will be ran and tested on the phone at first when this is improved and upgraded we would move to connecting the application to a Fit bit or an accelerometer chip.
+\newpage
+
+\subsubsection{Mobile Phones}
+Mobile phones include endless sensors that we don't even realise exist with the modern technology.
+Motion sensors such as the Accelerometer, Gyroscope and Pedometer sensors measure the movement of a human being. \\
+
+The accelerometer sensors measure the change in the x, y and z axis. Gyroscope measures and detects each degree of changes in orientation. While the Pedometer is an advanced version of the accelerometer it is mostly used to track a persons steps accurately.\cite{sensorsPhone}   
+
+\subsubsection{Fit Bits}
+
+Fit bits like phones work with certain sensors. Most of the time fitbits use a three-axis accelerometer they can tell if you are moving forwards, backwards, side to side or even up and down.
+By analyzing all the data recorded by the watch it can tell if you were walking, running, jumping or simply just moving your hands.\cite{sensorsFitbit}
+
+\subsubsection{Ultimate goal}
+We feel like the mobile phone device and the fitbit would suit the project for the moment but we don't believe that either one of them options would be reasonable for a boxer to wear or hold while training.\\
+
+The ultimate goal of a wearable device for this application it would be necessary to design and develop hardware that could be inserted into a boxing glove and there would not be a worry of holding or wearing a device.
+
 \newpage
 \subsection{Survey}
+\vspace{5mm} %5mm vertical space
 
 We had designed the following application to be used in everyday life even by the most vulnerable, we understood that the application had to be effective but easy to use at the same time. Decisions on what was most substantial information to include in the application needed to be finalized.\\
 
