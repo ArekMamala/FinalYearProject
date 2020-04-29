@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt,twoside]{report}
+\documentclass[a4paper,12pt]{report}
 
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
@@ -141,6 +141,7 @@ In the beginning it was a basic band supporting the wrist that was used and the 
 It was in 1719 that the term boxing was used for the upcoming sport and in 1743 the first formal rules were developed for the activity. When the Queensberry rules had been expanded in 1891 by the London National Sporting Club and stating how these fights would be scored, this gave the sport a safer name and also formalize the fight so that the result of each contest did not have to end with a knockout.
 \cite{modernBoxing}
 Due to this update to the sport it would be more accepted for the society to display fights tightly regulated. This meant that boxing would have the opportunity to make it professionally. 
+
 \subsection{Rules}
 At the start of boxing rules were non existent there were no weight classes no timed rounds no gloves the contest would end when an opponent is knocked unconscious or simply could not go on. 
 Rules of boxing can vary depending what competition we decide to look at. Boxing rule book consists of many different constrains on the sport.\linebreak
@@ -184,9 +185,13 @@ $Velocity = Distance / Time$
 
 What is Velocity? The speed of something in a given direction.\cite{boxPhysics}
 
-\begin{center}
-\includegraphics[scale=.3]{images/Velocity.jpeg}
-\end{center}
+ \begin{figure}[h]
+    \begin{center}
+    \includegraphics[scale=.3]{images/Velocity.jpeg}
+    \caption{Diagram showing how to calculate velocity}
+    \label{fig:velocity}
+    \end{center}
+\end{figure}
 
 Momentum can be described as "mass in motion" every object has mass therefore if that object is moving it has momentum. Its momentum depends on the amount of mass that is moved and the speed that the mass is moving at.\\
 
@@ -286,12 +291,13 @@ According to an article from 2019, the rate of the intake of sports supplements 
 Have you ever taken into consideration why athletes intake protein supplements?\\ Firstly supplements are usually taken either by powder or pills. Frequently powder supplements are taken with water, milk, juice etc... to make it taste better. Basically the intake of supplements are needed to create the amino acids that are needed to build muscle tissue, quicker and more efficiently. The reason athletes such as boxers benefit so much from the protein supplements intake is that intense physical activity demands higher protein levels than normal.
 \\
 There are many sorts of supplements, which include vitamins 
-
+\newpage
 \section{Frameworks}
 
 It was clear to us that the following frameworks, sdk's would be necessary to develop the application user friendly, ascetically pleasing and to give us the ability for the project to be developed on a work friendly platform.
 
 \subsection{Angular}
+\includegraphics[scale=.015]{images/angular.png}
 
 Angular is a web application framework it's typescript based developed by an Angular team at Google.
 It has been completely rewritten from the same team that built AngularJS.
@@ -317,6 +323,7 @@ For compiling and running the application command \textbf{ng serve} is available
 \textbf{ng build} and \textbf{ng deploy} are used for building the application and deploying the build artifacts.\cite{angularGuide} 
 
 \subsection{Ionic}
+\includegraphics[scale=.1]{images/ionic.png}
 
 Ionic is a complete open-source SDK for hybrid mobile app development created by Max Lynch, Ben Sperry, and Adam Bradley of Drifty Co.
 Ionic is is an incredibly popular framework for many applications across many platforms it is known to be powering over 10\% of the Apple App store and 16\% of the Google Play store.\\
@@ -350,19 +357,31 @@ With Ionic's components, navigation and platform specific styling Cordova workin
 This cloud application is designed by Google to help build. Firebase is a tool-set to “build, improve, and grow your app”, and the tools it gives you cover a large portion of the services that developers would normally have to build themselves, but don’t really want to build, because they’d rather be focusing on the app experience itself. This includes things like analytics, authentication, databases, configuration, file storage, push messaging, and the list goes on. The services are hosted in the cloud, and scale with little to no effort on the part of the developer.
 
 This is different than traditional app development, which typically involves writing both front-end and back-end software. The front-end code just invokes API endpoints exposed by the back-end, and the back-end code actually does the work. However, with Firebase products, the traditional back-end is bypassed, putting the work into the client. Administrative access to each of these products is provided by the Firebase console.
-\begin{center}
-\includegraphics[scale=.4]{images/firebaseDiagram.png}
-\end{center}
+\begin{figure}[h]
+    \begin{center}
+    \includegraphics[scale=.5]{images/firebaseDiagram.png}
+    \caption{Firebase console}
+    \label{fig:firbase}
+    \end{center}
+\end{figure}
 
 \subsection{MYSQL}
+\includegraphics[scale=.04]{images/mysql.png}
+
 MySQL is a relational database management system based on SQL – Structured Query Language. The application is used for a wide range of purposes, including data warehousing, e-commerce, and logging applications. There are many versions of MySQL, we chose to use version 5.7.24.
 
 In this project we use MySQL to store information about workout tips and meal plans. Users are able to view our seven day workout plan and meal plan through our homepage. The information is stored within the database and pulled when requested by user.
 First we create the database locally through WampServer. WAMP is an acronym that stands for “Windows, Apache, MySQL, and PHP.” After creating and naming our database, we create a table within the database. 
 This table is important as we need to pull information from this table. As you see this table has five columns. But the first column is unique, we are pulling information by the unique ID days. For example only workouts for Day-1 shall be printed out to the page that requests information about it.
-\begin{center}
-\includegraphics[scale=.7]{images/workouts-table.PNG}
-\end{center}
+
+\begin{figure}[h]
+    \begin{center}
+    \includegraphics[scale=.56]{images/workouts-table.PNG}
+    \caption{Workout excises in a sql database}
+    \label{fig:MYSQL}
+    \end{center}
+\end{figure}
+
 \subsubsection{How is this information displayed on web-page}
 Within our project, we created a JavaScript file called "server.js". Within the JavaScript file we create a secure connection between the server and WAMP.
 \begin{verbatim}
@@ -376,14 +395,15 @@ var connection = mysql.createConnection({
 We are establishing a connection with our database above. Below we will show you how to pull information from AWS (Amazon Web Services). Basically, our database will be stored on a cloud where it will be available to everyone to view, whereas on the local machine only the creater of the database can view it now.
 
 \subsection{Android}
+\includegraphics[scale=.1]{images/android.png}
 
 Android is a mobile device operating system developed mostly by Google. This was and still is the first reliable threat to the IPhone market.
 \\
 The Android working framework is based on an altered Linux kernel. The product contains Java applications running on a virtual machine. \\
 
 Elements of the framework are written in Java, C, C++, and XML.
-Google has partnered with multiple device providing organizations such as Samsung Htc and One Plus giving their clients options and variety that IPhone simply does not supply.
-\cite{butler2010android}\\
+Google has partnered with multiple device providing organizations such as Samsung Htc and One Plus giving their clients options and variety that IPhone simply does not supply.\cite{butler2010android}\\
+
 \subsubsection{Why Android Not IPhone}
 The decision to deploy the application on android platform was determined by many advantages that android possesses over the iOS.\\
 Since 2017 the number of android users is significantly higher than the IPhone users. Android has 64\% of the market share while IPhone has only 32\%.
@@ -394,9 +414,14 @@ Another difference that helped us finalize our decision was the cost of publishi
 The main reason that the revenue of iOS platform is much higher is due to the cost of publishing on the App Store.
 \cite{android&iOS}
 
-\begin{center}
-\includegraphics[scale=.4]{images/androidvsios.png}
-\end{center}
+\begin{figure}[h]
+    \begin{center}
+    \includegraphics[scale=.5]{images/androidvsios.png}
+    \caption{Chart showing the number of apps in different app stores}
+    \label{fig:numberOfApp}
+    \end{center}
+\end{figure}
+
 
 \subsubsection{Android Framework}
 
@@ -431,7 +456,6 @@ Options that we had came up with were
 \end{itemize}
 
 It was concluded that the application will be ran and tested on the phone at first when this is improved and upgraded we would move to connecting the application to a Fit bit or an accelerometer chip.
-\newpage
 
 \subsection{Mobile Phones}
 Mobile phones include endless sensors that we don't even realise exist with the modern technology.
@@ -448,7 +472,7 @@ By analyzing all the data recorded by the watch it can tell if you were walking,
 We feel like the mobile phone device and the fitbit would suit the project for the moment but we don't believe that either one of them options would be reasonable for a boxer to wear or hold while training.\\
 
 The ultimate goal of a wearable device for this application it would be necessary to design and develop hardware that could be inserted into a boxing glove and there would not be a worry of holding or wearing a device.
-
+\newpage
 \section{Survey}
 \vspace{5mm} %5mm vertical space
 
@@ -527,10 +551,15 @@ The responses that we obtained were such as.
 This was a very important survey with a very successful feedback. The following results stated above helped us with the finalizing the design of the application.
 It had supplied us with massive amount of ideas and possible solution. Its important to gain peoples feedback and apprehend their ideas. At the end of the day this application will be designed for everyday use by the mankind.\\
 
-\begin{center}
-\includegraphics[scale=.3]{images/statistic1.png}\includegraphics[scale=.3]{images/statistic2.png}
-\end{center}
+\begin{figure}[h]
+    \begin{center}
+    \includegraphics[scale=.4]{images/statistic1.png}\includegraphics[scale=.4]{images/statistic2.png}
+    \caption{Bar chart showing survey results}
+    \label{fig:survey}
+    \end{center}
+\end{figure}
 
+\newpage
 \section{Artificial Neural Network}
 In the oxford dictionary it says, “artificial intelligence is an area of study concerned with making computers copy intelligent human behaviour \cite{knowles2006oxford}.” If you google the question that I just asked, you’ll get something like “the theory and development of computer systems able to perform tasks normally requiring human intelligence, such as visual perception, speech recognition, decision-making, and translation between languages.”
 
@@ -545,14 +574,22 @@ For this project we have to learn how to build a neural database. To build the a
 \subsection{Neuron}
 \textit{"A specialized cell transmitting nerve impulses; a nerve cell."} \\ A neuron has an input($x$) and output($y$). The input normally has a weight to it and a bias($b$) with is usually This image below will show you how a neuron looks.
 
+\begin{figure}[h]
 \begin{center}
 \includegraphics[scale=.4]{images/Neuron.png}
+\caption{Diagram of Neuron}
+\label{fig:neuron}
 \end{center}
-
+\end{figure}
 Neural networks are a set of algorithms, modeled loosely after the human brain, that are designed to recognize patterns. Neural networks are being applied to many real-life problems today, including speech and image recognition, spam email filtering, finance, and medical diagnosis, to name a few.
+\begin{figure}[h]
 \begin{center}
-\includegraphics[scale=.19]{images/NeuralNetwork.png}
+\includegraphics[scale=.18]{images/NeuralNetwork.png}
+\caption{Diagram example of Neural Network}
+\label{fig:NeuralNetwork}
 \end{center}
+\end{figure}
+\\
 \textbf{3 reasons to study neural computation:}\\
 \textbf{1.} To understand how the brain actually works: it's very large and very complicated and made from things that die when you poke it, so we need to use computer simulations.\\
 \textbf{2.} To grasp a neuron-inspired model of parallel computation and their adaptive connections: it is a very different style from sequential computation.\\
@@ -561,7 +598,14 @@ Neural networks are a set of algorithms, modeled loosely after the human brain, 
 With these tools, we can train the model to recognize the type of punches:\\
 \textit{Jab\\hook\\Uppercut}
 \subsection{Tensorflow}
+\includegraphics[scale=.04]{images/tensorflow.png}
+
 Using Tensorflow with python to do this project. Tensorflow is a symbolic math library which can be used for machine learning. Keras is used to make the neural network. Numpy and pyplot is used to plot the data. This software allows developers to create a large-scale neural networks with many layers. This is used with python and has many uses in predictions and classification. Before making the data set for machine learning we'd need to learn of the core core concepts of making data-sets. This is how to shape your data and how to get it ready for training. To understand the layout of data-sets I used some examples online and decided to use the well know the iris data-set. This data-set collects data points from a hundred and fifty different samples of flower. It uses the petal length/width and the sepal length/width and sorts them into three types of iris.
+\\
+\\
+I wanted to do something similar to this using the x,y,z axis on the device and the accelerometer and sorting them into the three types of punches the device would register. I've learnt that by training a neural network with these values and telling it the type of punch it is I can then build a neural network than can reference from new values what type of punch is thrown. The data set that I'm going to make will contain four values and the type of punch it should be. The punch will be classified as 0, 1 or 2.
+
+\begin{figure}[h]
 \begin{verbatim}
 from sklearn.datasets import load_iris
 
@@ -573,7 +617,9 @@ iris
                [4.7, 3.2, 1.3, 0.2],
                [4.6, 3.1, 1.5, 0.2],
 \end{verbatim}
-I wanted to do something similar to this using the x,y,z axis on the device and the accelerometer and sorting them into the three types of punches the device would register. I've learnt that by training a neural network with these values and telling it the type of punch it is I can then build a neural network than can reference from new values what type of punch is thrown. The data set that I'm going to make will contain four values and the type of punch it should be. The punch will be classified as 0, 1 or 2.
+\caption{Loading in the iris results into tensorflow}
+\label{fig:iris}
+\end{figure}
 
 \chapter{Methodology}
 \section{Work allocation}
@@ -635,6 +681,131 @@ After the platform is added, you can generate the required .apk file with the co
 
 Running the application on the specified device is done with the input of this command \textbf{ionic cordova run android --device} while having the device plugged into the machine developing the application. \cite{cordovaRun}
 \chapter{System Design}
+This is where you’ll find all the the designs that we did before starting the project. We needed to have a clear understanding of different levels of the application and the outline of the user UI before we started the coding process.
+
+\section{Project Design}
+\begin{figure}[h]
+\includegraphics[scale=.37]{images/projectOverview.png}
+\caption{Project architecture block diagram}
+\label{fig:projectDiagram}
+\end{figure}
+
+Above image is the overall design of the entire project. We have an application working together with two databases one on the Wamp Server based on the AWS Cloud server and an online database for the users login and sign up information.\\
+The design shows Tensorflow connecting to the ionic application for the AI punching detection system.\\
+The application applying native functionality using Cordova getting deployed to the device operating system e.g. Mobile Phone. 
+\section{Application Design}
+This is the application design which describes the components that are included and the pattern that we decided to use in the project.
+We finalized the decision of developing the application using the Lazy Loading pattern. This pattern is used for large scale Angular projects.
+Since the application has databases, AI and servers working in line with it this pattern would be the best way increase our applications performance.
+Below image is the application designed in the lazy loading pattern.
+\subsection{Lazy Loading}
+\begin{figure}[h]
+\includegraphics[scale=.5]{images/Lazy-Loading(4).PNG}
+\caption{Lazy loading diagram}
+\label{fig:LazyLoading}
+\end{figure}
+\newpage
+As you can see in the above design app component is divided into two different components the Home Component and Index Component.
+The main idea of lazy loading is for the project to load only the components that are necessary at the time of use. \\
+Our index components is in charge of both the Login and Sign up parts of the application.\\
+While the Home Component loads the Workout, Profile and Home products of the application which then load only the selected component depending on which product, Workout, Profile and Home components are available to be loaded. 
+
+\section{Log In \& Sign Up}
+
+
+\section{Home Component}
+
+\begin{center}
+\includegraphics[scale=.5]{images/homePageBorder.png}
+\end{center}
+
+\begin{center}
+\includegraphics[scale=0.377]{images/days.png}
+\end{center}
+
+\subsection{Meals}
+
+\begin{center}
+\includegraphics[scale=0.377]{images/dayWorkouts.png}
+\end{center}
+\subsection{Workouts}
+
+\section{Profile Component}
+We have designed the Profile component as a planner for the user to stick by and follow strictly.
+For this to become possible the idea of a built in planner in the application was crossed out.
+We wanted to use the ideology of "work smarter not harder" we decided to use the already available calendar application on every mobile phone.\\
+This feature is designed to eliminate of the following scenario happening for example when a consumer decides to use the application and make plan for the following days, typically this would be saved in the application and only notify the user when accessing the application. This scenario can cause a problem for the user completing workouts as he/she can forget about their plans and not open the application in time to follow up on their program.
+By using the calendar application users will be notified that the workout is due even without accessing the application this will remind them to complete the workout and keep up with the application.
+
+
+\begin{figure}[h]
+    \begin{center}
+    \includegraphics[scale=.5]{images/profilePageBorder.png}
+    \caption{Profile component display.}
+    \label{fig:pComponent}
+    \end{center}
+\end{figure}
+
+As can be seen in figure \ref{fig:pComponent} it firstly displays the Username and Calendar. This is for the reassurance and a quick simple explanation towards the user of what the component consists of.\\
+As explained above this component is connected to the calendar plugin from the mobile device therefore we designed the applications to present the user with the already made events in his/her calendar.
+We extract the following information from the events 
+\begin{itemize}
+    \item Name of the event
+    \item The start date of the event
+    \item The end date of the event
+\end{itemize}
+and output them to the user as displayed in figure \ref{fig:pComponent}.
+This section is also designed to give the user an option to add an even for example a workout. The applicant can execute this with the $add-event$ button under displayed underneath the user information.
+This button connects to the calendar plugin and brings the applicant to the add section of the calendar application once the event is added user is back in the ASU Boxing application with the newly created event present.
+
+\section{Workout Component}
+    
+    \begin{figure}[h]
+    \begin{center}
+        \includegraphics[scale=.5]{images/workoutBorder.png}
+        \caption{Initial stage of Workout component.}
+        \label{fig:isWComponent}
+        \end{center}
+    \end{figure}
+
+The workout component is loaded when the bottom right tab is pressed.\\
+This component is designed to carry out and display to the user a lot of the applications functionality.\\
+Figure \ref{fig:isWComponent}  shows this component, at the top the user name is displayed just as a way of connecting the application with the user therefore he/she can be assured that we have loaded in the correct user information.\\
+Below the user name we have a timer for the specified workout time. The costumer has the ability to chose length of time themselves, the timer outputs the time selected and starts timing down when the button at the bottom of the screen $Start-Workout$ is selected. When the time is finished the application is designed to call the vibration plugin, ultimately when the workout is completed the phone should Vibrate.
+The vibration is put in as a reminder to the user when the time has finished we designed this feature because we are well aware that when workouts are carried out applicants would concentrate more so on the workout itself than the application hence the vibration is a finish line for the workout.\\
+
+This part of the application is designed to count the number of punches and recorded display the information to the user. In the above image we see the component at its initial stage where the amount of punches are zero.
+The start button will be connected to the accelerometer, gyroscope and the neural network. Working in conjunction they gather the three way axis information to determine if a punch is present, which punch it is and if its a valid punch.
+Another feature in this part of the application is when a punch is thrown it is printed out to the screen as can be seen in figure  \ref{fig:ipWComponent} in red colour the name of the punch is printed to the user and both the number of punches as well as the number of the punch carried out are increased.\\
+
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[scale=.5]{images/workoutAfterPunch.png}
+        \caption{Workout component during workout.}
+        \label{fig:ipWComponent}
+        \end{center}
+    \end{figure}
+
+The application has also the design that gives the user an option to to end a workout at anytime this can be done with the $Stop-Workout$ button shown in figure \ref{fig:ipWComponent}.
+When the workout is finished or stopped the application gives out the results from the exercise.
+Shown in figure \ref{fig:aWComponent} is the design of the results displayed out to the user the results will consist of 
+\begin{itemize}
+    \item Current Date 
+    \item Total amount of punches
+    \item Average amount of punches per minute
+    \item Number of Jab punches
+    \item Number of Uppercut punches
+\end{itemize}
+Workout feedback was designed to summarise the workout for the applicant also for the users to be able to analyse their performance and set goals for future workouts. 
+
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[scale=.47]{images/afterWorkout.png}
+        \caption{Workout component after workout.}
+        \label{fig:aWComponent}
+        \end{center}
+    \end{figure}
+
 
 \chapter{Conclusion}
 \section{Future Improvements}
