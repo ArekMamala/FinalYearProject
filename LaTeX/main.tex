@@ -711,7 +711,19 @@ Our index components is in charge of both the Login and Sign up parts of the app
 While the Home Component loads the Workout, Profile and Home products of the application which then load only the selected component depending on which product, Workout, Profile and Home components are available to be loaded. 
 
 \section{Log In \& Sign Up}
+The Log-in/Sign-up page should be very straight forward for the user to use. We decide that we should keep the page simple so users will more than likely sign up for the app. We didn't want them to share their email with us because we know some people don't like giving their user information away, instead we said they can just use their username and a password.
 
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=.5]{images/loginPageBorder.png}
+\end{center}
+\caption{Login page}
+\label{fig:LazyLoading}
+\end{figure}
+
+Having the sign-up feature next to the log-in made it easier to get more users to make an account to store their personal information. From what they choose, we can store and load custom workouts which are unique for every user. 
+\subsection{Firebase Design}
+For storing passwords, we didn't want to have the passwords available locally. This is where Firebase base comes in. It encrypts the password for us and stores it so we won't be able to know the users passwords either. The safety of users information is very important in this day and age. We all agreed it would be best if we did not have access to the passwords and if any issues occurred the users could contact us and we can send a link for the users to reset their passwords. Shown in figure \ref{fig:firbase} we can see how Firebase handles most of the back-end server maintenance.
 
 \section{Home Component}
 
@@ -734,7 +746,7 @@ While the Home Component loads the Workout, Profile and Home products of the app
 We have designed the Profile component as a planner for the user to stick by and follow strictly.
 For this to become possible the idea of a built in planner in the application was crossed out.
 We wanted to use the ideology of "work smarter not harder" we decided to use the already available calendar application on every mobile phone.\\
-This feature is designed to eliminate of the following scenario happening for example when a consumer decides to use the application and make plan for the following days, typically this would be saved in the application and only notify the user when accessing the application. This scenario can cause a problem for the user completing workouts as he/she can forget about their plans and not open the application in time to follow up on their program.
+This feature is designed to eliminate of the following scenario happening for example when a consumer decides to use the application and make plan for the following days, typically this would be saved in the application and only notify the user when accessing that application. This scenario can cause a problem for the user completing workouts as he/she can forget about their plans and not open the application in time to follow up on their program.
 By using the calendar application users will be notified that the workout is due even without accessing the application this will remind them to complete the workout and keep up with the application.
 
 
