@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt,twoside]{report}
+\documentclass[a4paper,12pt]{report}
 
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
@@ -6,26 +6,23 @@
 \usepackage{xcolor,graphicx}
 \usepackage{ragged2e}
 \usepackage[left=2.5cm,right=2.5cm,top=2cm,bottom=3cm]{geometry}
+\usepackage{listings}
 
 \include{thesis.preamble}
 
 \begin{document}
 
-\title{Final Year Project}
+\title{ASU Boxing}
 % author names
-\author{Your Name}
-\submitdate{May 2016}
-\degree{BSc Computer Science}
-\studentid{Your Student ID}
-\supervisor{Your Supervisor Name}
+\author{Usman Sattar, Sammar Tahir \& Arkadiusz Mamala}
+\studentid{G00_s}
+\supervisor{Gerard Harrison, Martin Kenirons \& Kevin O’Brien}
 
 \maketitle
-
 \preface
 \section*{Abstract}
 \\
-Sports and technology are two words which praise one another and have been endeavouring all through the earlier decades. With such exceptional increment in technology with sports it prospects on to becoming the apex of current life use. 
-As such, why not apply such concept of technology with sports working hand in hand and build an everyday application for any ordinary persons usage.
+Sports and technology are two words which praise one another and have been endeavouring all through the earlier decades. With such exceptional increment in technology with sports it prospects on to becoming the apex of current life use. As such, why not apply such concept of technology with sports working hand in hand and build an everyday application for any ordinary persons usage.
 
 The main objective that we set for ourselves as designers and developers of this projects was to see if we could train the application using machine learning in an Angular environment, while passing 
 data to and from the application remotely using Keras in conjunction with Jupyter Notebooks, to achieve a successful calculation and reading of the users hand movement, ie. a jab punch.
@@ -36,8 +33,8 @@ First and foremost it should have a valid log in and sign up options that should
 Secondly there should be a workout and meal plan available to the user which shall be stored and loaded from a database that is deployed in a server on the cloud.
 The third part of the application will consist of a workout section, the section lets the user practice specific workouts, the applicant will be timed and results will be printed out after every workout. 
 The idea of the user having the choice to log in for their results and in formations of all completed exercises are going to be downloaded from the database.
-\newpage
-\section*{Authors}
+
+\subsection*{Authors}
 \\
 The authors of this project are Usman Sattar, Sammar Tahir and
 Arkadiusz Mamala, who are three fourth year students studying for a
@@ -62,7 +59,7 @@ behind the look and it’s implementation.
 \section{Ideas}
 At the beginning of 4Th and the last year in Software Development, we were given the task of coming up with an idea worthy and suitable for a level 8 final year project, we knew that whatever we needed to come up with must have certain requirements, using multiple different technologies, languages and it had to challenge our own knowledge and skills that we learned in previous years.
 
-Our breakthrough had come few weeks into to college year, we had been practicing for a community event it had been a 5 kilometers run or walk, every time we'd exercise we would compare our results on mobile devices or fitbits, it was at that point we came across to the thought of connecting sports and technology and style an application in this current area. 
+Our breakthrough had come few weeks into to college year, we had been practicing for a community event it had been a 5 kilometers run or walk, every time we'd exercise we would compare our results on mobile devices or fit-bits, it was at that point we came across to the thought of connecting sports and technology and style an application in this current area. 
 
 We knew that running was the foremost popular exercise which was technologized therefore it had been a path we didn't want to travel down. Finally after long discussions we decided to develop a boxing related project counting punches and coming back with results.
 
@@ -77,7 +74,6 @@ free for us to use.
 For our own server we ........... and for the database on this cloud we decided to go back to Wamp together with mySql which we learned about in  our second year, this database would create the meals and workouts plans and we would have to connect them to the application.
 For the log in we wanted to experiment with some technology we haven't ever heard off therefore the decision to connect an online database to the project. After researching databases we made the decision of going with Firebase main reason was because none of us had experienced this technology before.
 
-\newpage
 \section{Reason for Choosing Project}
 The reasons that we decided to develop this application is because we find this idea very interesting. Sports is a topic that we are all involved in inside of college and out. We came up with this idea when we were at a boxing class when we couldn't decide who had more power. It’s a project that we feel will challenge us in developing it and get it working the way we have designed it.
 \\
@@ -131,28 +127,11 @@ This Chapter gives an insight on how the entire design of system architecture ho
 \subsection{Conclusion}
 The conclusion is a section in where we give a summary of our findings, end results and our experiences while creation development and deployment of this project.
 
-\subsection{GitHub Repository Summaries}
-\subsection{GitHub Repository}
-The GitHub repository containing the entire project can be found at 
-https://github.com/ArekMamala/FinalYearProject
-The following sections listed below outline the different components in the repository with a link to each part.
-\subsubsection{README}
-This part of the repository contains a simple introduction to the final year project brief explanation and a guide on how to download  install and run the application on a given device or environment.
-https://github.com/ArekMamala/FinalYearProject/blob/master/README.md
-\subsubsection{LaTex}
-This section of the repository contains the latex project that we used for the write up of the development of the project dissertation. This section also contains a PDF file of the complete dissertation.  
-https://github.com/ArekMamala/FinalYearProject/tree/master/LaTeX
-\subsubsection{Final Year Project}
-This section of the GitHub repository contains the Angular environment code used to design and develop the application with all the plugins and imports necessary for the environment to run the application. 
-link*****
-\subsubsection{Releases}
-The releases of the project is the build android applications as we progressed through making of the application. Each release differs from another. This section also contains the latest release of the application which is available to work on android devices. 
-link*****
 
 \chapter{Research}
-
-\subsection{Boxing History, Rules, Regulations}
-\subsubsection{History}
+This is where you'll find all the research we did before starting the project. We wanted to have a clear understanding of what we needed for this project before we even started coding. 
+\section{Boxing}
+\subsection{History}
 Its impossible to say when the idea of boxing had originated we are enlightened with evidence such as the Sumerian relief carvings from the 3rd millennium BC, therefore we know that it has been around for much longer than anyone could imagine.\newline
 It is known to man kind throughout the early sculptures such as the relief sculpture from Egyptian Thebes that in the beginning of boxing gloves were non existent for the people participating in this sport.\newline
 In the beginning it was a basic band supporting the wrist that was used and the first bit of evidence of a boxing glove is available to us through a vase from Minoan Crete 1500BC. It shows boxers wearing helmets and a stiff plate strapped to the fighters fist.
@@ -161,22 +140,22 @@ In the beginning it was a basic band supporting the wrist that was used and the 
 It was in 1719 that the term boxing was used for the upcoming sport and in 1743 the first formal rules were developed for the activity. When the Queensberry rules had been expanded in 1891 by the London National Sporting Club and stating how these fights would be scored, this gave the sport a safer name and also formalize the fight so that the result of each contest did not have to end with a knockout.
 \cite{modernBoxing}
 Due to this update to the sport it would be more accepted for the society to display fights tightly regulated. This meant that boxing would have the opportunity to make it professionally. 
-\newpage
-\subsubsection{Rules}
+
+\subsection{Rules}
 At the start of boxing rules were non existent there were no weight classes no timed rounds no gloves the contest would end when an opponent is knocked unconscious or simply could not go on. 
 Rules of boxing can vary depending what competition we decide to look at. Boxing rule book consists of many different constrains on the sport.\linebreak
 
 Here are just some rules to be mentioned that refer to the Olympic Boxing.
 \begin{itemize}
-    \item Each fight will consist of four rounds and each round will be two minutes long with a minute long break in between rounds.\linebreak
-    \item Points can be earned only when a punch is landed with the right part of the glove on the opponents front or side of the head or body above the belt.\linebreak
-    \item Five judges use computerized scoring.\linebreak
-    \item Points are only scored for fighters when three or more judges had pressed the button for the same boxer within one second of each other.\linebreak
-    \item A knockdown is considered valid when a boxer is hit with a legal blow and he touches the ground with any other part of his body other than his feet.\linebreak
-    \item Punches  that land on the opponents arms or punches without power are not counted as points.\linebreak
-    \item If a boxer is down the referee starts a count up to ten, the count is timed by an audible bee.\linebreak
-    \item If the boxer fails to get up after the ten seconds count his opponent wins with a knockout.\linebreak
-    \item If the boxer successfully gets up after a knockdown, he must be given an eight seconds count, after which the referee decides if the fighter is able to continue or unable to keep going and award the opponent the victory.\linebreak
+    \item Each fight will consist of four rounds and each round will be two minutes long with a minute long break in between rounds.
+    \item Points can be earned only when a punch is landed with the right part of the glove on the opponents front or side of the head or body above the belt.
+    \item Five judges use computerized scoring.
+    \item Points are only scored for fighters when three or more judges had pressed the button for the same boxer within one second of each other.
+    \item A knockdown is considered valid when a boxer is hit with a legal blow and he touches the ground with any other part of his body other than his feet.
+    \item Punches  that land on the opponents arms or punches without power are not counted as points.
+    \item If a boxer is down the referee starts a count up to ten, the count is timed by an audible bee.
+    \item If the boxer fails to get up after the ten seconds count his opponent wins with a knockout.
+    \item If the boxer successfully gets up after a knockdown, he must be given an eight seconds count, after which the referee decides if the fighter is able to continue or unable to keep going and award the opponent the victory.
     \item When a boxer receives his third count of the round or fourth count of the the boxing contest. The referee must end the fight and award the opponent the victory.
 \end{itemize}
 \cite{lewandowski2012olympic}
@@ -187,64 +166,428 @@ Doping regulations and certain substances must be banned.
 The points scoring system doesn't change and the fight result is determined by knockdowns, knockout or scores.
 These are just a few to name out certain rules and regulations must be followed and obeyed by the participants to make this sport as fair as possible. 
 
-\subsection*{How is ge physics applied to boxing}
-Physics occurs in punching because of energy. Person uses energy in order for a punch to be carried out. That is why, as well as energy we need momentum, work, power, and velocity. Before a boxer punches, he has potential energy which is stored energy. Once, the boxer begins to punch potential energy turns into kinetic energy.
-
-Boxing is more than the brutal beating up of one another; it is a sport that applies many physics laws. If a fighter uses physics correctly, he will likely get the victory; but if he does not, he will probably lose.
+\subsection{How are physics applied to boxing}
+Physics occurs in punching because of energy. Person uses energy in order for a punch to be carried out. That is why, as well as energy we need momentum, work, power, and velocity. Before a boxer punches, he has potential energy which is stored energy. Once, the boxer begins to punch potential energy turns into kinetic energy.\\
+Boxing is more than the brutal beating up of one another; it is a sport that applies many physics laws. If a fighter uses physics correctly, he will likely get the victory; but if he does not, he will probably come out with a defeat.
 
 As soon as a boxer starts to move his or her shoulders and arms and eventually the fists, his/her potential energy is being converted into kinetic energy.\\
+
 \textbf{Kinetic energy is calculated by using the formula:}
 
-$Kinetic Energy = (1/2)mv^2$
+$Kinetic Energy = (1/2)mv^2$\\
 
 The fist has its maximum velocity when it hits something. The collision then causes the fist to slow down, eventually the fighter begins applying a force to retract his/her arm.\\
+
 \textbf{This speed is calculated using:}
 
 $Velocity = Distance / Time$
-\\
-What is Velocity? The speed of something in a given direction.
 
-\includegraphics[scale=.3]{Velocity.jpeg}
+What is Velocity? The speed of something in a given direction.\cite{boxPhysics}
+
+ \begin{figure}[h]
+    \begin{center}
+    \includegraphics[scale=.3]{images/Velocity.jpeg}
+    \caption{Diagram showing how to calculate velocity}
+    \label{fig:velocity}
+    \end{center}
+\end{figure}
+
+Momentum can be described as "mass in motion" every object has mass therefore if that object is moving it has momentum. Its momentum depends on the amount of mass that is moved and the speed that the mass is moving at.\\
+
+\textbf{Momentum is calculated by using the formula:}
+
+$Momentum (P) = Mass * Velocity$\\
+
+Impulse is another factor that can change the power, speed and momentum of a boxers punch. \\
+When a punch is thrown and as it moves towards the head it has momentum while the head has momentum of zero.
+When the punch is connecting there is a transfer of momentum form arm to fist and then to the opponents head. \\
+Depending on the opponent who your punch is connecting with damage can be decreased even by the slightest movement of his head this would increase the time interval meaning force of the punch is reduced. \\
+
+\textbf{Impulse is calculated by using the formula:}
+
+$Impulse = Force * Time$ \cite{boxingPhysics}\\
+
+The degrees of angles and certain twists of the arm, fist is determined on the different kinds of punches.
+
+\textbf{Jab}\\
+Starting position hands near your nose with the fingers facing your chin.
+As the punch is thrown extend your hand straight twist your knuckles so when the hand is extended fingertips are pointed at the ground.\\
+
+\textbf{Hook}\\
+Starting in a boxing stance, hands in the same starting position as the jab.
+With the elbow at 90 degrees bring your forearm in front of you, finishing in the same line as your shoulders. 
+knuckles stay up with fingertips pointing at the ground.\\
+
+\textbf{Upper Cut}\\
+Starting position is the same a the Hook, boxing stance with hands near the nose. 
+Your hand needs to swipe up from your hip while keeping elbow bent and fingers pointing towards your head. Imagining the punch finishing underneaths the opponents chin.\cite{punchingPhysics}
+
 
 \subsection{Boxing Workouts}
-\newpage
-\subsection{Nutrition in Relation To sports}
-\subsection{Integration Of Ionic, Cordova, Angular}
+Boxing is known as one of the most competitive, popular sports out there bringing athletes from all over the world to find out who is the most skilled has the biggest work rate and also who is the fittest.
 
-\subsection{Tensorflow, Firebase}
+\textbf{Cardio}\\
+Endurance is one of the most important traits that a boxer can have. Boxing fight consists of 12 rounds and a boxer must have the ability to keep the highest fighting intensity during them rounds.
+To get  a fighters endurance ready here are some simple exercises which even the most professional fighters use.
+\textbf{Jump rope} this is a great exercise for endurance as the boxer is constantly moving both hands and feet. \textbf{high knees} and \textbf{heel taps} although these exercise seem harmless boxers cardio can be increased by executing theses exercises to the maximum intensity. \textbf{Burpee} this is a draining exercise used by top athletes its a very effective exercise improving endurance along with other muscles. \textbf{Shadow Boxing} and \textbf{Mountain climber} are exercises which help you to work on your breathing and technique while at the same time working on cardio.\\
+It is recommended for beginners to start by executing each exercise for 1 minute and from then on keep adding on time or work without breaks in between exercises. \cite{cardioWorkout}.\\
+
+\textbf{Gym}\\
+Workouts in the gym can vary depending on what improvements a boxer needs, preparations for fights or just general conditioning.
+For general conditioning gym sessions should be carried out 2-3 times a week exercises such as 
+   \textbf{Squat (or leg press), Bench press (or chest press), Romanian deadlift, Crunch, Seated cable row, Triceps pushdown, Lat Pulldown, Overhead press, Biceps curl
+ }.\\
+If a boxer wants to work on specific needs such as power and strength the workout changes to suit the program.
+The workout should be carried out 2-3 times a week including the following exercises \textbf{Romanian deadlift, Incline bench press, Hang power clean, Pull-ups, Squats, Combo crunches at 3 sets of 10 to 12
+}.\\
+When fight preparations begin gym sessions should be changed to lighter loads and faster execution so the fighter can maintain their strength and power.
+Workouts should be carried out 1-2 times a week containing the following exercises \textbf{Squats, Hang clean, Romanian deadlift, Crunches}.\cite{gymWorkout}\\
+
+\textbf{Sparring}\\
+Sparring in the ring is not about beating your opponent but its about making ring side improvements polishing on your technique and trying new things. Sparring is also about making mistakes its much better for fighters to figure out their mistakes in a sparring session than it the actual fight.  
+Sparring is a great advantage for young fighters all of the top boxers out there practice sparring and have been sparring since a young age it gives young fighters the opportunity of gathering experience on top of learning from the best. 
+Here are some of the learning outcomes from sparring with professionals.\cite{sparringWorkout}
+\begin{itemize}
+    \item Respect the opponents
+    \item Everyone is at different levels of mindset and fitness
+    \item It’s all about learning
+    \item Don’t be too down if you’ve done badly
+\end{itemize}
+
+\subsubsection{Benefits}
+There are many benefits of working out and exercising, boxing has the ability like any other sport to help people exit their realities.\\
+Boxing workouts or any other workouts are known to reduce stress workouts boost endorphins,  moods, works as a form of meditation and its known to improves sleep, all of which aid in reducing stress.
+Usually boxing workouts comprise of high intensity sessions with short recovery periods because these workouts are very demanding its not possible to think and worry about reality.\\
+
+Workouts and exercises have many other benefits and advantages such as it improves cardiovascular health and decreases the chances of suffering from heart disease.\\
+
+Keeping a consistent workout routine can help participants improve and gain total-body strength. Most if not all boxing workout consist of requiring the use of upper and lower body strength in their exercises while also boxing gyms incorporate other strength sessions within a workout. While it improves total-body strength it also enhances persons body composition which is the increase of muscle mass while decreasing your fat mass.\cite{workoutBenifits}   
+\newpage
+\section{Nutrition in Relation To sports}
+ \textbf{Nutrition} is the study of how food and drink affect our bodies with special regard for the important nutrients required to sustain human health. It is a critical part of health and development. Nutrition is taken in to our bodies and used for growth, metabolism and repair.
+ 
+\subsection{Benefits of having a nutritious diet}
+\begin{itemize}
+    \item Good Nutrition Improves Well-Being 
+    \item Helps You Manage A Healthy Weight
+    \item Maintains Your Immune System
+    \item Reduces The Risk of Chronic Disease
+    \item Healthy Eating Positively Affects Your Mood
+    \item Increases Focus
+\end{itemize}
+
+\subsection{Nutrition for Athletes}
+Food is important for athletes like boxers because it offers a great source of energy required for the action to be carried out. The food we choose to eat has an effect on our strength, training, performance and recovery.
+Meals consumed before and after exercise are the most important in sports nutrition but you should really be careful with everything that you put into your body.
+\cite{Nutrition}
+\subsection{Building and Repairing Muscle}
+As well as good training to improve exercise performance, good nutritious diet is also important. Many athletes, especially those engaged in strength and power sports (boxers), eat a high protein diet believing this is necessary for muscle growth and repair, and the habitual protein intakes of some groups of athletes can reach values in excess of 2.5 g/kg body mass per d(5), with some individual values far higher than this.
+\cite{maughan2012nutrition}
+\subsection{Supplements}
+According to an article from 2019, the rate of the intake of sports supplements was 82.2 percent, with the protein supplements being predominant (54.5 percent). Without further details, just by looking at this figure shows us that most athletes need supplements on top of their natural diet.
+\cite{Supplements}
+\subsection{Impact of Supplements}
+Have you ever taken into consideration why athletes intake protein supplements?\\ Firstly supplements are usually taken either by powder or pills. Frequently powder supplements are taken with water, milk, juice etc... to make it taste better. Basically the intake of supplements are needed to create the amino acids that are needed to build muscle tissue, quicker and more efficiently. The reason athletes such as boxers benefit so much from the protein supplements intake is that intense physical activity demands higher protein levels than normal.
+\\
+There are many sorts of supplements, which include vitamins 
+\newpage
+\section{Frameworks}
+
+It was clear to us that the following frameworks, sdk's would be necessary to develop the application user friendly, ascetically pleasing and to give us the ability for the project to be developed on a work friendly platform.
+
+\subsection{Angular}
+\includegraphics[scale=.015]{images/angular.png}
+
+Angular is a web application framework it's typescript based developed by an Angular team at Google.
+It has been completely rewritten from the same team that built AngularJS.
+
+Before we begin using Angular in our project we need to familiarize and rejuvenate ourselves with the following necessary languages \textbf{JavaScript}, \textbf{HTML} and \textbf{CSS} which are used in the framework.\\
+The development environment must include both Node Js and npm package manager.\\
+The latest Node JS version is 14.0.0 and the recommended version is 12.16.2. To determine the version of Node JS installed on your devices we simply type in \textbf{node -v} in the terminal.
+The npm package manager is required for the downloading and installing of the npm packages.
+\\To investigate if you have package manager installed you simply run the \textbf{npm -v} command in the terminal.\cite{angularSetup}
+
+\subsubsection{Angular-CLI}
+Angular CLI is a  command line interface that helps to simplify the development of high quality Angular applications. 
+With angular CLI we are able to, develop, test, build, and deploy an Angular applications with very little trouble.
+
+\subsubsection{Meaningful commands}
+
+This interface provides us with commands such as \textbf{ng new} this is used when you wish to create a new project, to produce code from already defined blueprints we run \textbf{ng generate} and \textbf{ng add} for adding framework support or application plugins necessary in the Angular project.
+
+In the application we are able to run unit testing by executing the \textbf{ng test} command and for end to end testing we use \textbf{ng e2e}.
+
+For compiling and running the application command \textbf{ng serve} is available this command runs the application locally on the web browser allowing us to view changes immediately.
+
+\textbf{ng build} and \textbf{ng deploy} are used for building the application and deploying the build artifacts.\cite{angularGuide} 
+
+\subsection{Ionic}
+\includegraphics[scale=.1]{images/ionic.png}
+
+Ionic is a complete open-source SDK for hybrid mobile app development created by Max Lynch, Ben Sperry, and Adam Bradley of Drifty Co.
+Ionic is is an incredibly popular framework for many applications across many platforms it is known to be powering over 10\% of the Apple App store and 16\% of the Google Play store.\\
+Ionic allows Web-developers IOS, Android and Web applications with one shared codebase. Using JavaScript, TypeScript and web API's it offers cutting edge web development experience.\\
+Ionic consists of over 100 API integrations it has the capability to connect any Native API or SDK allowing developers to extend their applications to its optimum capacity.\cite{ionicInsight}\\
+
+There are many advantages of using Ionic with developing an applications designed for a mobile platform it consists of an extensive amount of UI elements and quick prototyping. An Ionic UI component consist of two parts GUI and their functionality. It is available for the developer to change the way an element works, adding animations modifying, changing scrolling and many more adjustments are possible with ease.\\
+
+Other advantages come in to play as we progress into testing and building the application such as the simplified technique for the developer to test an Ionic application he does not require a testing device once The Ionic app works via webview the browser on the development machine can be used for testing.\\
+Another massive advantage of using Ionic is the available documentation. Us as young developers we don't obtain a large amount of knowledge about ionic. Using an SDK with an in depth documentation could play a massive role in this project.
+Ionics documentation is astonishing it covers an endless amount of useful topics explaining what these components are how they are used and how they connect.\cite{ionicPros}
+
+When user creates an application they have three options 
+\begin{itemize}
+    \item Blank project with executing the following command \textbf{ionic start myApp blank}
+    \item Project designed with tabs by executing the following command\\ \textbf{ionic start myApp tabs}
+    \item Project designed with a side menu by executing the following command\\ \textbf{ionic start myApp sidemenu}
+\end{itemize}
+
+The application can be tested with the following command \textbf{ionic serve} this will deploy the application on your locally on your browser.\cite{ionicRun}
+
+\subsection{Cordova}
+Apache Cordova is an open source framework that allows web developers to use their HTML, CSS, and JavaScript to develop a native application for mobile platforms such as IOS and Android.\\
+
+Ionic and Cordova have been working very closely with each other since the very beginning of Ionic. Cordova has the ability to implement native mobile functionality and creating a fully native applications its biggest downfall is that it lacks a UI SDK.
+With Ionic's components, navigation and platform specific styling Cordova working in conjunction with Ionic grants you the capability of developing a high performing native-like applications.\cite{cordovaInsight}
+
+\subsection{Firebase} 
+\includegraphics[scale=.05]{images/firebase.png}
+
+This cloud application is designed by Google to help build. Firebase is a tool-set to “build, improve, and grow your app”, and the tools it gives you cover a large portion of the services that developers would normally have to build themselves, but don’t really want to build, because they’d rather be focusing on the app experience itself. This includes things like analytics, authentication, databases, configuration, file storage, push messaging, and the list goes on. The services are hosted in the cloud, and scale with little to no effort on the part of the developer.
+
+This is different than traditional app development, which typically involves writing both front-end and back-end software. The front-end code just invokes API endpoints exposed by the back-end, and the back-end code actually does the work. However, with Firebase products, the traditional back-end is bypassed, putting the work into the client. Administrative access to each of these products is provided by the Firebase console.
+\begin{figure}[h]
+    \begin{center}
+    \includegraphics[scale=.5]{images/firebaseDiagram.png}
+    \caption{Firebase console}
+    \label{fig:firbase}
+    \end{center}
+\end{figure}
+
+\subsection{MYSQL}
+\includegraphics[scale=.04]{images/mysql.png}
+
+MySQL is a relational database management system based on SQL – Structured Query Language. The application is used for a wide range of purposes, including data warehousing, e-commerce, and logging applications. There are many versions of MySQL, we chose to use version 5.7.24.
+
+In this project we use MySQL to store information about workout tips and meal plans. Users are able to view our seven day workout plan and meal plan through our homepage. The information is stored within the database and pulled when requested by user.
+First we create the database locally through WampServer. WAMP is an acronym that stands for “Windows, Apache, MySQL, and PHP.” After creating and naming our database, we create a table within the database. 
+This table is important as we need to pull information from this table. As you see this table has five columns. But the first column is unique, we are pulling information by the unique ID days. For example only workouts for Day-1 shall be printed out to the page that requests information about it.
+
+\begin{figure}[h]
+    \begin{center}
+    \includegraphics[scale=.56]{images/workouts-table.PNG}
+    \caption{Workout excises in a sql database}
+    \label{fig:MYSQL}
+    \end{center}
+\end{figure}
+
+\subsubsection{How is this information displayed on web-page}
+Within our project, we created a JavaScript file called "server.js". Within the JavaScript file we create a secure connection between the server and WAMP.
+\begin{verbatim}
+var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'workout'
+});
+\end{verbatim}
+We are establishing a connection with our database above. Below we will show you how to pull information from AWS (Amazon Web Services). Basically, our database will be stored on a cloud where it will be available to everyone to view, whereas on the local machine only the creater of the database can view it now.
 
 \subsection{Android}
+\includegraphics[scale=.1]{images/android.png}
 
-\subsection{Deploying on the App Store}
+Android is a mobile device operating system developed mostly by Google. This was and still is the first reliable threat to the IPhone market.
+\\
+The Android working framework is based on an altered Linux kernel. The product contains Java applications running on a virtual machine. \\
 
-\subsection{Wearable Devices}
+Elements of the framework are written in Java, C, C++, and XML.
+Google has partnered with multiple device providing organizations such as Samsung Htc and One Plus giving their clients options and variety that IPhone simply does not supply.\cite{butler2010android}\\
 
-\subsection{Survey, Results}
+\subsubsection{Why Android Not IPhone}
+The decision to deploy the application on android platform was determined by many advantages that android possesses over the iOS.\\
+Since 2017 the number of android users is significantly higher than the IPhone users. Android has 64\% of the market share while IPhone has only 32\%.
+Android users are double of the amount of IPhone users therefore if our application was created and designed for an android platform it would cover a wider market.\\
 
-\subsection{Future Improvements}
+Another difference that helped us finalize our decision was the cost of publishing the application. Google Play has earned over \$ 3.3B in revenue while the App store made a huge revenue of \$ 5.4B. The iOS application store has produced a much higher revenue while possessing a substantially less amount of applications. Google play inherits around 2,800,000 available applications and the iOS platform consists of roughly 2,200,000.   
+\\
+The main reason that the revenue of iOS platform is much higher is due to the cost of publishing on the App Store.
+\cite{android&iOS}
+
+\begin{figure}[h]
+    \begin{center}
+    \includegraphics[scale=.5]{images/androidvsios.png}
+    \caption{Chart showing the number of apps in different app stores}
+    \label{fig:numberOfApp}
+    \end{center}
+\end{figure}
 
 
+\subsubsection{Android Framework}
 
+Creating the current software program we required a framework to develop and deploy an android application for the purpose of testing and customer use.\\
 
-\subsection{Artificial Neural Network}
+We had been slightly aware of Cordova through a previous module during our software course.
+The agreement on Cordova came with no hesitations, using it presented us with the availability of deploying the application on Android, iOS and Windows. 
+Cordova is a framework with many plugins that we had required for the completion of this project. 
+It was clear that using Cordova would have a positive impact on our project, with the ability of testing applications on both platforms Android and iOS.
+\cite{cordova}\\
+
+Verdict on the application's platform was completed and our decision was made. We had agred that the application will be developed for both Android and iOS but will only be developed on google play for the android users. 
+
+\section{Wearable Devices}
+\vspace{5mm} %5mm vertical space
+The availability and ownership of fitness devices and fitness applications has largely increased. Flurry an American mobile analytics, monetization, and advertising company founded in 2005 had completed a recent study on app users.
+They have announced that the usage of health applications are growing 87 percent faster than the entire mobile industry.
+
+One particular area of the mobile health market that is rapidly increasing are wearable devices. With Google Fit, Apple HealthKit, Samsung Gear and many other devices these accessories empower the customers in controlling, managing and tracking their fitness lives.\cite{rhodes2014accessing}\\
+
+One of many objectives assigned to this project was to deploy the application on to wearable fitness device. 
+For this to happen it was necessary for us to research and come up with reasonable options for a device and explore them in more details.
+
+The option that we decide to use in the testing of our application must be able to determine users movements with sensors such as accelerometer also needs to be capable of receiving, collecting and sending data to a software program.\\
+
+Options that we had came up with were 
+\begin{itemize}
+    \item Mobile Phone 
+    \item Fit Bit
+    \item Accelerometer chip
+    \item Activity trackers
+\end{itemize}
+
+It was concluded that the application will be ran and tested on the phone at first when this is improved and upgraded we would move to connecting the application to a Fit bit or an accelerometer chip.
+
+\subsection{Mobile Phones}
+Mobile phones include endless sensors that we don't even realise exist with the modern technology.
+Motion sensors such as the Accelerometer, Gyroscope and Pedometer sensors measure the movement of a human being. \\
+
+The accelerometer sensors measure the change in the x, y and z axis. Gyroscope measures and detects each degree of changes in orientation. While the Pedometer is an advanced version of the accelerometer it is mostly used to track a persons steps accurately.\cite{sensorsPhone}   
+
+\subsection{Fit Bits}
+
+Fit bits like phones work with certain sensors. Most of the time fitbits use a three-axis accelerometer they can tell if you are moving forwards, backwards, side to side or even up and down.
+By analyzing all the data recorded by the watch it can tell if you were walking, running, jumping or simply just moving your hands.\cite{sensorsFitbit}
+
+\subsubsection{Ultimate goal}
+We feel like the mobile phone device and the fitbit would suit the project for the moment but we don't believe that either one of them options would be reasonable for a boxer to wear or hold while training.\\
+
+The ultimate goal of a wearable device for this application it would be necessary to design and develop hardware that could be inserted into a boxing glove and there would not be a worry of holding or wearing a device.
+\newpage
+\section{Survey}
+\vspace{5mm} %5mm vertical space
+
+We had designed the following application to be used in everyday life even by the most vulnerable, we understood that the application had to be effective but easy to use at the same time. Decisions on what was most substantial information to include in the application needed to be finalized.\\
+
+As the designing and developing team of the application it was necessary that we could answer the following questions. \\
+
+What are the main factors and reasons that make an application unusable and complex especially for people that lack in the knowledge of technology.
+
+One of many reasons for applications not succeeding at present is determined by many factors. We decided to look more into certain factors which we defined as the most important to maximize the performance and simplicity while not damaging the performance or the aestheticism of the application. 
+\cite{DesignFailure}\\
+
+The factors that we believe are essential to making the application successful and we decided to look at in more detail were as follows
+
+\begin{itemize}
+    \item First Impression
+    \item User Interface
+    \item Target Audience
+    \item Speedy/Performance
+\end{itemize}
+
+Today, most applications are dismissed by clients ultimately leading to their failure due to poor user experience.
+
+An unsatisfactory result of the applications performance usually ends up with uninstalling it in no time. 
+\cite{AppFailure}
+
+Our decision to gain much more information was through out the form of communicating with the outside word. Our objectives from this was to gather opinions, ideas and possible improvements to the application.
+This in fact would help us to improve the knowledge of what people expect and would like to see in such application while also allowing us to elevate the quality and performance.\cite{surveyReasearch}
+
+\subsection{Survey Questions}
+
+\begin{enumerate}
+    \item What is your gender ?
+    \item What age are you ? 
+    \item Do you own a sports/fitness device ?
+    \item Do you use your sporting device while exercising ?
+    \item Do you find your fitness device useful during or after workouts ?
+    \item How many times do you exercise a week ?
+    \item How important are statistics of a workout for you ?
+    \item Do you rather follow already made plan or your own plan ?
+    \item Are you aware with the reasons for each workout and what it improves ?
+    \item If you could add a functionality to your application what would that be ?
+\end{enumerate}
+
+\subsection{Survey Results}
+
+After a few weeks of getting responses to the designed survey we received the results.
+This survey was mostly completed 70.97 male and 29.03 percent females.
+87.10\% of users were between the ages of 18-24 with 9.68\% over the age of 25 and finally 3.23\% under 18s.
+
+We were presented with surprising results when asking if people own a sporing device in question three.
+43.33\% of responses answered no while 56.67\% answered yes. We expected a much higher percentage in people owning a sporting device. We have come to the conclusion that participants didn't include their mobile devices as a sporting device therefore results didn't elevate as expected in this answer.\\ 
+
+The result gave us insight that the if people use their devices while exercising where it stated that 10\% always use it 40\% sometimes and 30\% never use it.
+We established if people find a fitness device useful in question five of the survey. Output of this question is very much divided 13.33\% of answers are both Extremely Usefully and Not Useful at all while majority of answers 46.67\% find it somewhat useful.
+
+We needed to find out if people exercise often during a week to determine if this application would get enough attention from the user.
+The result came back with a 53.34\% of respondents exercising three or more times a week while 6.67\% of responses came back as I don't exercise. 
+This was a positive outcome because we believe that it would get enough use during the week by the user to get it tested and for it to become a permanent application on the users device.
+
+It was important to verify if the users find statistics important, plans they follow and the reasons for certain workouts.
+Only 3.33\% of people think statistics are not important while 30\% find them very important and 10\% extremely important.
+Answers to question eight were very balance where people answered which plan they rather use plan already designed for users came out on top by a 10\% higher result.
+We received the result for the second last question and we concluded that most people are aware of what each exercise is designed for. 53.33\% of responses were somewhat aware of reasons and improvements of each exercise.
+
+The final question from the survey was on the improvements that people see on the already made applications.
+We needed to to make a decision on what to add to the application this would be the first place we had to analyze.
+The responses that we obtained were such as.
+\begin{itemize}
+    \item  Multiple plans available
+    \item Heart rate monitor, breathing apparatus, step count
+    \item Calories Burnt 
+\end{itemize}
+   
+\subsection{Reflection on survey} 
+This was a very important survey with a very successful feedback. The following results stated above helped us with the finalizing the design of the application.
+It had supplied us with massive amount of ideas and possible solution. Its important to gain peoples feedback and apprehend their ideas. At the end of the day this application will be designed for everyday use by the mankind.\\
+
+\begin{figure}[h]
+    \begin{center}
+    \includegraphics[scale=.4]{images/statistic1.png}\includegraphics[scale=.4]{images/statistic2.png}
+    \caption{Bar chart showing survey results}
+    \label{fig:survey}
+    \end{center}
+\end{figure}
+
+\newpage
+\section{Artificial Neural Network}
 In the oxford dictionary it says, “artificial intelligence is an area of study concerned with making computers copy intelligent human behaviour \cite{knowles2006oxford}.” If you google the question that I just asked, you’ll get something like “the theory and development of computer systems able to perform tasks normally requiring human intelligence, such as visual perception, speech recognition, decision-making, and translation between languages.”
 
 To really understand what Artificial intelligence (AI) is, we first must know what Intelligence is. When people talk about intelligence, they identify it with “the ability to solve hard problems.” Some people say it’s “Maybe it is too early
 to define intelligence. It is obvious that, after decades of study, we still do not know very much about it. There are more questions than answers \cite{wang2007logic}.” This is where we stumble upon the idea of Artificial Intelligence.
-\textbf{The birth of the idea}
-\\
+
+\subsection{Origin of the idea}
 The birth of AI is bizarre from what normal people would think. AI wasn’t made along with computers it was sort of this fictional monster. The first AI possibly made was by Mary Shelly when she wrote Frankenstein in 1818 \cite{shelley2012frankenstein}.So technically the first ever AI was made long before we even thought of the idea. The main concept that comes into people’s minds is something man made that is designed to solve all our lives biggest questions. \cite{bostrom2014ethics}
 
-For this project we have to learn how to build a neural database. To build the actual neural network we are using a program called Keras which comes with Anaconda, a powerful tool used with Python. We look at different approaches when it comes to training a system. For example, taking this project in hand, we need to train the system to recognize the different types of punches thrown. Before learning out neural networks we would need to know what a neuron is.\\
-\textbf{Neuron}
+For this project we have to learn how to build a neural database. To build the actual neural network we are using a program called Keras which comes with Anaconda, a powerful tool used with Python. We look at different approaches when it comes to training a system. For example, taking this project in hand, we need to train the system to recognize the different types of punches thrown. Before learning out neural networks we would need to know what a neuron is.
 
+\subsection{Neuron}
 \textit{"A specialized cell transmitting nerve impulses; a nerve cell."} \\ A neuron has an input($x$) and output($y$). The input normally has a weight to it and a bias($b$) with is usually This image below will show you how a neuron looks.
-\\
-\includegraphics[scale=.4]{images/Neuron.png}
-\\
-Neural networks are a set of algorithms, modeled loosely after the human brain, that are designed to recognize patterns. Neural networks are being applied to many real-life problems today, including speech and image recognition, spam email filtering, finance, and medical diagnosis, to name a few.
 
-\includegraphics[scale=.19]{images/NeuralNetwork.png}
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=.4]{images/Neuron.png}
+\caption{Diagram of Neuron}
+\label{fig:neuron}
+\end{center}
+\end{figure}
+Neural networks are a set of algorithms, modeled loosely after the human brain, that are designed to recognize patterns. Neural networks are being applied to many real-life problems today, including speech and image recognition, spam email filtering, finance, and medical diagnosis, to name a few.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=.18]{images/NeuralNetwork.png}
+\caption{Diagram example of Neural Network}
+\label{fig:NeuralNetwork}
+\end{center}
+\end{figure}
 \\
 \textbf{3 reasons to study neural computation:}\\
 \textbf{1.} To understand how the brain actually works: it's very large and very complicated and made from things that die when you poke it, so we need to use computer simulations.\\
@@ -253,8 +596,15 @@ Neural networks are a set of algorithms, modeled loosely after the human brain, 
 \\
 With these tools, we can train the model to recognize the type of punches:\\
 \textit{Jab\\hook\\Uppercut}
+\subsection{Tensorflow}
+\includegraphics[scale=.04]{images/tensorflow.png}
 
-Using tensorflow with python to do this project. Tensorflow is a symbolic math library which can be used for machine learning. Keras is used to make the neural network. Numpy and pyplot is used to plot the data. Before making the data set for machine learning we'd need to learn of the core core concepts of making data-sets. This is how to shape your data and how to get it ready for training. To understand the layout of data-sets I used some examples online and decided to use the well know the iris data-set. This data-set collects data points from a hundred and fifty different samples of flower. It uses the petal length/width and the sepal length/width and sorts them into three types of iris.
+Using Tensorflow with python to do this project. Tensorflow is a symbolic math library which can be used for machine learning. Keras is used to make the neural network. Numpy and pyplot is used to plot the data. This software allows developers to create a large-scale neural networks with many layers. This is used with python and has many uses in predictions and classification. Before making the data set for machine learning we'd need to learn of the core core concepts of making data-sets. This is how to shape your data and how to get it ready for training. To understand the layout of data-sets I used some examples online and decided to use the well know the iris data-set. This data-set collects data points from a hundred and fifty different samples of flower. It uses the petal length/width and the sepal length/width and sorts them into three types of iris.
+\\
+\\
+I wanted to do something similar to this using the x,y,z axis on the device and the accelerometer and sorting them into the three types of punches the device would register. I've learnt that by training a neural network with these values and telling it the type of punch it is I can then build a neural network than can reference from new values what type of punch is thrown. The data set that I'm going to make will contain four values and the type of punch it should be. The punch will be classified as 0, 1 or 2.
+
+\begin{figure}[h]
 \begin{verbatim}
 from sklearn.datasets import load_iris
 
@@ -266,30 +616,13 @@ iris
                [4.7, 3.2, 1.3, 0.2],
                [4.6, 3.1, 1.5, 0.2],
 \end{verbatim}
-I wanted to do something similar to this using the x,y,z axis on the device and the accelerometer and sorting them into the three types of punches the device would register. I've learnt that by training a neural network with these values and telling it the type of punch it is I can then build a neural network than can reference from new values what type of punch is thrown. The dataset that I'm going to make will contain four values and the type of punch it should be. The punch will be classified as 0, 1 or 2.
+\caption{Loading in the iris results into tensorflow}
+\label{fig:iris}
+\end{figure}
 
-\subsection*{How is physics applied to boxing}
-Physics occurs in punching because of energy. Person uses energy in order for a punch to be carried out. That is why, as well as energy we need momentum, work, power, and velocity. Before a boxer punches, he has potential energy which is stored energy. Once, the boxer begins to punch potential energy turns into kinetic energy.
-
-Boxing is more than the brutal beating up of one another; it is a sport that applies many physics laws. If a fighter uses physics correctly, he will likely get the victory; but if he does not, he will probably lose.
-
-As soon as a boxer starts to move his or her shoulders and arms and eventually the fists, his/her potential energy is being converted into kinetic energy.\\
-\textbf{Kinetic energy is calculated by using the formula:}
-
-$Kinetic Energy = (1/2)mv^2$
-
-The fist has its maximum velocity when it hits something. The collision then causes the fist to slow down, eventually the fighter begins applying a force to retract his/her arm.\\
-\textbf{This speed is calculated using:}
-
-$Velocity = Distance / Time$
-\\
-What is Velocity? The speed of something in a given direction.
-
-\includegraphics[scale=.3]{Velocity.jpeg}
-
-\Chapter{Methodology}
-\subsection{Work allocation}
-We are allocating this project into three sections.
+\chapter{Methodology}
+\section{Work allocation}
+We are allocating this project into three sections.\\
 \textbf{First Step:}
 
 Firstly we are going to start our research. We are going to deeply research in how this wearable device is going to work and what it takes to develop this new piece of technology. We need to understand what language is going to be used in constructing this. We need to know what sensors are required and how all data is going to be recorded.
@@ -302,22 +635,191 @@ During the term our research is going to be a piece of document in how this wear
 
 Whilst two members of the team are constructing the application. One person is going to specifically manage the database. They will have the responsibility to create the AWS account and link it up to the database. Overall, they are responsible for the whole database section of this project and to link it up to the application, that is works efficiently.
 
-\subsection{Deployment}
+\section{GitHub Repository}
+The GitHub repository containing the entire project can be found at 
+https://github.com/ArekMamala/FinalYearProject
+The following sections listed below outline the different components in the repository with a link to each part.
+\subsection{README}
+This part of the repository contains a simple introduction to the final year project brief explanation and a guide on how to download  install and run the application on a given device or environment.
+https://github.com/ArekMamala/FinalYearProject/blob/master/README.md
+\subsection{LaTex}
+This section of the repository contains the latex project that we used for the write up of the development of the project dissertation. This section also contains a PDF file of the complete dissertation.  
+https://github.com/ArekMamala/FinalYearProject/tree/master/LaTeX
+\subsection{Final Year Project}
+This section of the GitHub repository contains the Angular environment code used to design and develop the application with all the plugins and imports necessary for the environment to run the application. 
+link*****
+\subsection{Releases}
+The releases of the project is the build android applications as we progressed through making of the application. Each release differs from another. This section also contains the latest release of the application which is available to work on android devices. 
+link***** 
+
+\section{Deploying on the App Store}
 We decided to android for developing our application. We choose android because the ease of use and developing. Android is one of many mobile operating systems based on the Linux kernel. Android was announced in Sept 2008 and has now become one of the most popular mobile operating system. Developing an app for android is simple using android studio and ionic. This is why we also choose ionic for our application. 
 
-To deploy an app in the play store we'd need to;
+To deploy an app in the play store we'd need to:
 \\
-* Understand the Developer Program: \\https://play.google.com/about/developer-content-policy/
+\textbf{Understand the Developer Program:} https://play.google.com/about/developer-content-policy/
 
 Following these guidelines we keep us in good standing with google play store and most importantly keep our users safe and protected. An example of this would be, our app should only request permissions that are only used for core features of the app while keeping clear of what personal data we use.
 \\
-* Test against the quality guidelines:\\ https://developer.android.com/docs/quality-guidelines
+\textbf{Test against the quality guidelines:} https://developer.android.com/docs/quality-guidelines
 
 This will be tested with our test cases.
- 
-\Chapter{System Design}
 
-\Chapter{Conclusion}
+\section{Installing \& Running Angular}
+We use the Node Package Manager to install Angular-CLI we execute the following command in the terminal on your machine \textbf{npm install -g @angular/cli}. To cerity if the CLI has been correctly installed the following command is used to check \textbf{ng version}.
+
+\section{Installing \& Running Ionic }
+Very much like Angular Ionic requires for Node JS to be present before the user has an option to install Ionic.
+Once Node JS is available user can start the install using the terminal the developer needs to use the following command \textbf{npm install -g @ionic/cli}.
+
+\section{Installing \& Running Cordova }
+To be able to install Cordova Node JS and Angular CLI must be present. To install Cordova the user simply needs to enter the following command in their terminal\\ \textbf{npm install -g cordova}. To find out the version of cordova installed on the device enter \textbf{cordova -v} in the terminal.\cite{cordova}\\
+
+Before we can run the application on a device the developer must add the specific platform that is used in the testing the application you can do this by entering\\ \textbf{ionic cordova platform add android/ios} in their terminal.
+After the platform is added, you can generate the required .apk file with the command  \textbf{ionic cordova build android}.\\
+
+Running the application on the specified device is done with the input of this command \textbf{ionic cordova run android --device} while having the device plugged into the machine developing the application. \cite{cordovaRun}
+\chapter{System Design}
+This is where you’ll find all the the designs that we did before starting the project. We needed to have a clear understanding of different levels of the application and the outline of the user UI before we started the coding process.
+
+\section{Project Design}
+\begin{figure}[h]
+\includegraphics[scale=.37]{images/projectOverview.png}
+\caption{Project architecture block diagram}
+\label{fig:projectDiagram}
+\end{figure}
+
+Above image is the overall design of the entire project. We have an application working together with two databases one on the Wamp Server based on the AWS Cloud server and an online database for the users login and sign up information.\\
+The design shows Tensorflow connecting to the ionic application for the AI punching detection system.\\
+The application applying native functionality using Cordova getting deployed to the device operating system e.g. Mobile Phone. 
+\section{Application Design}
+This is the application design which describes the components that are included and the pattern that we decided to use in the project.
+We finalized the decision of developing the application using the Lazy Loading pattern. This pattern is used for large scale Angular projects.
+Since the application has databases, AI and servers working in line with it this pattern would be the best way increase our applications performance.
+Below image is the application designed in the lazy loading pattern.
+\subsection{Lazy Loading}
+\begin{figure}[h]
+\includegraphics[scale=.5]{images/Lazy-Loading(4).PNG}
+\caption{Lazy loading diagram}
+\label{fig:LazyLoading}
+\end{figure}
+\newpage
+As you can see in the above design app component is divided into two different components the Home Component and Index Component.
+The main idea of lazy loading is for the project to load only the components that are necessary at the time of use. \\
+Our index components is in charge of both the Login and Sign up parts of the application.\\
+While the Home Component loads the Workout, Profile and Home products of the application which then load only the selected component depending on which product, Workout, Profile and Home components are available to be loaded. 
+
+\section{Log In \& Sign Up}
+The Log-in/Sign-up page should be very straight forward for the user to use. We decide that we should keep the page simple so users will more than likely sign up for the app. We didn't want them to share their email with us because we know some people don't like giving their user information away, instead we said they can just use their username and a password.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=.5]{images/loginPageBorder.png}
+\end{center}
+\caption{Login page}
+\label{fig:LazyLoading}
+\end{figure}
+
+Having the sign-up feature next to the log-in made it easier to get more users to make an account to store their personal information. From what they choose, we can store and load custom workouts which are unique for every user. 
+\subsection{Firebase Design}
+For storing passwords, we didn't want to have the passwords available locally. This is where Firebase base comes in. It encrypts the password for us and stores it so we won't be able to know the users passwords either. The safety of users information is very important in this day and age. We all agreed it would be best if we did not have access to the passwords and if any issues occurred the users could contact us and we can send a link for the users to reset their passwords. Shown in figure \ref{fig:firbase} we can see how Firebase handles most of the back-end server maintenance.
+
+\section{Home Component}
+
+\begin{center}
+\includegraphics[scale=.5]{images/homePageBorder.png}
+\end{center}
+
+\begin{center}
+\includegraphics[scale=0.377]{images/days.png}
+\end{center}
+
+\subsection{Meals}
+
+\begin{center}
+\includegraphics[scale=0.377]{images/dayWorkouts.png}
+\end{center}
+\subsection{Workouts}
+
+\section{Profile Component}
+We have designed the Profile component as a planner for the user to stick by and follow strictly.
+For this to become possible the idea of a built in planner in the application was crossed out.
+We wanted to use the ideology of "work smarter not harder" we decided to use the already available calendar application on every mobile phone.\\
+This feature is designed to eliminate of the following scenario happening for example when a consumer decides to use the application and make plan for the following days, typically this would be saved in the application and only notify the user when accessing that application. This scenario can cause a problem for the user completing workouts as he/she can easily forget about their plans and not open the application in time to follow up on their programs.
+By using the calendar application users will be notified that the workout is due even without accessing the application this will remind them to complete the workout and keep up with their program.
+
+
+\begin{figure}[h]
+    \begin{center}
+    \includegraphics[scale=.5]{images/profilePageBorder.png}
+    \caption{Profile component display.}
+    \label{fig:pComponent}
+    \end{center}
+\end{figure}
+
+As can be seen in figure \ref{fig:pComponent} it firstly displays the Username and Calendar. This is for the reassurance and a quick simple explanation towards the user of what the component consists of.\\
+As explained above this component is connected to the calendar plugin from the mobile device therefore we designed the applications to present the user with the already made events in his/her calendar.
+We extract the following information from these events 
+\begin{itemize}
+    \item Name of the event
+    \item The start date of the event
+    \item The end date of the event
+\end{itemize}
+we output them to the user as displayed in figure \ref{fig:pComponent}.
+This section is also designed to give the user an option to add an even for example a workout. The applicant can execute this with the $add-event$ button displayed underneath the user information.
+This button connects to the calendar plugin and brings the applicant to the add section of the calendar application once the event is added user is back in  ASU Boxing with the newly created event present.
+
+\section{Workout Component}
+    
+    \begin{figure}[h]
+    \begin{center}
+        \includegraphics[scale=.5]{images/workoutBorder.png}
+        \caption{Initial stage of Workout component.}
+        \label{fig:isWComponent}
+        \end{center}
+    \end{figure}
+
+The workout component is loaded when the bottom right tab is pressed.\\
+This component is designed to carry out and display to the user a lot of the applications functionality.\\
+Figure \ref{fig:isWComponent}  shows this component, at the top the user name is displayed just as a way of connecting the application with the user therefore he/she can be assured that we have loaded in the correct user information.\\
+Below the user name we have a timer for the specified workout time. The costumer has the ability to chose length of time themselves, the timer outputs the time selected and starts timing down when the button at the bottom of the screen $Start-Workout$ is selected. When the time is finished the application is designed to call the vibration plugin, ultimately when the workout is completed the phone should Vibrate.
+The vibration is put in as a reminder to the user when the time has finished we designed this feature because we are well aware that when workouts are carried out applicants would concentrate more so on the workout itself than the application hence the vibration is a finish line for the workout.\\
+
+This part of the application is designed to count the number of punches and recorded display the information to the user. In the above image we see the component at its initial stage where the amount of punches are zero.
+The start button will be connected to the accelerometer, gyroscope and the neural network. Working in conjunction they gather the three way axis information to determine if a punch is present, which punch it is and if its a valid punch.
+Another feature in this part of the application is when a punch is thrown it is printed out to the screen as can be seen in figure  \ref{fig:ipWComponent} in red colour the name of the punch is printed to the user and both the number of punches as well as the number of the punch carried out are increased.\\
+
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[scale=.5]{images/workoutAfterPunch.png}
+        \caption{Workout component during workout.}
+        \label{fig:ipWComponent}
+        \end{center}
+    \end{figure}
+
+The application has also the design that gives the user an option to to end a workout at anytime this can be done with the $Stop-Workout$ button shown in figure \ref{fig:ipWComponent}.
+When the workout is finished or stopped the application gives out the results from the exercise.
+Shown in figure \ref{fig:aWComponent} is the design of the results displayed out to the user the results will consist of 
+\begin{itemize}
+    \item Current Date 
+    \item Total amount of punches
+    \item Average amount of punches per minute
+    \item Number of Jab punches
+    \item Number of Uppercut punches
+\end{itemize}
+Workout feedback was designed to summarise the workout for the applicant also for the users to be able to analyse their performance and set goals for future workouts. 
+
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[scale=.47]{images/afterWorkout.png}
+        \caption{Workout component after workout.}
+        \label{fig:aWComponent}
+        \end{center}
+    \end{figure}
+
+
+\chapter{Conclusion}
+\section{Future Improvements}
 
 % references section
 \bibliographystyle{plain}
