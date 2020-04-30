@@ -15,7 +15,7 @@ var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'workout'
+    database: 'asuboxing'
 });
 
 // Connecting to the database
@@ -87,6 +87,36 @@ app.get('/api/day5', function (req, res){
 app.get('/api/day7', function (req, res){
   days = 'Day-7';
   sql = 'SELECT * FROM workouts WHERE days = ' + connection.escape(days);
+  connection.query(sql, function (error, results, fields) {
+      if (error) throw error;
+      console.log(results);
+      res.json(results);
+  });
+})
+
+app.get('/api/mealday1', function (req, res){
+  weekday = 'Monday';
+  sql = 'SELECT * FROM meals WHERE weekday = ' + connection.escape(weekday);
+  connection.query(sql, function (error, results, fields) {
+      if (error) throw error;
+      console.log(results);
+      res.json(results);
+  });
+})
+
+app.get('/api/mealday2', function (req, res){
+  weekday = 'Tuesday';
+  sql = 'SELECT * FROM meals WHERE weekday = ' + connection.escape(weekday);
+  connection.query(sql, function (error, results, fields) {
+      if (error) throw error;
+      console.log(results);
+      res.json(results);
+  });
+})
+
+app.get('/api/mealday3', function (req, res){
+  weekday = 'Wednesday';
+  sql = 'SELECT * FROM meals WHERE weekday = ' + connection.escape(weekday);
   connection.query(sql, function (error, results, fields) {
       if (error) throw error;
       console.log(results);

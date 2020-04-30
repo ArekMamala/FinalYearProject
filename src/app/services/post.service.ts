@@ -30,6 +30,18 @@ export class PostService {
     return this.http.get("http://localhost:8081/api/day7");
   }
 
+  getPostsDataMealDay1(): Observable<any> {
+    return this.http.get("http://localhost:8081/api/mealday1");
+  }
+
+  getPostsDataMealDay2(): Observable<any> {
+    return this.http.get("http://localhost:8081/api/mealday2");
+  }
+
+  getPostsDataMealDay3(): Observable<any> {
+    return this.http.get("http://localhost:8081/api/mealday3");
+  }
+
   private posts: Post[] = [];
   //private postsUpdated = new Subject<Post[]>();
 
@@ -40,6 +52,7 @@ export class PostService {
   getPost(days: string): Observable<any> {
     return this.http.get("http://localhost:8081/api/posts/" + days);
   }
+  
 
 }
 
