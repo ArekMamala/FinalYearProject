@@ -621,7 +621,34 @@ iris
 \end{figure}
 
 \chapter{Methodology}
-\section{Work allocation}
+
+\section{Overview}
+In this section we will describe and review the approach that we took in developing of this project, we will describe the methodology used why it was necessary, how it was implemented and how it helped the development of the application progress overall.
+After reading this section the reader should have a clear understanding of the complexity and scale of the project as well as the steps taken throughout the development.
+The project design was not fully completed and and features were not finalized therefore we needed to use a system that would help us keep on top of any changes and where issues could be dealt within an easy and efficient manner.
+After researching many methodologies such as the Waterfall, Lean, Kanban we had decided that the best methodology for our project was Scrum which is an agile project management methodology or framework.
+\\\\\\\\\\
+
+
+\subsection{Scrum }\\
+Scrum consists of six different stages\\ 
+\textbf{Product Backlog}\\
+This is where the product owner builds a list of bright ideas and features that could possibly be developed into the project.
+They then prioritise the list and bring the top items to the developing team.\\
+\textbf{Sprint Planning}\\
+The team, product owner and the scrum master discuss the top priority user stories and determine which ones will be implemented in the next sprint.\\
+\textbf{Sprint Backlog}\\
+Is the list of the user stories which are committed for the next sprint.\\
+\textbf{Sprint}\\
+This is a one to three week time frame where the user stories in the sprint backlog are developed by the team. During the sprint daily scrum occurs this is a team stand up meeting in which they discussing the completed work, the part each person is working on and if there are any blocked items or if anyone needs help with any part of their development.\\
+\textbf{Potentially shippable Product}\\
+After the sprint is completed the product owner decides if the project is ready to be shipped or if additional features need to be implemented.\\
+\textbf{Sprint Review \& Sprint Retrospective}\\
+Sprint review is where the team show the work developed on the project to the product owner and sprint retrospective is where they discuss what can be done to improve the process.\\
+\textbf{This Workflow is repeated for each sprint carried out in the project}
+\section{Sprint 1 - Application Idea}
+
+\subsection{Work allocation}
 We are allocating this project into three sections.\\
 \textbf{First Step:}
 
@@ -635,24 +662,77 @@ During the term our research is going to be a piece of document in how this wear
 
 Whilst two members of the team are constructing the application. One person is going to specifically manage the database. They will have the responsibility to create the AWS account and link it up to the database. Overall, they are responsible for the whole database section of this project and to link it up to the application, that is works efficiently.
 
-\section{GitHub Repository}
+\subsection{Frameworks, Technologies \& Languages}
+
+\subsection{Scope}
+
+\section{Sprint 2 - Design & Research}
+\subsection{Researching Application}
+\textbf{Environments}\\
+\textbf{Plugins}\\
+\textbf{Platforms}
+
+\subsection{Designing Application}
+\textbf{Rough Design (Tabs/sidemenu/blank)}\\
+\textbf{Possible Features}\\
+
+\section{Sprint 3 - Implementation \& development}
+\subsection{Initial Setup}
+
+\subsection{GitHub Repository}
 The GitHub repository containing the entire project can be found at 
 https://github.com/ArekMamala/FinalYearProject
 The following sections listed below outline the different components in the repository with a link to each part.
-\subsection{README}
+\textbf{README}
 This part of the repository contains a simple introduction to the final year project brief explanation and a guide on how to download  install and run the application on a given device or environment.
 https://github.com/ArekMamala/FinalYearProject/blob/master/README.md
-\subsection{LaTex}
+\textbf{LaTex}
 This section of the repository contains the latex project that we used for the write up of the development of the project dissertation. This section also contains a PDF file of the complete dissertation.  
 https://github.com/ArekMamala/FinalYearProject/tree/master/LaTeX
-\subsection{Final Year Project}
+\textbf{Final Year Project}
 This section of the GitHub repository contains the Angular environment code used to design and develop the application with all the plugins and imports necessary for the environment to run the application. 
 link*****
-\subsection{Releases}
+\textbf{Releases}
 The releases of the project is the build android applications as we progressed through making of the application. Each release differs from another. This section also contains the latest release of the application which is available to work on android devices. 
-link***** 
+link*****
 
-\section{Deploying on the App Store}
+\subsection{Frameworks}
+
+\textbf{Installing \& Running Angular}
+We use the Node Package Manager to install Angular-CLI we execute the following command in the terminal on your machine \textbf{npm install -g @angular/cli}. To cerity if the CLI has been correctly installed the following command is used to check \textbf{ng version}.
+
+\textbf{Installing \& Running Ionic }
+Very much like Angular Ionic requires for Node JS to be present before the user has an option to install Ionic.
+Once Node JS is available user can start the install using the terminal the developer needs to use the following command \textbf{npm install -g @ionic/cli}.
+
+\textbf{Installing \& Running Cordova }
+To be able to install Cordova Node JS and Angular CLI must be present. To install Cordova the user simply needs to enter the following command in their terminal\\ \textbf{npm install -g cordova}. To find out the version of cordova installed on the device enter \textbf{cordova -v} in the terminal.\cite{cordova}\\
+
+Before we can run the application on a device the developer must add the specific platform that is used in the testing the application you can do this by entering\\ \textbf{ionic cordova platform add android/ios} in their terminal.
+After the platform is added, you can generate the required .apk file with the command  \textbf{ionic cordova build android}.\\
+
+Running the application on the specified device is done with the input of this command \textbf{ionic cordova run android --device} while having the device plugged into the machine developing the application. \cite{cordovaRun}
+
+\subsection{Punch Detection}
+
+\subsection{Log In \& Sign Up Database}
+
+\subsection{AWS server, Wamp \& MySQL}
+
+\section{Sprint 4 - Testing \& Debugging}
+\subsection{Integration Testing}
+\textbf{Frameworks SDK's Databases }\\
+
+\subsection{System Functionality Testing}
+\textbf{Punch detection}\\
+\textbf{Log In Sign In Database}\\
+\textbf{Workouts Meals Database}
+\subsection{Acceptance Testing}
+
+\section{Sprint 5 - Deploying}
+\subsection{Android Deployment}
+\subsection{App Store Deployment}
+
 We decided to android for developing our application. We choose android because the ease of use and developing. Android is one of many mobile operating systems based on the Linux kernel. Android was announced in Sept 2008 and has now become one of the most popular mobile operating system. Developing an app for android is simple using android studio and ionic. This is why we also choose ionic for our application. 
 
 To deploy an app in the play store we'd need to:
@@ -665,20 +745,6 @@ Following these guidelines we keep us in good standing with google play store an
 
 This will be tested with our test cases.
 
-\section{Installing \& Running Angular}
-We use the Node Package Manager to install Angular-CLI we execute the following command in the terminal on your machine \textbf{npm install -g @angular/cli}. To cerity if the CLI has been correctly installed the following command is used to check \textbf{ng version}.
-
-\section{Installing \& Running Ionic }
-Very much like Angular Ionic requires for Node JS to be present before the user has an option to install Ionic.
-Once Node JS is available user can start the install using the terminal the developer needs to use the following command \textbf{npm install -g @ionic/cli}.
-
-\section{Installing \& Running Cordova }
-To be able to install Cordova Node JS and Angular CLI must be present. To install Cordova the user simply needs to enter the following command in their terminal\\ \textbf{npm install -g cordova}. To find out the version of cordova installed on the device enter \textbf{cordova -v} in the terminal.\cite{cordova}\\
-
-Before we can run the application on a device the developer must add the specific platform that is used in the testing the application you can do this by entering\\ \textbf{ionic cordova platform add android/ios} in their terminal.
-After the platform is added, you can generate the required .apk file with the command  \textbf{ionic cordova build android}.\\
-
-Running the application on the specified device is done with the input of this command \textbf{ionic cordova run android --device} while having the device plugged into the machine developing the application. \cite{cordovaRun}
 \chapter{System Design}
 This is where you’ll find all the the designs that we did before starting the project. We needed to have a clear understanding of different levels of the application and the outline of the user UI before we started the coding process.
 
