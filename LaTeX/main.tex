@@ -566,7 +566,7 @@ To really understand what Artificial intelligence (AI) is, we first must know wh
 to define intelligence. It is obvious that, after decades of study, we still do not know very much about it. There are more questions than answers \cite{wang2007logic}.” This is where we stumble upon the idea of Artificial Intelligence.
 
 \subsection{Origin of the idea}
-The birth of AI is bizarre from what normal people would think. AI wasn’t made along with computers it was sort of this fictional monster. The first AI possibly made was by Mary Shelly when she wrote Frankenstein in 1818 \cite{shelley2012frankenstein}.So technically the first ever AI was made long before we even thought of the idea. The main concept that comes into people’s minds is something man made that is designed to solve all our lives biggest questions. \cite{bostrom2014ethics}
+The birth of AI is bizarre from what normal people would think. AI was not made along with computers it was sort of this fictional monster. The first AI possibly made was by Mary Shelly when she wrote Frankenstein in 1818 \cite{shelley2012frankenstein}.So technically the first ever AI was made long before we even thought of the idea. The main concept that comes into people’s minds is something man made that is designed to solve all our lives biggest questions. \cite{bostrom2014ethics}
 
 For this project we have to learn how to build a neural database. To build the actual neural network we are using a program called Keras which comes with Anaconda, a powerful tool used with Python. We look at different approaches when it comes to training a system. For example, taking this project in hand, we need to train the system to recognize the different types of punches thrown. Before learning out neural networks we would need to know what a neuron is.
 
@@ -616,7 +616,7 @@ iris
                [4.7, 3.2, 1.3, 0.2],
                [4.6, 3.1, 1.5, 0.2],
 \end{verbatim}
-\caption{Loading in the iris results into tensorflow}
+\caption{Loading in the iris results into Tensorflow}
 \label{fig:iris}
 \end{figure}
 
@@ -841,22 +841,68 @@ The project proposed the development of an ionic, angular, android application
 with an AI punching detection system using Tensorflow, user details stored in Firebase an online
 database and meals as well as workouts stored on a database in server on the cloud.
 
-Using something like Firebase really gave us an opportunity to work on the rest of the application without having most of the back-end, we do have our own back-end server but we didn't want to have users personal information in case our application got compromise. Firebase was originally used for security and was really easy understand due the like well written documentation you can find online. I would highly recommend using Firebase to any developer that plans on starting a new application and isn't ready to handle all the back-end server issues. 
-
-Tensorflow is a really powerful tool for developing neural networks. This powerful tool is also easy to use and that's why we choose to use Keras with Tensorflow. There is a countless amount of documentation available online for developers to make a neural network for anything a developer desires to use it for. This really helped us get more accurate results for our punches, more specifically the upper-cut that the accelerometer had a issues properly calculating.
 \section{Objectives \& Goals}
 \begin{itemize}
 
-\item Deploy a working application on to the official android store.
-\item Design and Develop a user friendly application which will be easy to understand and use by any given person.
-\item Find a way to integrate neural networks in conjunction with the angular environment and teach the machine learning part of the project to recognize persons hand movements.
-\item To work as a developing team, work as professionally as possible set objectives and complete them. Meet up on weekly basis with project development updates and discussions about the application. 
-\item Connect the application and display the information from a self developed server with our own designed database of meals and workouts.
-\item For the application to to have a valid log in and sign up connected to a database that stores the users information.
-\item Allocate the work evenly and fairly between the three of us and set goals for each one of us.
-\item Constantly testing the application will allow for error and bug detection detection as well as advance the development of this application. The application should be tested every time it is updated and documented on the results.  
+\item Deploy a working application on to the official android store.\\
+\textbf{PASS OR FAIL}
+\item Design and Develop a user friendly application which will be easy to understand and use by any given person.\\
+\textbf{PASS OR FAIL}
+\item Find a way to integrate neural networks in conjunction with the angular environment and teach the machine learning part of the project to recognize persons hand movements.\\
+\textbf{PASS OR FAIL}
+\item To work as a developing team, work as professionally as possible set objectives and complete them. Meet up on weekly basis with project development updates and discussions about the application.\\
+\textbf{PASS OR FAIL} 
+\item Connect the application and display the information from a self developed server with our own designed database of meals and workouts.\\
+\textbf{PASS OR FAIL}
+\item For the application to to have a valid log in and sign up connected to a database that stores the users information.\\
+\textbf{PASS OR FAIL}
+\item Allocate the work evenly and fairly between the three of us and set goals for each one of us.\\
+\textbf{PASS OR FAIL}
+\item Constantly testing the application will allow for error and bug detection detection as well as advance the development of this application. The application should be tested every time it is updated and documented on the results.\\
+\textbf{PASS OR FAIL}  
 \end{itemize}
+
+\section{Retrospective of the project}
+
+We had found the ionic, angular and cordova documentation extremely useful and helpful. 
+The documentation was easy to follow and very detailed in the description of the steps necessary to complete chosen tasks.
+We used the documentations in the set up of the software connecting ionic cordova and angular but also in the testing and deploying of the application.\\
+
+This project required certain plugins such as the device motion this was used for the accelerometer and we used the ionic documentation to install and use it as well as all the other plugins necessary.
+Ionic documentation was very detailed giving us plenty of help in the development.
+
+Using something like Firebase really gave us an opportunity to work on the rest of the application without having most of the back-end, we do have our own back-end server but we didn't want to have users personal information in case our application got compromise. Firebase was originally used for security and was really easy understand due the like well written documentation you can find online. I would highly recommend using Firebase to any developer that plans on starting a new application and isn't ready to handle all the back-end server issues. \\
+
+Tensorflow is a really powerful tool for developing neural networks. This powerful tool is also easy to use and that's why we choose to use Keras with Tensorflow. There is a countless amount of documentation available online for developers to make a neural network for anything a developer desires to use it for. This really helped us get more accurate results for our punches, more specifically the upper-cut that the accelerometer had a issues properly calculating.\\
+
+Paragraph on wamp server and mysql
+
 \section{Future Improvements}
+This section of the conclusion has the description of the possible future implementations that we have decided on. We feel these improvements would help this application move forward in the software industry gain popularity and improve the overall user experience while not damaging the applications performance.\\
+
+\textbf{Applications Improvements}\\
+There are certain aspects of the application that that didn't quite come out as it was planned at the beginning and due to the project time frame certain features were not included.
+The improvements in the application that we believe can bet made are as follows the punching detection system we would like to maximize Tensorflow's performance and connect it to the application and have the highest correct punch detection percentage as possible.\\
+At the beginning we planned this application to have the option for multiple amount of exercises such as running, cycling and walking. This was not completed but we feel in the future this is very much possible by implementing certain plugins and connecting their data to the application.\\  
+
+
+\textbf{Hardware Design}\\
+From the beginning we knew that the application would be suitable for a mobile device but it was obvious another bit of hardware would give it the edge that is necessary to make it work in the real world.
+At the moment the application is developed on the phone and its not ethical for a boxer to be holding the phone in his hand while practicing punching.
+
+We planed many ideas for this implementation and when the time is right we would love to design and develop our own hardware with built in accelerometer and gyroscope.
+This piece of hardware would connect to the application but also be inserted into a boxing glove possibly into the gloves strap this could allow the boxer to fight freely without noticing the hardware and at the same time receiving results back from the program.\\
+
+\textbf{Boxing Environments}\\
+Another future implementation for this application is exposing it to the boxing environment. When this application is completed and hardware is connected we would love to introduce the app to boxing, MMA and all other fighting clubs.
+This would help us with with feedback from actual fighters and determine if there is any future in this application.\\
+
+\textbf{iOS}\\
+This application is currently developed for and Android device and for the Play store. In the near future we would love to widen the availability of the application across as many platforms as possible.
+iOS devices and the iOS app store are as popular as the android environment therefore deploying the application for iOS could make significant difference to the applications popularity.\\
+
+
+
 
 % references section
 \bibliographystyle{plain}
