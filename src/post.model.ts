@@ -4,4 +4,7 @@ export interface Post {
     set: string;
     rep: string;
     rest: string;
+    weekday: string;
+    time: string;
+    food: string;
 }

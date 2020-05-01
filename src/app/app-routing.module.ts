@@ -47,6 +47,18 @@ const routes: Routes = [
   {
     path: 'day7',
     loadChildren: () => import('./day7/day7.module').then( m => m.Day7PageModule)
+  },
+  {
+    path: 'mealday1',
+    loadChildren: () => import('./mealday1/mealday1.module').then( m => m.Mealday1PageModule)
+  },
+  {
+    path: 'mealday2',
+    loadChildren: () => import('./mealday2/mealday2.module').then( m => m.Mealday2PageModule)
+  },
+  {
+    path: 'mealday3',
+    loadChildren: () => import('./mealday3/mealday3.module').then( m => m.Mealday3PageModule)
   }
 
 
