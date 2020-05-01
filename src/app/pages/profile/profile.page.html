@@ -1,14 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>profile</ion-title>
+    <div>
+      <img src="../../../assets/logo_long_invert.jpg" alt="Simply Easy Learning" width="100%" height="60px">
+    </div>      
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-card >
-    <ion-button (click)="logOut()">Log Out</ion-button>
-      User information
-      <h1>Username: {{fireBaseUser}}</h1>
+      <h1 class="h1">{{fireBaseUser}}</h1>  
+      <h1 class="h1">Calendar </h1>
+      
       </ion-card>
 
   <ion-card *ngFor = "let ev of events">
@@ -36,10 +38,7 @@
 
   <ion-list>
     <ion-item *ngFor="let cal of calendars" tappable>
-      <button ion-button  (click)="addEvent(cal)">
-        <ion-icon name="add"></ion-icon>
-        Add Event
-      </button>
+      <ion-button color="dark" (click)="addEvent(cal)" expand="block">Add Event</ion-button>
       {{cal.name}}
       <p>{{cal.type}}</p>
     </ion-item>
@@ -48,5 +47,5 @@
   
 </ion-content>
 <ion-footer class="footer">
-  <ion-button  expand="block" color="primary" (click)="updateValues()">updateValues</ion-button>
+  <ion-button (click)="logOut()" color="danger" expand="block">Log Out</ion-button>
 </ion-footer>

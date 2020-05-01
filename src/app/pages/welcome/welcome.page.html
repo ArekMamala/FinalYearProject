@@ -7,12 +7,18 @@
 </ion-header>
 
 <ion-content class="ion-content">
+
+
+  <div class="logo">
+    <img src="../../../assets/logo.png" alt="Simply Easy Learning" width="100%" height="100%">
+  </div>      
+
   <!-- Using cards because it is an easier way of displaying information withour messing with full page.
   Show hide certain cards and will make sure others working on project don't mess with your cards.-->
-
+  <div>
   <!--This card is for signing up-->
   <ion-card [hidden]=isHidden>
-    <h3>Sign-up</h3>
+    <h2>Sign-up</h2>
 
     <ion-list>
       <ion-item>
@@ -29,8 +35,8 @@
   </ion-card>
   <!-- Notice how I can hide both cards when I don't want the user to see them-->
   <ion-card [hidden]=isHidden>
-    <h5>Already have an account? Login below</h5>
+    <h3>Already have an account? Login below</h3>
     <ion-button (click)="logIn()" color="danger">Login</ion-button>
   </ion-card>
-
-  
+  </div>
+</ion-content>
