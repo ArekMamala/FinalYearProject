@@ -749,23 +749,28 @@ We also have error handling in place for when the user enters the wrong username
 
 \subsection{System Functionality Testing}
 \textbf{Punch detection}\\
-\textbf{Log In Sign Up Database}\\
-\begin{tabular}{||c c c||} 
- \hline
- \textbf{Test} & \textbf{Expected Output} & \textbf{Pass/Fail} \\ [0.5ex] 
- \hline\hline
- Creating new user & New user is created & Pass \\ 
- \hline
- Logging in with username/password & Log-In successful & Pass \\  
- \hline
- Logging out & Log-Out successful & Pass \\
- \hline
- Creating a user when an existing username & Username taken & Pass \\
- \hline
- Entering incorrect username/password & Log-In unsuccessful & Pass \\
- \hline
- 
-\end{tabular}\\
+\textbf{Log In Sign Up Database}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{||c c c||} 
+     \hline
+     \textbf{Test} & \textbf{Expected Output} & \textbf{Pass/Fail} \\ [0.5ex] 
+     \hline\hline
+     Creating new user & New user is created & Pass \\ 
+     \hline
+     Logging in with username/password & Log-In successful & Pass \\  
+     \hline
+     Logging out & Log-Out successful & Pass \\
+     \hline
+     Creating a user when an existing username & Username taken & Pass \\
+     \hline
+     Entering incorrect username/password & Log-In unsuccessful & Pass \\
+     \hline
+    \end{tabular}
+    \caption{Test Case for Log-In/Sign-Up}
+    \label{tab:LogInTest}
+\end{table}
+
 
 \textbf{Workouts Meals Database}
 \subsection{Acceptance Testing}
