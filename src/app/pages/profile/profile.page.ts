@@ -50,17 +50,11 @@ export class ProfilePage implements OnInit {
   ngOnInit() {
   }
 
-  updateValues(){
-    this.totalPunches = this.workout.totpunches();
-    console.log("total punches here "+ this.totalPunches);
-    this.averagePunchesPerTime = this.workout.getTotalTime(this.workout.selectedTime);
-  }
-
   addEvent(cal){
     let date = new Date();
     let options = {calendarId: cal.id, calendarName: cal.name, url: 'https://ionicacademy.com', firstReminderMinutes: 15};
 
-    this.calendar.createEventInteractivelyWithOptions('My bew Event', 'Munster', 'Some special Note', date, date, options).then(() => {
+    this.calendar.createEventInteractivelyWithOptions('My new Event', 'Munster', 'Some special Note', date, date, options).then(() => {
 
     });
   }
