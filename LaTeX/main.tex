@@ -627,10 +627,12 @@ In this section we will describe and review the approach that we took in develop
 After reading this section the reader should have a clear understanding of the complexity and scale of the project as well as the steps taken throughout the development.
 The project design was not fully completed and and features were not finalized therefore we needed to use a system that would help us keep on top of any changes and where issues could be dealt within an easy and efficient manner.
 After researching many methodologies such as the Waterfall, Lean, Kanban we had decided that the best methodology for our project was Scrum which is an agile project management methodology or framework.
-\\\\\\\\\\
+Agile methodology is a way of continuous iteration of both developing and testing. Unlike the Waterfall methodology which was an option for us to use both development and testing of the project are concurrent. 
+There are many benefits of using this methodology and here are some of the ones that helped us determine that this was the right decision.
+Agile allows the team to effectively prioritize features and workings also big changes to the project can be implemented even towards the end of the development.\\
+The agile methodology was a perfect way to help us with the development but we did were not able to utilize all of its features such as the daily scrum meetings we instead had a team meeting once a week discussing the work completed and forward approach. We attended meetings with our supervisors as often as possible informing them on the progress and gathering their thoughts on the progress as well as the necessary future development.   
 
-
-\subsection{Scrum }\\
+\subsection{Using Scrum }\\
 Scrum consists of six different stages\\ 
 \textbf{Product Backlog}\\
 This is where the product owner builds a list of bright ideas and features that could possibly be developed into the project.
@@ -663,41 +665,6 @@ During the term our research is going to be a piece of document in how this wear
 Whilst two members of the team are constructing the application. One person is going to specifically manage the database. They will have the responsibility to create the AWS account and link it up to the database. Overall, they are responsible for the whole database section of this project and to link it up to the application, that is works efficiently.
 
 \subsection{Frameworks, Technologies \& Languages}
-
-\subsection{Scope}
-
-\section{Sprint 2 - Design & Research}
-\subsection{Researching Application}
-\textbf{Environments}\\
-\textbf{Plugins}\\
-\textbf{Platforms}
-
-\subsection{Designing Application}
-\textbf{Rough Design (Tabs/sidemenu/blank)}\\
-\textbf{Possible Features}\\
-
-\section{Sprint 3 - Implementation \& development}
-\subsection{Initial Setup}
-
-\subsection{GitHub Repository}
-The GitHub repository containing the entire project can be found at 
-https://github.com/ArekMamala/FinalYearProject
-The following sections listed below outline the different components in the repository with a link to each part.
-\textbf{README}
-This part of the repository contains a simple introduction to the final year project brief explanation and a guide on how to download  install and run the application on a given device or environment.
-https://github.com/ArekMamala/FinalYearProject/blob/master/README.md
-\textbf{LaTex}
-This section of the repository contains the latex project that we used for the write up of the development of the project dissertation. This section also contains a PDF file of the complete dissertation.  
-https://github.com/ArekMamala/FinalYearProject/tree/master/LaTeX
-\textbf{Final Year Project}
-This section of the GitHub repository contains the Angular environment code used to design and develop the application with all the plugins and imports necessary for the environment to run the application. 
-link*****
-\textbf{Releases}
-The releases of the project is the build android applications as we progressed through making of the application. Each release differs from another. This section also contains the latest release of the application which is available to work on android devices. 
-link*****
-
-\subsection{Frameworks}
-
 \textbf{Installing \& Running Angular}
 We use the Node Package Manager to install Angular-CLI we execute the following command in the terminal on your machine \textbf{npm install -g @angular/cli}. To cerity if the CLI has been correctly installed the following command is used to check \textbf{ng version}.
 
@@ -712,10 +679,69 @@ Before we can run the application on a device the developer must add the specifi
 After the platform is added, you can generate the required .apk file with the command  \textbf{ionic cordova build android}.\\
 
 Running the application on the specified device is done with the input of this command \textbf{ionic cordova run android --device} while having the device plugged into the machine developing the application. \cite{cordovaRun}
+\subsection{Scope}
+
+\subsection{GitHub Repository}
+The GitHub repository containing the entire project can be found at 
+https://github.com/ArekMamala/FinalYearProject
+The following sections listed below outline the different components in the repository with a link to each part.
+
+\textbf{README}\\
+This part of the repository contains a simple introduction to the final year project brief explanation and a guide on how to download  install and run the application on a given device or environment.
+https://github.com/ArekMamala/FinalYearProject/blob/master/README.md
+
+\textbf{LaTex}\\
+This section of the repository contains the latex project that we used for the write up of the development of the project dissertation. This section also contains a PDF file of the complete dissertation.  
+https://github.com/ArekMamala/FinalYearProject/tree/master/LaTeX
+
+\textbf{Final Year Project}\\
+This section of the GitHub repository contains the Angular environment code used to design and develop the application with all the plugins and imports necessary for the environment to run the application. 
+link*****
+
+\textbf{Releases}\\
+The releases of the project is the build android applications as we progressed through making of the application. Each release differs from another. This section also contains the latest release of the application which is available to work on android devices. 
+link*****
+
+\section{Sprint 2 - Design & Research}
+\subsection{Researching Application}
+\textbf{Environments}\\
+\textbf{Plugins}\\
+\textbf{Platforms}
+
+\subsection{Designing Application}
+\textbf{Rough Design (Tabs/sidemenu/blank)}\\
+\textbf{Possible Features}\\
+
+\section{Sprint 3 - Implementation \& development}
+\subsection{Initial Setup}
+We started with making a basic angular application while discussing what pages to do first. The languages we mainly wanted to use were JavaScript and typescript. Our main focus would be to make sure everyone was one the same level of coding before doing anything major. Angular and Ionic were had helpful documentation that we could easily grasp. For user storage we used Firebase to store basic user information. This was useful because we could work on our core pages without worrying to much about the user server issues. This make us develop faster than we normally planned on putting us ahead of scheduling. The efficiency gave us an opportunity to work on the hardware sensors on the phone, we had to do some maths to see how a punch would work using an accelerometer. This was the most complex step as it required us to learn some psychics about boxing, the method on this works can be found in our research. 
+
+This is where we started to integrate what we have researched individually together. We used the Firebase services to sync with the information the users would need for working out and also to store the results from the accelerometer's inputs. This can be seen again whenever the user logs-in on any device connected to the internet. At this point in development we wanted to have our own management server that would not be on Firebase. This should be different from the clients and store information that we can update at anytime without effecting how the application itself runs. This means the users will be able to get workout updates or meal updates without us having to do a new application release. We also wanted our pages to load a bit quicker and wanted to stop the load times some of us would experience when testing the application.
+
+
+
+
 
 \subsection{Punch Detection}
 
+-INSERT HOW NEURAL NETWORK WOULD WORK WITH THIS-
+
 \subsection{Log In \& Sign Up Database}
+For logging in and signing up the user will be using Firebase. Instead of allowing the user to enter an email and password we wanted them just to enter a username. We did not want to personally information we didn't need. To get around this we used @fitness to trick Firebase into thinking the username is an email address. This is the main line of code showing how a user signs up using the application this line below creates a user for Firebase.
+\begin{verbatim}
+\\ Creating user
+const res = await this.afAuth.auth.createUserWithEmailAndPassword(username +
+    '@fitness.com', inputPassword)
+\end{verbatim}
+
+This means when signing in we'd have to add the @fitness to the end of the username. 
+\begin{verbatim}
+// This is using firebase auth to check if logIn is correct
+const res = await this.afAuth.auth.signInWithEmailAndPassword(data.username +
+    '@fitness.com', data.password)
+\end{verbatim}
+
+We also have error handling in place for when the user enters the wrong username/password. After logging in successfully the user should be brought to the main homepage. The user should be able to look at basic information about themselves when logged in and are able to log out on the same page they used to log-in. We used cards to show and hide information the user instead of loading them to a different page. the cards are very useful for having everything already loaded onto one page so the user doesn't have to wait and navigate through different pages.
 
 \subsection{AWS server, Wamp \& MySQL}
 
@@ -725,7 +751,136 @@ Running the application on the specified device is done with the input of this c
 
 \subsection{System Functionality Testing}
 \textbf{Punch detection}\\
-\textbf{Log In Sign In Database}\\
+We decided before Tensorflow is implemented into the project we needed a manual detecting system as a precaution if Tensorflow was not finished in time. We had tested the X, Y and Z values using the accelerometer to observe the changes in values when the punch is thrown and conclude a theory that would be used in the development of the detecting system.
+\begin{center}
+    \textbf{JAB}
+\end{center}{}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{||c c c c c c||} 
+     \hline
+     \textbf{Values Tested} & \textbf{Test 1} & \textbf{Test 2} & \textbf{Test 3} & \textbf{Test 4} & \textbf{Test 4} \\ [0.5ex] 
+     \hline\hline
+     X VALUE & 0 & 0 & 1 & 0 & 0\\ 
+     \hline
+     Y VALUE & 10 & 9 & 9 & 9 & 10\\  
+     \hline
+     Z VALUE & 0 & 0 & 0 & -2 & 2\\
+     \hline
+    \end{tabular}
+    \caption{Values before the punch is thrown in a starting position.}
+    \label{tab:jabBeforet}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{||c c c c c c||} 
+     \hline
+     \textbf{Values Tested} & \textbf{Test 1} & \textbf{Test 2} & \textbf{Test 3} & \textbf{Test 4} & \textbf{Test 4} \\ [0.5ex] 
+     \hline\hline
+     X VALUE & 0 & 1 & 2 & 3 & 0\\ 
+     \hline
+     Y VALUE & 0 & 1 & 1 & 2 & 2\\  
+     \hline
+     Z VALUE & -9 & -9 & -9 & -8 & -10\\
+     \hline
+    \end{tabular}
+    \caption{Values at the end of the punching process.}
+    \label{tab:jabAfter}
+\end{table}
+
+As we can see above in figure \ref{tab:jabBeforet} are the values in boxing ready position and  figure \ref{tab:jabAfter} are the values at the concluding position.
+The following conclusion from the above data can be drawn 
+\begin{itemize}
+    \item The X value usually stays in and around its initial value.
+    \item The Y value decreases by an average value of 8.2.
+    \item The Z value as well as the Y value decreases by an average value of 8.2.
+\end{itemize}
+
+\begin{verbatim}
+\\ Possible If statment Theory
+    if((YStart - YEnd >= 6) && (ZStart - ZEnd >= 8)){
+        Punch++
+        Jab++
+    }
+\end{verbatim}
+
+
+\begin{center}
+    \textbf{UPPERCUT}
+\end{center}{}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{||c c c c c c||} 
+     \hline
+     \textbf{Values Tested} & \textbf{Test 1} & \textbf{Test 2} & \textbf{Test 3} & \textbf{Test 4} & \textbf{Test 4} \\ [0.5ex] 
+     \hline\hline
+     X VALUE & 0 & -1 & 1 & 0 & -2\\ 
+     \hline
+     Y VALUE & 10 & 9 & 9 & 9 & 9\\  
+     \hline
+     Z VALUE & 0 & 2 & -2 & -2 & 0\\
+     \hline
+    \end{tabular}
+    \caption{Values before the punch is thrown in a starting position.}
+    \label{tab:uppercutBeforet}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{||c c c c c c||} 
+     \hline
+     \textbf{Values Tested} & \textbf{Test 1} & \textbf{Test 2} & \textbf{Test 3} & \textbf{Test 4} & \textbf{Test 4} \\ [0.5ex] 
+     \hline\hline
+     X VALUE & -9 & -9 & -9 & -10 & -9\\ 
+     \hline
+     Y VALUE & 0 & 0 & 0 & 0 & 0\\  
+     \hline
+     Z VALUE & 2 & 3 & 3 & 2 & -3\\
+     \hline
+    \end{tabular}
+    \caption{Values at the end of the punching process.}
+    \label{tab:vAfter}
+\end{table}
+
+As we can see above in figure \ref{tab:uppercutBeforet} are the values in boxing ready position and  figure \ref{tab:uppercutBeforet} are the values at the concluding position.
+The following conclusion from the above data can be drawn 
+\begin{itemize}
+    \item The X value decreases by an average value of 8.8.
+    \item The Y value decreases by an average value of 9.2.
+    \item The Z value has on average a 3.1 increase.
+\end{itemize}
+\begin{verbatim}
+\\ Possible If statment Theory
+    if((XStart - XEnd <= -8) && (YStart - YEnd >= 9)){
+        Punch++
+        Uppercut++
+    }
+\end{verbatim}
+
+\textbf{Log In Sign Up Database}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{||c c c||} 
+     \hline
+     \textbf{Test} & \textbf{Expected Output} & \textbf{Pass/Fail} \\ [0.5ex] 
+     \hline\hline
+     Creating new user & New user is created & Pass \\ 
+     \hline
+     Logging in with username/password & Log-In successful & Pass \\  
+     \hline
+     Logging out & Log-Out successful & Pass \\
+     \hline
+     Creating a user when an existing username & Username taken & Pass \\
+     \hline
+     Entering incorrect username/password & Log-In unsuccessful & Pass \\
+     \hline
+    \end{tabular}
+    \caption{Test Case for Log-In/Sign-Up}
+    \label{tab:LogInTest}
+\end{table}
+
+
 \textbf{Workouts Meals Database}
 \subsection{Acceptance Testing}
 
@@ -744,6 +899,8 @@ Following these guidelines we keep us in good standing with google play store an
 \textbf{Test against the quality guidelines:} https://developer.android.com/docs/quality-guidelines
 
 This will be tested with our test cases.
+
+
 
 \chapter{System Design}
 This is where you’ll find all the the designs that we did before starting the project. We needed to have a clear understanding of different levels of the application and the outline of the user UI before we started the coding process.
@@ -882,21 +1039,6 @@ Workout feedback was designed to summarise the workout for the applicant also fo
         \label{fig:aWComponent}
         \end{center}
     \end{figure}
-
-\chapter{example test case}
-Just an example of what we need to do
-\begin{center}
- \begin{tabular}{||c c c||} 
- \hline
- Test & Expected Output & Pass/Fail \\ [0.5ex] 
- \hline\hline
- Is the project fun? & Yes & Pass \\ 
- \hline
- \hline
- Finished? & Yes & Fail \\ [1ex] 
- \hline
-\end{tabular}
-\end{center}
 
 
 \chapter{Conclusion}
