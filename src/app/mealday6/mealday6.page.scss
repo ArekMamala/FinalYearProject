@@ -1,0 +1,24 @@
+
+  .test{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  h4 {
+    margin: 0 0 1px;
+    justify-content: center;
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+}
+
+ion-title{
+  justify-content: center;
+  display: grid;
+  }
+h3 {
+    color: red;
+    font-weight: bold;
+  }

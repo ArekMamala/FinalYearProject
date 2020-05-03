@@ -42,6 +42,21 @@ export class PostService {
     return this.http.get("http://localhost:8081/api/mealday3");
   }
 
+  getPostsDataMealDay4(): Observable<any> {
+    return this.http.get("http://localhost:8081/api/mealday4");
+  }
+
+  getPostsDataMealDay5(): Observable<any> {
+    return this.http.get("http://localhost:8081/api/mealday5");
+  }
+
+  getPostsDataMealDay6(): Observable<any> {
+    return this.http.get("http://localhost:8081/api/mealday6");
+  }
+
+  getPostsDataMealDay7(): Observable<any> {
+    return this.http.get("http://localhost:8081/api/mealday7");
+  }
   private posts: Post[] = [];
   //private postsUpdated = new Subject<Post[]>();
 

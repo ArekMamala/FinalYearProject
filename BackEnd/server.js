@@ -124,46 +124,47 @@ app.get('/api/mealday3', function (req, res){
   });
 })
 
-
-/*var Workout1 = {
-    getWorkout: function (callback) {
-      // run query
-      return connection.query('SELECT * FROM workoutone', callback);
-    }
-  }
-  
-  // function to get data from accom table
-  app.get('/api/workout', function (req, res) {
-    Workout1.getWorkout(function (err, data) {
-      if (err) res.status(400).send(err)
-  
-      // Complete - send callback
-      res.send(data);
-      console.log(data);
-    });
+app.get('/api/mealday4', function (req, res){
+  weekday = 'Thursday';
+  sql = 'SELECT * FROM meals WHERE weekday = ' + connection.escape(weekday);
+  connection.query(sql, function (error, results, fields) {
+      if (error) throw error;
+      console.log(results);
+      res.json(results);
   });
+})
 
-
-
-  var Workout2 = {
-    getWorkout: function (callback) {
-      // run query
-      return connection.query('SELECT * FROM workouttwo', callback);
-    }
-  }
-  
-  // function to get data from accom table
-  app.get('/api/workout', function (req, res) {
-    Workout2.getWorkout(function (err, data) {
-      if (err) res.status(400).send(err)
-  
-      // Complete - send callback
-      res.send(data);
-      console.log(data);
-    });
+app.get('/api/mealday5', function (req, res){
+  weekday = 'Friday';
+  sql = 'SELECT * FROM meals WHERE weekday = ' + connection.escape(weekday);
+  connection.query(sql, function (error, results, fields) {
+      if (error) throw error;
+      console.log(results);
+      res.json(results);
   });
+})
 
-*/
+app.get('/api/mealday6', function (req, res){
+  weekday = 'Saturday';
+  sql = 'SELECT * FROM meals WHERE weekday = ' + connection.escape(weekday);
+  connection.query(sql, function (error, results, fields) {
+      if (error) throw error;
+      console.log(results);
+      res.json(results);
+  });
+})
+
+app.get('/api/mealday7', function (req, res){
+  weekday = 'Sunday';
+  sql = 'SELECT * FROM meals WHERE weekday = ' + connection.escape(weekday);
+  connection.query(sql, function (error, results, fields) {
+      if (error) throw error;
+      console.log(results);
+      res.json(results);
+  });
+})
+
+
 // Listing to port number 8081 @ http://localhost:8081/
 app.listen(8081, function () {
     console.log('connected to port 8081')

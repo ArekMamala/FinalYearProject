@@ -289,7 +289,10 @@ According to an article from 2019, the rate of the intake of sports supplements 
 \subsection{Impact of Supplements}
 Have you ever taken into consideration why athletes intake protein supplements?\\ Firstly supplements are usually taken either by powder or pills. Frequently powder supplements are taken with water, milk, juice etc... to make it taste better. Basically the intake of supplements are needed to create the amino acids that are needed to build muscle tissue, quicker and more efficiently. The reason athletes such as boxers benefit so much from the protein supplements intake is that intense physical activity demands higher protein levels than normal.
 \\
-There are many sorts of supplements, which include vitamins 
+There are two types of supplements which  IOC and NCAA have ruled out. Some are allowed like the intake of protein powers, vitamins, amino acid etc.. But there are some which are prohibited and athletes could be fined quiet heavily or even a lifetime ban.According to the Department of Family Medicine, University of Tennessee College of Medicine–Chattanooga Unit, Chattanooga, Tennessee the following supplements are prohibited. \cite{jenkinson2008supplements}\\
+ 
+\textbf{\emph{Anabolic steroids - Prohibited\\ Human growth hormone - Prohibited\\Ephedrine and pseudoephedrine - Prohibited\\Androstenedione and dehydroepiandrosterone - Prohibited}} 
+
 \newpage
 \section{Frameworks}
 
@@ -742,8 +745,24 @@ const res = await this.afAuth.auth.signInWithEmailAndPassword(data.username +
 \end{verbatim}
 
 We also have error handling in place for when the user enters the wrong username/password. After logging in successfully the user should be brought to the main homepage. The user should be able to look at basic information about themselves when logged in and are able to log out on the same page they used to log-in. We used cards to show and hide information the user instead of loading them to a different page. the cards are very useful for having everything already loaded onto one page so the user doesn't have to wait and navigate through different pages.
+\newpage
 
 \subsection{AWS server, Wamp \& MySQL}
+In order for the user to access information regarding workouts and meal plans, the decision of implementing AWS server, Wamp and MySql was taken. We didn't want to hard code in the information, instead one person went ahead and took the responsibility to set up the database and the AWS account in order to manage the database from cloud server. In chapter four, figure 4.1, you will see a diagram with the implementation of the complete database in the ionic application.\\
+\begin{verbatim}
+app.get('/api/mealday1', function (req, res){
+  weekday = 'Monday';
+  sql = 'SELECT * FROM meals WHERE weekday = ' + connection.escape(weekday);
+  connection.query(sql, function (error, results, fields) {
+      if (error) throw error;
+      console.log(results);
+      res.json(results);
+  });
+})
+\end{verbatim}
+Above is a piece of code which prints out the meal plan for Monday.
+Respond with all the information regarding 'Monday' when a GET request is made to the mealday1 page. We made the weekday into an unique ID. Although all the weekdays are in the same table with the database, but we access them by the days. For example we call all the information relating to 'Monday' to be printed out.
+\newpage
 
 \section{Sprint 4 - Testing \& Debugging}
 \subsection{Integration Testing}
@@ -1039,6 +1058,7 @@ Workout feedback was designed to summarise the workout for the applicant also fo
         \label{fig:aWComponent}
         \end{center}
     \end{figure}
+
 
 \chapter{Conclusion}
 This chapter will summarise the project in terms of the objectives of

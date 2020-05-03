@@ -1,11 +1,15 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Sweat n Gain</ion-title>
+    <ion-title>Sweat n Gain (Day 7)</ion-title>
+    <ion-tab-button href="workouts"><h3>WORKOUTS</h3> </ion-tab-button>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <table *ngFor="let post of posts">
+<ion-content *ngFor="let post of posts">
+  <h4><b>{{post.exercise}}</b></h4><h4>Sets: {{post.set}} Reps: {{post.rep}} Rest: {{post.rest}}</h4>
+</ion-content>
+
+  <!--table *ngFor="let post of posts">
     <tr class="test">
       <th>Day</th>
       <th>Exercise</th>
@@ -20,6 +24,4 @@
       <td>{{post.rep}}</td>
       <td>{{post.rest}}</td>
     </tr>
-  </table>
-
-</ion-content>
+  </table-->

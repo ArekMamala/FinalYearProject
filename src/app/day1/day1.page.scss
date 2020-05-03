@@ -3,20 +3,31 @@ table {
     border-collapse: collapse;
     width: 100%;
   }
-  
-  td, th {
+td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
   }
-  
-  tr:nth-child(even) {
+tr:nth-child(even) {
     background-color: #dddddd;
   }
-
-  .test{
+.test {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     align-items: flex-start;
+  }
+h4 {
+    margin: 0 0 1px;
+    justify-content: center;
+    display: flex;
+    align-items: flex-start;
+  }
+ion-title{
+  justify-content: center;
+  display: grid;
+  }
+h3 {
+    color: red;
+    font-weight: bold;
   }

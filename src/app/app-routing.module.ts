@@ -59,6 +59,22 @@ const routes: Routes = [
   {
     path: 'mealday3',
     loadChildren: () => import('./mealday3/mealday3.module').then( m => m.Mealday3PageModule)
+  },
+  {
+    path: 'mealday4',
+    loadChildren: () => import('./mealday4/mealday4.module').then( m => m.Mealday4PageModule)
+  },
+  {
+    path: 'mealday5',
+    loadChildren: () => import('./mealday5/mealday5.module').then( m => m.Mealday5PageModule)
+  },
+  {
+    path: 'mealday6',
+    loadChildren: () => import('./mealday6/mealday6.module').then( m => m.Mealday6PageModule)
+  },
+  {
+    path: 'mealday7',
+    loadChildren: () => import('./mealday7/mealday7.module').then( m => m.Mealday7PageModule)
   }
 
 
