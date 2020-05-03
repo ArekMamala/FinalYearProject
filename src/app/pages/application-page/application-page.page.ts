@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from "@angular/platform-browser"
 //import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
 import { Router } from '@angular/router';
+import { WorkoutPage } from '../workout/workout.page';
+import { WorkoutsPage } from '../workouts/workouts.page';
 
 @Component({
   selector: 'app-application-page',

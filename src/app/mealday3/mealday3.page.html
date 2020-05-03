@@ -1,13 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>mealday3</ion-title>
+    <ion-title>Day 3 (Rest Day)</ion-title>
+    <ion-tab-button href="meals"><h3>MEALS</h3> </ion-tab-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content *ngFor="let post of posts">
-  <div class="cen">
-        <h4>{{post.weekday}}</h4><h4>{{post.time}}</h4><h4>{{post.food}}</h4>
-  </div>
+        <h4><b>{{post.weekday}}</b></h4><h4>{{post.time}}</h4><h4>{{post.food}}</h4>
      
   </ion-content>
   
