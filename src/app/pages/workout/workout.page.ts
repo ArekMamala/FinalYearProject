@@ -3,6 +3,7 @@ import { DeviceMotion, DeviceMotionAccelerationData, DeviceMotionAccelerometerOp
 import { DeviceOrientation, DeviceOrientationCompassHeading} from "@ionic-native/device-orientation/ngx";
 import { BehaviorSubject } from 'rxjs';
 import { Vibration } from '@ionic-native/vibration/ngx';
+import * as firebase from 'firebase';
 
 const circleR = 80;
 const circleDasharray = 2 * Math.PI * circleR;
@@ -58,7 +59,8 @@ export class WorkoutPage  {
   selectedTime: number = 1;
   circleR = circleR;
   circleDasharray = circleDasharray;
-
+  fireBaseUser = firebase.auth().currentUser.email;
+  
   constructor(private vibration: Vibration, public deviceMotion: DeviceMotion, public deviceOrientation:DeviceOrientation) { 
     this.x = 0;
     this.y = 0;
