@@ -33,13 +33,13 @@ export class ProfilePage implements OnInit {
     });*/
   
     if (this.plt.is('ios')) {
-      this.calendar.findAllEventsInNamedCalendar("My calendars").then(data => {
+      this.calendar.findAllEventsInNamedCalendar("mamala132@gmail.com").then(data => {
         this.events = data; 
       });
     } else if(this.plt.is('android')) {
       let start = new Date();
       let end = new Date();
-      end.setDate(end.getDate() + 31);
+      end.setDate(end.getDate() + 62);
       
       this.calendar.listEventsInRange(start, end).then(data => {
         this.events = data; 
@@ -60,7 +60,7 @@ export class ProfilePage implements OnInit {
   }
 
   openCal(cal){
-    this.router.navigate(['/home/applicationPage'])
+    this.router.navigate(['/home/applicationPage' ])
   }
 
   logOut(){
