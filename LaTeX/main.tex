@@ -7,6 +7,8 @@
 \usepackage{ragged2e}
 \usepackage[left=2.5cm,right=2.5cm,top=2cm,bottom=3cm]{geometry}
 \usepackage{listings}
+\usepackage{wrapfig}
+\usepackage{lipsum}
 
 \include{thesis.preamble}
 
@@ -965,22 +967,32 @@ Having the sign-up feature next to the log-in made it easier to get more users t
 For storing passwords, we didn't want to have the passwords available locally. This is where Firebase base comes in. It encrypts the password for us and stores it so we won't be able to know the users passwords either. The safety of users information is very important in this day and age. We all agreed it would be best if we did not have access to the passwords and if any issues occurred the users could contact us and we can send a link for the users to reset their passwords. Shown in figure \ref{fig:firbase} we can see how Firebase handles most of the back-end server maintenance.
 
 \section{Home Component}
-
-\begin{center}
-\includegraphics[scale=.5]{images/homePageBorder.png}
-\end{center}
-
-\begin{center}
-\includegraphics[scale=0.377]{images/days.png}
-\end{center}
-
-\subsection{Meals}
-
-\begin{center}
-\includegraphics[scale=0.377]{images/dayWorkouts.png}
-\end{center}
+\begin{wrapfigure}{R}{0.3\textwidth}
+\centering
+\includegraphics[width=0.25\textwidth]{images/homePageBorder.png}
+\caption{\label{fig:homepage}Home}
+\end{wrapfigure}
+The main homepage is designed to be as simple and elegant with user friendly features. The homepage starts of with a simple slider where the user can slide through three images.
+Further below we have the clickable ion-card feature for workouts which brings the user to our workouts page for their 7-day workout plan. Just to break up the page a little, we provide a motivational quote by Winston Churchill. Below that we have another ion-card feature for meals which is also a clickable feature that brings the user to the meals page for meal plan advisory.
+\\
+\newpage
+\subsection{Workouts and Meals}
+\begin{wrapfigure}{L}{0.3\textwidth}
+\centering
+\includegraphics[width=0.25\textwidth]{images/days.png}
+\caption{\label{fig:homepage}Dashboard}
+\end{wrapfigure}
+Both the meals and workouts page have the similar layout. These pages are designed using ion-cards. The ion-card features image and text in a card like look. For seven days, we create seven separate clickable cards which brings the user to another page which will be described below. It makes it simple for users to understand and navigate back and forth. As seen below in figure 4.6, once the user clicks on one the seven days, it will look somewhat like that in terms of design.\\\\\\\
 \subsection{Workouts}
+\begin{wrapfigure}{R}{0.3\textwidth}
+\centering
+\includegraphics[width=0.25\textwidth]{images/dayWorkouts.png}
+\caption{\label{fig:homepage}Days}
+\end{wrapfigure}
+This is an example of one of the workouts page. This is one way we can format the information from the database to the page. The information is extracted from a cloud hosted database using the combination of MySQL, WAMP and AWS. The information is extracted on the base of the days as the days are set to a unique ID. As seen in the image, there is an ion-button that brings the user back to the workouts dashboard where he/she can choose a different day to view.
+For storing information regarding meals and workouts, we didn’t want to have the information available locally. This is where MySQL, WAMP and AWS comes in. It makes sense that the user can get to this information from anywhere and anytime by us linking the data through an IP address.
 
+\newpage
 \section{Profile Component}
 We have designed the Profile component as a planner for the user to stick by and follow strictly.
 For this to become possible the idea of a built in planner in the application was crossed out.
