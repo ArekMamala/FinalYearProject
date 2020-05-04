@@ -9,9 +9,18 @@ import gzip
 
 # NEED TO MAKE DATABASE FOR THIS TO WORK
 
-jab = 0
-uppercut = 1
-hook = 2
+# Importing files from the MNIST website
+# The data from these files will be used to make the nerual network
+with gzip.open('data/type.gz', 'rb') as f:
+    train_type = f.read()
+
+with gzip.open('data/postion.gz', 'rb') as f:
+    train_pos = f.read()
+
+# Loading in the files
+(train_img, train_lbl), (test_img, test_lbl) = kr.datasets.mnist.load_data()
+
+train_lbl = kr.utils.np_utils.to_categorical(train_lbl, 10)
 
 
 
