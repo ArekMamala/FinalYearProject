@@ -1285,12 +1285,23 @@ When running on android the device used for testing must be connected to the com
 \end{lstlisting}
 
 \textbf{Browser}   
+When running on browser a link to test the application will be displayed after the following command is entered.
 \begin{lstlisting}
     ionic cordova run browser
 \end{lstlisting}
 
 
-\section{Android with APK file}
+\subsection{Android with APK file}
+The applications SDK files are located in the Github repository in the releases section of the project.
+https://github.com/ArekMamala/FinalYearProject/releases\\
+
+To deploy the SDK file of the application we use the following command
+\begin{lstlisting}
+    ionic cordova build android --prod 
+\end{lstlisting}
+This results in a creation of an SDK file in the file directory displayed.\\
+The following SDK needs to be transferred into the testing device and installed.
+
 Installing unknown applications on your android device can be challenging if you are not aware of the application security system in the android environment.
 The following steps are necessary for android users to run the applications apk file.
 \begin{itemize}
