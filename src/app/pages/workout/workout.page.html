@@ -1,5 +1,6 @@
 <ion-header>
   <ion-toolbar>
+    <!--Username called at the top of the page and printed out to the user-->
     <ion-title class="toolbar-title">{{fireBaseUser}}</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -7,8 +8,8 @@
 <ion-content>
 
   <div>
-    <ion-list>
-      
+    <!--ion drop down list for th user to select a time for the timer-->
+    <ion-list>      
       <ion-item>
         <ion-label>Select Time</ion-label>
         <ion-select  (ionChange)="selectChangeHandler($event)">
@@ -28,6 +29,7 @@
     </ion-list>
   </div>
   <div class="timerDisplay">
+  <!--SVG circle for the timer -->
   <svg
     id="progress-circle"
     width = "50vh"
@@ -38,7 +40,7 @@
       <stop offset="0%" stop-color = "#ddd6f3"></stop>
       <stop offset="100%" stop-color = "#faaca8"></stop>
     </linearGradient>
-    
+    <!--Circle background so the progress is seen-->
     <circle
       cx = "50%"
       cy = "50%"
@@ -47,6 +49,8 @@
       stroke="#f3f3f3"
       stroke-width="12"   
     />
+    <!--foreground colour which uses the above linear gradient so the ideal linear colours one-->
+    <!--Circle calculations includeded as well as how the percetage works-->
     <circle
       cx = "50%"
       cy = "50%"
@@ -63,68 +67,80 @@
   </svg>
   </div>
  
+  <!--Displaying to the user The punch numbers and the punchname-->
   <div full class="punchDetails" [hidden]=isShown>
     <h1>Punches: {{punch}}</h1>
      <h1>Jabs: {{jab}}</h1>
     <h1>Uppercuts: {{uppercut}}</h1>
     <h1>{{punchName}}</h1>
   </div>
-<!--
-  <div full class="punchDetails">
-    <h1>X: {{x}}</h1>
-  </div>
-  <div full class="punchDetails">
-    <h1>Y: {{y}}</h1>
-  </div>
-  <div full class="punchDetails">
-    <h1>Z: {{z}}</h1>
-  </div>-->
 
- <!--
-  <button ion-button full (click)="start()">Start Listening</button>
-  <button ion-button full (click)="stop()">Stop Listening</button>
-  <button ion-button full (click)="startingPosition()">Starting Position</button>
-  
-  <div full class="punchDetails">
-    <h1>Starting X: {{xStart}}</h1>
-  </div>
-  <div full class="punchDetails">
-    <h1>Starting Y: {{yStart}}</h1>
-  </div>
-  <div full class="punchDetails">
-    <h1>Starting Z: {{zStart}}</h1>
-  </div>
-  <div full class="punchDetails">
-    <h1>Starting TH: {{thStart}}</h1>
-  </div>
-  <div full class="punchDetails">
-    <h1>Starting MH: {{mhStart}}</h1>
-  </div>
-  
-  
-  <div full>
-    <h1>difference: {{test}}</h1>
-  </div>
+  <!--
+  This is some code testing the X, Y and Z values 
+  printing them out for testing purposes
+  -->
+  <!--
+    <div full class="punchDetails">
+      <h1>X: {{x}}</h1>
+    </div>
+    <div full class="punchDetails">
+      <h1>Y: {{y}}</h1>
+    </div>
+    <div full class="punchDetails">
+      <h1>Z: {{z}}</h1>
+    </div>-->
 
-  <ion-label>MAGNETION HEADING = {{magneticHeading}}</ion-label><br/><br/>
-  <ion-label>TRUE HEADING = {{trueheading}}</ion-label><br/><br/>
-  <ion-label>TIMESTAMP = {{timestamp}}</ion-label><br/>
-  <ion-label>{{totalTime}}</ion-label><br/>
--->
+  <!--
+    <button ion-button full (click)="start()">Start Listening</button>
+    <button ion-button full (click)="stop()">Stop Listening</button>
+    <button ion-button full (click)="startingPosition()">Starting Position</button>
+    
+    <div full class="punchDetails">
+      <h1>Starting X: {{xStart}}</h1>
+    </div>
+    <div full class="punchDetails">
+      <h1>Starting Y: {{yStart}}</h1>
+    </div>
+    <div full class="punchDetails">
+      <h1>Starting Z: {{zStart}}</h1>
+    </div>
+    <div full class="punchDetails">
+      <h1>Starting TH: {{thStart}}</h1>
+    </div>
+    <div full class="punchDetails">
+      <h1>Starting MH: {{mhStart}}</h1>
+    </div>
+    
+    
+    <div full>
+      <h1>difference: {{test}}</h1>
+    </div>
 
-<ion-card class="punchDetails" [hidden]=isHidden > 
-  <div full >
-    <h2>Workout Feedback</h2>
-    <h3>date: {{ timestamp }} </h3>
-    <h3>Total punches today: {{ totalPunches }} </h3>
-    <h3>Average punches per minute: {{ punchespermin }} </h3>
-    <h3>Number of jabs Today: {{ totJabs }} </h3>
-    <h3>number of Uppecuts Today: {{ totUppercuts }} </h3>
-  </div>
-</ion-card>
-
+    <ion-label>MAGNETION HEADING = {{magneticHeading}}</ion-label><br/><br/>
+    <ion-label>TRUE HEADING = {{trueheading}}</ion-label><br/><br/>
+    <ion-label>TIMESTAMP = {{timestamp}}</ion-label><br/>
+    <ion-label>{{totalTime}}</ion-label><br/>
+  -->
+  <!--
+    Workout feedback card outputing the feedback alues to the user
+    hidden untill the stop button is pressed 
+  -->
+  <ion-card class="punchDetails" [hidden]=isHidden > 
+    <div full >
+      <h2>Workout Feedback</h2>
+      <h3>date: {{ timestamp }} </h3>
+      <h3>Total punches today: {{ totalPunches }} </h3>
+      <h3>Average punches per minute: {{ punchespermin }} </h3>
+      <h3>Number of jabs Today: {{ totJabs }} </h3>
+      <h3>number of Uppecuts Today: {{ totUppercuts }} </h3>
+    </div>
+  </ion-card>
 </ion-content>
+
 <ion-footer class="footer">
-  <ion-button *ngIf="state === 'stop'" expand="block" color="primary" (click)="start()" >Start Timer</ion-button>
-  <ion-button *ngIf="state === 'start'" expand="block" color="primary" (click)="stop()">Stop Timer</ion-button>
+  <!--Button For the Punching and timer functionality-->
+  <!--if the stop button is pressed start button appears and oposite way arround too-->
+  <!--Start button calls start  button and stop button calls the stop function-->
+  <ion-button *ngIf="state === 'stop'" expand="block" color="primary" (click)="start()" >Start Workout</ion-button>
+  <ion-button *ngIf="state === 'start'" expand="block" color="primary" (click)="stop()">Stop Workout</ion-button>
 </ion-footer>

@@ -7,6 +7,8 @@
 \usepackage{ragged2e}
 \usepackage[left=2.5cm,right=2.5cm,top=2cm,bottom=3cm]{geometry}
 \usepackage{listings}
+\usepackage{wrapfig}
+\usepackage{lipsum}
 
 \include{thesis.preamble}
 
@@ -289,7 +291,10 @@ According to an article from 2019, the rate of the intake of sports supplements 
 \subsection{Impact of Supplements}
 Have you ever taken into consideration why athletes intake protein supplements?\\ Firstly supplements are usually taken either by powder or pills. Frequently powder supplements are taken with water, milk, juice etc... to make it taste better. Basically the intake of supplements are needed to create the amino acids that are needed to build muscle tissue, quicker and more efficiently. The reason athletes such as boxers benefit so much from the protein supplements intake is that intense physical activity demands higher protein levels than normal.
 \\
-There are many sorts of supplements, which include vitamins 
+There are two types of supplements which  IOC and NCAA have ruled out. Some are allowed like the intake of protein powers, vitamins, amino acid etc.. But there are some which are prohibited and athletes could be fined quiet heavily or even a lifetime ban.According to the Department of Family Medicine, University of Tennessee College of Medicine–Chattanooga Unit, Chattanooga, Tennessee the following supplements are prohibited. \cite{jenkinson2008supplements}\\
+
+\textbf{\emph{Anabolic steroids - Prohibited\\ Human growth hormone - Prohibited\\Ephedrine and pseudoephedrine - Prohibited\\Androstenedione and dehydroepiandrosterone - Prohibited}} 
+
 \newpage
 \section{Frameworks}
 
@@ -588,8 +593,7 @@ Neural networks are a set of algorithms, modeled loosely after the human brain, 
 \label{fig:NeuralNetwork}
 \end{center}
 \end{figure}
-\\
-\textbf{3 reasons to study neural computation:}\\
+\subsubsection{3 reasons to study neural computation:}\\
 \textbf{1.} To understand how the brain actually works: it's very large and very complicated and made from things that die when you poke it, so we need to use computer simulations.\\
 \textbf{2.} To grasp a neuron-inspired model of parallel computation and their adaptive connections: it is a very different style from sequential computation.\\
 \textbf{3.} To solve practical problems by using novel learning algorithms inspired by the brain: learning algorithms can be very useful even if they are not how the brain actually works.
@@ -629,7 +633,7 @@ The project design was not fully completed and and features were not finalized t
 After researching many methodologies such as the Waterfall, Lean, Kanban we had decided that the best methodology for our project was Scrum which is an agile project management methodology or framework.
 Agile methodology is a way of continuous iteration of both developing and testing. Unlike the Waterfall methodology which was an option for us to use both development and testing of the project are concurrent. 
 There are many benefits of using this methodology and here are some of the ones that helped us determine that this was the right decision.
-Agile allows the team to effectively prioritize features and workings also big changes to the project can be implemented even towards the end of the development.\\
+Agile allows the team to effectively prioritize features and workings also big changes to the project can be implemented even towards the end of the development.\cite{agileResearch}\\
 The agile methodology was a perfect way to help us with the development but we did were not able to utilize all of its features such as the daily scrum meetings we instead had a team meeting once a week discussing the work completed and forward approach. We attended meetings with our supervisors as often as possible informing them on the progress and gathering their thoughts on the progress as well as the necessary future development.   
 
 \subsection{Using Scrum }\\
@@ -679,7 +683,7 @@ Before we can run the application on a device the developer must add the specifi
 After the platform is added, you can generate the required .apk file with the command  \textbf{ionic cordova build android}.\\
 
 Running the application on the specified device is done with the input of this command \textbf{ionic cordova run android --device} while having the device plugged into the machine developing the application. \cite{cordovaRun}
-\subsection{Scope}
+
 
 \subsection{GitHub Repository}
 The GitHub repository containing the entire project can be found at 
@@ -703,12 +707,53 @@ The releases of the project is the build android applications as we progressed t
 link*****
 
 \section{Sprint 2 - Design & Research}
+\subsection{Scope}
+The following Sprint focused on studying our project materials, such as an acceptable environment that we could use, which languages we could use and whether there were any external libraries or tools that we could use to enhance the overall reach.
 \subsection{Researching Application}
+There were many types of research taken into consideration for this sprint. This ranged from articles from Google Scholar including articles from universities, stack overflow, videos, and information from genuine sources. We reviewed many books, articles and papers with the help of Google School and the GMIT library resourse available through GMIT's website.
+\newpage
 \textbf{Environments}\\
-\textbf{Plugins}\\
+With careful research, we decided to go with the development of an application through ionic with the usage of Visual Studio Code. Knowing some basic knowledge of ionic from our module from previous year, it made it easier to understand when conducting further research in relation to ionic. Visual Studio Code includes embedded Git and support for debugging, syntax highlighting, intelligent code completion, snippets and code refactoring.\\
+\textbf{Plugins}
+During the process of our application development, the following are the necessary plugins that are currently utilized within the program:
+
+\begin{lstlisting}
+cordova-plugin-calendar 5.1.5 "Calendar"
+cordova-plugin-compat 1.2.0 "Compat"
+cordova-plugin-device 2.0.2 "Device"
+cordova-plugin-device-motion 2.0.1 "Device Motion"
+cordova-plugin-device-orientation 2.0.1 "Device Orientation"
+cordova-plugin-gyroscope 0.1.4 "Device Gyroscope"
+cordova-plugin-ionic-webview 4.1.3 "cordova-plugin-ionic-webview"
+cordova-plugin-screen-orientation 3.0.2 "Screen Orientation"
+cordova-plugin-splashscreen 5.0.2 "Splashscreen"
+cordova-plugin-statusbar 2.4.2 "StatusBar"
+cordova-plugin-vibration 3.1.1 "Vibration"
+cordova-plugin-whitelist 1.3.3 "Whitelist"
+cordova-sqlite-storage 4.0.0 "Cordova sqlite storage plugin - cordova-sqlite-storage plugin version"
+\end{lstlisting} 
 \textbf{Platforms}
+\\
+We than researched and finalise the platforms used for this application. We determined to test on both Android and browser. We added in the ios platform in case we decided to implement it in the near future. To test out our application, we need the following:
+\begin{lstlisting}
+ionic cordova platform add android
+ionic cordova platform add browser
+ionic cordova platform add ios
+\end{lstlisting}
 
 \subsection{Designing Application}
+While constructing this application as a team, we required to take some vital steps in designing it. Strong communication is important when it comes to any sort of team working exercise. In this section, we discuss on how we enhanced our application with the following implementations.\\
+The team, product owner and the scrum master discuss the top priority user stories and determine which ones will be implemented within our application. During the stage of planning for the design of the application, we came up with some top features for the design.
+
+backlog- is a list of them
+
+discuss, sketch, software
+
+sprint planner
+stage in srum, srum is the methodolofy
+
+1. discuss & opinions
+2. sketch
 \textbf{Rough Design (Tabs/sidemenu/blank)}\\
 \textbf{Possible Features}\\
 
@@ -717,10 +762,6 @@ link*****
 We started with making a basic angular application while discussing what pages to do first. The languages we mainly wanted to use were JavaScript and typescript. Our main focus would be to make sure everyone was one the same level of coding before doing anything major. Angular and Ionic were had helpful documentation that we could easily grasp. For user storage we used Firebase to store basic user information. This was useful because we could work on our core pages without worrying to much about the user server issues. This make us develop faster than we normally planned on putting us ahead of scheduling. The efficiency gave us an opportunity to work on the hardware sensors on the phone, we had to do some maths to see how a punch would work using an accelerometer. This was the most complex step as it required us to learn some psychics about boxing, the method on this works can be found in our research. 
 
 This is where we started to integrate what we have researched individually together. We used the Firebase services to sync with the information the users would need for working out and also to store the results from the accelerometer's inputs. This can be seen again whenever the user logs-in on any device connected to the internet. At this point in development we wanted to have our own management server that would not be on Firebase. This should be different from the clients and store information that we can update at anytime without effecting how the application itself runs. This means the users will be able to get workout updates or meal updates without us having to do a new application release. We also wanted our pages to load a bit quicker and wanted to stop the load times some of us would experience when testing the application.
-
-
-
-
 
 \subsection{Punch Detection}
 
@@ -742,8 +783,24 @@ const res = await this.afAuth.auth.signInWithEmailAndPassword(data.username +
 \end{verbatim}
 
 We also have error handling in place for when the user enters the wrong username/password. After logging in successfully the user should be brought to the main homepage. The user should be able to look at basic information about themselves when logged in and are able to log out on the same page they used to log-in. We used cards to show and hide information the user instead of loading them to a different page. the cards are very useful for having everything already loaded onto one page so the user doesn't have to wait and navigate through different pages.
+\newpage
 
 \subsection{AWS server, Wamp \& MySQL}
+In order for the user to access information regarding workouts and meal plans, the decision of implementing AWS server, Wamp and MySql was taken. We didn't want to hard code in the information, instead one person went ahead and took the responsibility to set up the database and the AWS account in order to manage the database from cloud server. In chapter four, figure 4.1, you will see a diagram with the implementation of the complete database in the ionic application.\\
+\begin{verbatim}
+app.get('/api/mealday1', function (req, res){
+  weekday = 'Monday';
+  sql = 'SELECT * FROM meals WHERE weekday = ' + connection.escape(weekday);
+  connection.query(sql, function (error, results, fields) {
+      if (error) throw error;
+      console.log(results);
+      res.json(results);
+  });
+})
+\end{verbatim}
+Above is a piece of code which prints out the meal plan for Monday.
+Respond with all the information regarding 'Monday' when a GET request is made to the mealday1 page. We made the weekday into an unique ID. Although all the weekdays are in the same table with the database, but we access them by the days. For example we call all the information relating to 'Monday' to be printed out.
+\newpage
 
 \section{Sprint 4 - Testing \& Debugging}
 \subsection{Integration Testing}
@@ -858,7 +915,9 @@ The following conclusion from the above data can be drawn
     }
 \end{verbatim}
 
-\textbf{Log In Sign Up Database}
+\textbf{Log In Sign Up Database}\\
+Most of the error handling is done within Firebase. As developers we have to enter the code that calls these functions to testing in our code. 
+
 \begin{table}[h]
     \centering
     \begin{tabular}{||c c c||} 
@@ -883,17 +942,16 @@ The following conclusion from the above data can be drawn
 
 \textbf{Workouts Meals Database}
 \subsection{Acceptance Testing}
+Acceptance testing is a software test level in which an acceptability test is performed on a system. The aim of this test is to determine compliance with the business specifications of the program and to decide whether it is appropriate for delivery. Once the entire application testing process was completed by the three of us, we decided to get a group of young athletes particularly focusing on boxers to test out this application for its acceptability. ASU Boxing application should have a flawless result in terms of meeting our expectation and what it is designed for.
 
 \section{Sprint 5 - Deploying}
 \subsection{Android Deployment}
-\subsection{App Store Deployment}
-
 We decided to android for developing our application. We choose android because the ease of use and developing. Android is one of many mobile operating systems based on the Linux kernel. Android was announced in Sept 2008 and has now become one of the most popular mobile operating system. Developing an app for android is simple using android studio and ionic. This is why we also choose ionic for our application. 
 
 To deploy an app in the play store we'd need to:
 \\
 \textbf{Understand the Developer Program:} https://play.google.com/about/developer-content-policy/
-
+\subsection{App Store Deployment}
 Following these guidelines we keep us in good standing with google play store and most importantly keep our users safe and protected. An example of this would be, our app should only request permissions that are only used for core features of the app while keeping clear of what personal data we use.
 \\
 \textbf{Test against the quality guidelines:} https://developer.android.com/docs/quality-guidelines
@@ -948,22 +1006,32 @@ Having the sign-up feature next to the log-in made it easier to get more users t
 For storing passwords, we didn't want to have the passwords available locally. This is where Firebase base comes in. It encrypts the password for us and stores it so we won't be able to know the users passwords either. The safety of users information is very important in this day and age. We all agreed it would be best if we did not have access to the passwords and if any issues occurred the users could contact us and we can send a link for the users to reset their passwords. Shown in figure \ref{fig:firbase} we can see how Firebase handles most of the back-end server maintenance.
 
 \section{Home Component}
-
-\begin{center}
-\includegraphics[scale=.5]{images/homePageBorder.png}
-\end{center}
-
-\begin{center}
-\includegraphics[scale=0.377]{images/days.png}
-\end{center}
-
-\subsection{Meals}
-
-\begin{center}
-\includegraphics[scale=0.377]{images/dayWorkouts.png}
-\end{center}
+\begin{wrapfigure}{R}{0.3\textwidth}
+\centering
+\includegraphics[width=0.25\textwidth]{images/homePageBorder.png}
+\caption{\label{fig:homepage}Home}
+\end{wrapfigure}
+The main homepage is designed to be as simple and elegant with user friendly features. The homepage starts of with a simple slider where the user can slide through three images.
+Further below we have the clickable ion-card feature for workouts which brings the user to our workouts page for their 7-day workout plan. Just to break up the page a little, we provide a motivational quote by Winston Churchill. Below that we have another ion-card feature for meals which is also a clickable feature that brings the user to the meals page for meal plan advisory.
+\\
+\newpage
+\subsection{Workouts and Meals}
+\begin{wrapfigure}{L}{0.3\textwidth}
+\centering
+\includegraphics[width=0.25\textwidth]{images/days.png}
+\caption{\label{fig:homepage}Dashboard}
+\end{wrapfigure}
+Both the meals and workouts page have the similar layout. These pages are designed using ion-cards. The ion-card features image and text in a card like look. For seven days, we create seven separate clickable cards which brings the user to another page which will be described below. It makes it simple for users to understand and navigate back and forth. As seen below in figure 4.6, once the user clicks on one the seven days, it will look somewhat like that in terms of design.\\\\\\\
 \subsection{Workouts}
+\begin{wrapfigure}{R}{0.3\textwidth}
+\centering
+\includegraphics[width=0.25\textwidth]{images/dayWorkouts.png}
+\caption{\label{fig:homepage}Days}
+\end{wrapfigure}
+This is an example of one of the workouts page. This is one way we can format the information from the database to the page. The information is extracted from a cloud hosted database using the combination of MySQL, WAMP and AWS. The information is extracted on the base of the days as the days are set to a unique ID. As seen in the image, there is an ion-button that brings the user back to the workouts dashboard where he/she can choose a different day to view.
+For storing information regarding meals and workouts, we didn’t want to have the information available locally. This is where MySQL, WAMP and AWS comes in. It makes sense that the user can get to this information from anywhere and anytime by us linking the data through an IP address.
 
+\newpage
 \section{Profile Component}
 We have designed the Profile component as a planner for the user to stick by and follow strictly.
 For this to become possible the idea of a built in planner in the application was crossed out.
@@ -1040,6 +1108,7 @@ Workout feedback was designed to summarise the workout for the applicant also fo
         \end{center}
     \end{figure}
 
+
 \chapter{Conclusion}
 This chapter will summarise the project in terms of the objectives of
 the initial proposal and will discuss the findings and outcomes of the
@@ -1108,6 +1177,139 @@ This would help us with with feedback from actual fighters and determine if ther
 This application is currently developed for and Android device and for the Play store. In the near future we would love to widen the availability of the application across as many platforms as possible.
 iOS devices and the iOS app store are as popular as the android environment therefore deploying the application for iOS could make significant difference to the applications popularity.\\
 
+
+\chapter{Appendices}
+
+\section{Instalation Guide}
+\textbf{Github Repository link:} https://github.com/ArekMamala/FinalYearProject \\
+
+Download and install Cordova, Angular and Ionic using the following
+link:
+\begin{itemize}
+    \item \textbf{Cordova: } https://cordova.apache.org
+    \item \textbf{Angular: } https://angular.io/guide/setup-local
+    \item \textbf{Ionic: } https://ionicframework.com/getting-started\\
+\end{itemize}
+
+With all the frameworks and SDK's out of the way, we can begin setting up
+the project files. 
+Begin by cloning the GitHub repository, this can be done from the command line using the following command:
+\begin{lstlisting}
+    git clone https://github.com/ArekMamala/FinalYearProject
+\end{lstlisting}{}
+
+When the project is set up correctly plugins and platform's in the application will have to be added into the project and installed using the commands stated below.\\
+\subsection{Plugins}
+\textbf{Vibration}
+\begin{lstlisting}
+    ionic cordova plugin add cordova-plugin-vibration
+    npm install @ionic-native/vibration
+\end{lstlisting}
+
+\textbf{Calendar}
+\begin{lstlisting}
+    ionic cordova plugin add cordova-plugin-calendar
+    npm install @ionic-native/calendar
+\end{lstlisting}
+
+
+\textbf{Device Motion}
+\begin{lstlisting}
+    ionic cordova plugin add cordova-plugin-device-motion
+    npm install @ionic-native/device-motion
+\end{lstlisting}{}
+
+
+\textbf{Device Gyroscope} cordova-plugin-gyroscope 0.1.4 "Device Gyroscope"
+\begin{lstlisting}
+    ionic cordova plugin add cordova-plugin-gyroscope
+    npm install @ionic-native/gyroscope
+\end{lstlisting}
+
+
+\textbf{SQLite-Storage}
+\begin{lstlisting}
+    npm install mysql
+    npm install cors
+\end{lstlisting}
+
+
+\textbf{Splash screen}
+\begin{lstlisting}
+    ionic cordova plugin add cordova-plugin-splashscreen
+    npm install @ionic-native/splash-screen
+\end{lstlisting}{}
+
+
+\textbf{Firebase}   
+\begin{lstlisting}
+    npm install firebase --save
+    npm install -g firebase-toolsso
+\end{lstlisting}
+
+
+
+
+
+unknown\\
+cordova-plugin-compat 1.2.0 "Compat"
+
+cordova-plugin-device 2.0.2 "Device"
+
+cordova-plugin-ionic-keyboard 2.2.0 "cordova-plugin-ionic-keyboard"
+cordova-plugin-ionic-webview 4.1.3 "cordova-plugin-ionic-webview"
+
+cordova-plugin-screen-orientation 3.0.2 "Screen Orientation"
+
+cordova-plugin-statusbar 2.4.2 "StatusBar"
+cordova-plugin-whitelist 1.3.3 "Whitelist"
+
+\subsection{Platforms}
+The following platforms can be used for testing and running the application on your local device.\\
+\textbf{Android}   
+\begin{lstlisting}
+    ionic cordova platform add android
+\end{lstlisting}
+
+\textbf{Browser}   
+\begin{lstlisting}
+    ionic cordova platform add browser
+\end{lstlisting}
+
+\subsection{Running Application}
+
+\textbf{Android}   
+When running on android the device used for testing must be connected to the computer and that device must be selected when running the below command.
+\begin{lstlisting}
+    ionic cordova run android
+\end{lstlisting}
+
+\textbf{Browser}   
+When running on browser a link to test the application will be displayed after the following command is entered.
+\begin{lstlisting}
+    ionic cordova run browser
+\end{lstlisting}
+
+
+\subsection{Android with APK file}
+The applications SDK files are located in the Github repository in the releases section of the project.
+https://github.com/ArekMamala/FinalYearProject/releases\\
+
+To deploy the SDK file of the application we use the following command
+\begin{lstlisting}
+    ionic cordova build android --prod 
+\end{lstlisting}
+This results in a creation of an SDK file in the file directory displayed.\\
+The following SDK needs to be transferred into the testing device and installed.
+
+Installing unknown applications on your android device can be challenging if you are not aware of the application security system in the android environment.
+The following steps are necessary for android users to run the applications apk file.
+\begin{itemize}
+    \item \textbf{Menu} - move to the menu section of the device.
+    \item \textbf{Settings} - move to the settings section of the device.
+    \item Check \textbf{Unknown Sources} to allow your phone to install apps from sources other than the Google Play. Store.
+\end{itemize}
+More recent versions of Android deal with this situation a bit differently, instead of you doing all the work above when you install an APK for the first time you are prompted to allow your browser or file manager to carry out this process.\cite{apkFiles} 
 
 
 
