@@ -10,13 +10,21 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 
-// Establishing a connection
+// Establishing a connection with AWS
+var connection = mysql.createConnection({
+  host: '18.206.137.252',
+  user: 'admin',
+  password: 'admin',
+  database: 'asuboxing'
+});
+
+/* Establishing a connection (Local Database)
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
     database: 'asuboxing'
-});
+});*/
 
 // Connecting to the database
 connection.connect(function (err) {
