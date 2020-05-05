@@ -683,7 +683,7 @@ Before we can run the application on a device the developer must add the specifi
 After the platform is added, you can generate the required .apk file with the command  \textbf{ionic cordova build android}.\\
 
 Running the application on the specified device is done with the input of this command \textbf{ionic cordova run android --device} while having the device plugged into the machine developing the application. \cite{cordovaRun}
-\subsection{Scope}
+
 
 \subsection{GitHub Repository}
 The GitHub repository containing the entire project can be found at 
@@ -707,14 +707,53 @@ The releases of the project is the build android applications as we progressed t
 link*****
 
 \section{Sprint 2 - Design & Research}
+\subsection{Scope}
+The following Sprint focused on studying our project materials, such as an acceptable environment that we could use, which languages we could use and whether there were any external libraries or tools that we could use to enhance the overall reach.
 \subsection{Researching Application}
-There were many types of research taken into consideration for this sprint. This ranged from articles from Google Scholar including articles from universities, stack overflow, videos, and information from genuine sources. We reviewed many books, articles and papers with the help of Google School and the GMIT library resourse available through GMIT's website.\\
+There were many types of research taken into consideration for this sprint. This ranged from articles from Google Scholar including articles from universities, stack overflow, videos, and information from genuine sources. We reviewed many books, articles and papers with the help of Google School and the GMIT library resourse available through GMIT's website.
+\newpage
 \textbf{Environments}\\
-With careful research, we decided to go with the development of an application through ionic with the usage of Visual Studio Code. Knowing some basic knowledge of ionic from our module from previous year, it made it easier to understand when conducting further research in relation to ionic. Visual Studio Code includes embedded Git and support for debugging, syntax highlighting, intelligent code completion, snippets, and code refactoring.\\
-\textbf{Plugins}\\
+With careful research, we decided to go with the development of an application through ionic with the usage of Visual Studio Code. Knowing some basic knowledge of ionic from our module from previous year, it made it easier to understand when conducting further research in relation to ionic. Visual Studio Code includes embedded Git and support for debugging, syntax highlighting, intelligent code completion, snippets and code refactoring.\\
+\textbf{Plugins}
+During the process of our application development, the following are the necessary plugins that are currently utilized within the program:
+
+\begin{lstlisting}
+cordova-plugin-calendar 5.1.5 "Calendar"
+cordova-plugin-compat 1.2.0 "Compat"
+cordova-plugin-device 2.0.2 "Device"
+cordova-plugin-device-motion 2.0.1 "Device Motion"
+cordova-plugin-device-orientation 2.0.1 "Device Orientation"
+cordova-plugin-gyroscope 0.1.4 "Device Gyroscope"
+cordova-plugin-ionic-webview 4.1.3 "cordova-plugin-ionic-webview"
+cordova-plugin-screen-orientation 3.0.2 "Screen Orientation"
+cordova-plugin-splashscreen 5.0.2 "Splashscreen"
+cordova-plugin-statusbar 2.4.2 "StatusBar"
+cordova-plugin-vibration 3.1.1 "Vibration"
+cordova-plugin-whitelist 1.3.3 "Whitelist"
+cordova-sqlite-storage 4.0.0 "Cordova sqlite storage plugin - cordova-sqlite-storage plugin version"
+\end{lstlisting} 
 \textbf{Platforms}
+\\
+We than researched and finalise the platforms used for this application. We determined to test on both Android and browser. We added in the ios platform in case we decided to implement it in the near future. To test out our application, we need the following:
+\begin{lstlisting}
+ionic cordova platform add android
+ionic cordova platform add browser
+ionic cordova platform add ios
+\end{lstlisting}
 
 \subsection{Designing Application}
+While constructing this application as a team, we required to take some vital steps in designing it. Strong communication is important when it comes to any sort of team working exercise. In this section, we discuss on how we enhanced our application with the following implementations.\\
+The team, product owner and the scrum master discuss the top priority user stories and determine which ones will be implemented within our application. During the stage of planning for the design of the application, we came up with some top features for the design.
+
+backlog- is a list of them
+
+discuss, sketch, software
+
+sprint planner
+stage in srum, srum is the methodolofy
+
+1. discuss & opinions
+2. sketch
 \textbf{Rough Design (Tabs/sidemenu/blank)}\\
 \textbf{Possible Features}\\
 
@@ -903,6 +942,7 @@ Most of the error handling is done within Firebase. As developers we have to ent
 
 \textbf{Workouts Meals Database}
 \subsection{Acceptance Testing}
+Acceptance testing is a software test level in which an acceptability test is performed on a system. The aim of this test is to determine compliance with the business specifications of the program and to decide whether it is appropriate for delivery. Once the entire application testing process was completed by the three of us, we decided to get a group of young athletes particularly focusing on boxers to test out this application for its acceptability. ASU Boxing application should have a flawless result in terms of meeting our expectation and what it is designed for.
 
 \section{Sprint 5 - Deploying}
 \subsection{Android Deployment}
@@ -1137,6 +1177,128 @@ This would help us with with feedback from actual fighters and determine if ther
 This application is currently developed for and Android device and for the Play store. In the near future we would love to widen the availability of the application across as many platforms as possible.
 iOS devices and the iOS app store are as popular as the android environment therefore deploying the application for iOS could make significant difference to the applications popularity.\\
 
+
+\chapter{Appendices}
+
+\section{Instalation Guide}
+\textbf{Github Repository link:} https://github.com/ArekMamala/FinalYearProject \\
+
+Download and install Cordova, Angular and Ionic using the following
+link:
+\begin{itemize}
+    \item \textbf{Cordova: } https://cordova.apache.org
+    \item \textbf{Angular: } https://angular.io/guide/setup-local
+    \item \textbf{Ionic: } https://ionicframework.com/getting-started\\
+\end{itemize}
+
+With all the frameworks and SDK's out of the way, we can begin setting up
+the project files. 
+Begin by cloning the GitHub repository, this can be done from the command line using the following command:
+\begin{lstlisting}
+    git clone https://github.com/ArekMamala/FinalYearProject
+\end{lstlisting}{}
+
+When the project is set up correctly plugins and platform's in the application will have to be added into the project and installed using the commands stated below.\\
+\subsection{Plugins}
+\textbf{Vibration}
+\begin{lstlisting}
+    ionic cordova plugin add cordova-plugin-vibration
+    npm install @ionic-native/vibration
+\end{lstlisting}
+
+\textbf{Calendar}
+\begin{lstlisting}
+    ionic cordova plugin add cordova-plugin-calendar
+    npm install @ionic-native/calendar
+\end{lstlisting}
+
+
+\textbf{Device Motion}
+\begin{lstlisting}
+    ionic cordova plugin add cordova-plugin-device-motion
+    npm install @ionic-native/device-motion
+\end{lstlisting}{}
+
+
+\textbf{Device Gyroscope} cordova-plugin-gyroscope 0.1.4 "Device Gyroscope"
+\begin{lstlisting}
+    ionic cordova plugin add cordova-plugin-gyroscope
+    npm install @ionic-native/gyroscope
+\end{lstlisting}
+
+
+\textbf{SQLite-Storage}
+\begin{lstlisting}
+    npm install mysql
+    npm install cors
+\end{lstlisting}
+
+
+\textbf{Splash screen}
+\begin{lstlisting}
+    ionic cordova plugin add cordova-plugin-splashscreen
+    npm install @ionic-native/splash-screen
+\end{lstlisting}{}
+
+
+\textbf{Firebase}   
+\begin{lstlisting}
+    npm install firebase --save
+    npm install -g firebase-toolsso
+\end{lstlisting}
+
+
+
+
+
+unknown\\
+cordova-plugin-compat 1.2.0 "Compat"
+
+cordova-plugin-device 2.0.2 "Device"
+
+cordova-plugin-ionic-keyboard 2.2.0 "cordova-plugin-ionic-keyboard"
+cordova-plugin-ionic-webview 4.1.3 "cordova-plugin-ionic-webview"
+
+cordova-plugin-screen-orientation 3.0.2 "Screen Orientation"
+
+cordova-plugin-statusbar 2.4.2 "StatusBar"
+cordova-plugin-whitelist 1.3.3 "Whitelist"
+
+\subsection{Platforms}
+The following platforms can be used for testing and running the application on your local device.\\
+\textbf{Android}   
+\begin{lstlisting}
+    ionic cordova platform add android
+\end{lstlisting}
+
+\textbf{Browser}   
+\begin{lstlisting}
+    ionic cordova platform add browser
+\end{lstlisting}
+
+\subsection{Running Application}
+
+\textbf{Android}   
+When running on android the device used for testing must be connected to the computer and that device must be selected when running the below command.
+\begin{lstlisting}
+    ionic cordova run android
+\end{lstlisting}
+
+\textbf{Browser}   
+\begin{lstlisting}
+    ionic cordova run browser
+\end{lstlisting}
+
+
+\section{Android with APK file}
+Installing unknown applications on your android device can be challenging if you are not aware of the application security system in the android environment.
+The following steps are necessary for android users to run the applications apk file.
+\begin{itemize}
+    \item \textbf{Menu} - move to the menu section of the device.
+    \item \textbf{Settings} - move to the settings section of the device.
+    \item Check \textbf{Unknown Sources} to allow your phone to install apps from sources other than the Google Play. Store.
+\end{itemize}
+More recent versions of Android deal with this situation a bit differently, instead of you doing all the work above when you install an APK for the first time you are prompted to allow your browser or file manager to carry out this process.\cite{apkFiles} 
 
 
 
