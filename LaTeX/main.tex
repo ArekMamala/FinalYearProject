@@ -30,9 +30,12 @@ The main objective that we set for ourselves as designers and developers of this
 data to and from the application remotely using Keras in conjunction with Jupyter Notebooks, to achieve a successful calculation and reading of the users hand movement, ie. a jab punch.
 
 The ultimate goal of our Final Year project is develop a four tier application using Keras machine learning, our own server deployed on the cloud, an online database and using the angular and ionic development environment.
-We set out to create and deploy an android application on the official Android store, we had decided this project should consist of three main sections. 
+We set out to create and deploy an android application on the official Android store, we had decided this project should consist of three main sections.
+
 First and foremost it should have a valid log in and sign up options that should be connected to a database which stores and hashes the users information due to the security reason. 
+
 Secondly there should be a workout and meal plan available to the user which shall be stored and loaded from a database that is deployed in a server on the cloud.
+
 The third part of the application will consist of a workout section, the section lets the user practice specific workouts, the applicant will be timed and results will be printed out after every workout. 
 The idea of the user having the choice to log in for their results and in formations of all completed exercises are going to be downloaded from the database.
 \newpage
@@ -45,46 +48,49 @@ The authors would like to thank our supervisors Gerard Harrison, Martin Kenirons
 We would also like to thank the lecturers and faculty of the GMIT Dublin Road campus, in particular Dr.John Healy, whom we found to be a constant source of useful information on programming practices, life in industry and linking the nuances of technology and modern life to ancient Greek parables.
 
 \subsection*{Important Project Documentation}
-
-\textbf{GitHub Link:}\\https://github.com/ArekMamala/FinalYearProject\\
-\textbf{Screencast Link:}\\
-\textbf{Project Video - Usman Sattar: }\\
-\textbf{Project Video - Sammar Tahir: }\\
-\textbf{Project Video - Arkadiusz Mamala: }\\
-\textbf{Punching Detection video: }\\
-https://github.com/ArekMamala/FinalYearProject/blob/master/ProjectVideos/punching%20video.mp4
+\subsubsection{GitHub Link:}\begin{lstlisting}
+https://github.com/ArekMamala/FinalYearProject
+\end{lstlisting}
+\subsubsection{Screencast Link:}
+\subsubsection{Project Video - Usman Sattar: }
+\subsubsection{Project Video - Sammar Tahir: }
+\subsubsection{Project Video - Arkadiusz Mamala: }
+\subsubsection{Punching Detection video: }\begin{lstlisting}
+https://github.com/ArekMamala/FinalYearProject/blob/master/ProjectVideos
+/punching\%20video.mp4
+\end{lstlisting}
 \body
 
 \chapter{Introduction}
-For our project we wanted to make a wearable wristband that allows a user to keep track of how many punches hit an object, tracking the speed of movement and calculating the beats per minute whilst continuously punching . We also want to connect the wristband to a laptop/phone so the user is able to get all his information tracked and displayed in an elegant and sleek app.
+For our project we wanted to make a wearable wristband that allows an user to keep track of how many punches hit an object, tracking the speed of movement and calculating the beats per minute whilst continuously punching . We also want to connect the wristband to a laptop/phone so the user is able to get all his information tracked and displayed in an elegant and sleek app.
 
-\section{Overview}
+\subsubsection{Overview}
 This chapter will outline the context and scope of the project. It
 will explain the objectives we had for the project and therefore the specifications for the software, additionally as detail our initial ideas and thoughts
 behind the look and it’s implementation.
 
 \section{Ideas}
-At the beginning of 4th and the last year in Software Development, we were given the task of coming up with an idea worthy and suitable for a level 8 final year project, we knew that whatever we needed to come up with must have certain requirements, using multiple different technologies, languages and it had to challenge our own knowledge and skills that we learned in previous years.
-\newpage
+At the beginning of 4$^{th}$, the last year in Software Development, we were given the task of coming up with an idea worthy and suitable for a level 8 final year project. We knew that whatever we needed to come up with must have certain requirements, using multiple different technologies, languages and it had to challenge our own knowledge and skills that we learned in previous years.
+
 Our breakthrough had come few weeks into to college year, we had been practicing for a community event it had been a 5 kilometers run or walk, every time we'd exercise we would compare our results on mobile devices or fit-bits, it was at that point we came across to the thought of connecting sports and technology and style an application in this current area. 
 
-We knew that running was the foremost popular exercise which was technologized therefore it had been a path we didn't want to travel down. Finally after long discussions we decided to develop a boxing related project counting punches and coming back with results.
+We knew that running was the foremost popular exercise which was '\textit{technologized}' therefore it had been a path we didn't want to travel down. Finally after long discussions we decided to develop a boxing related project counting punches and coming back with results.
 
 We needed to find the right environment for this application, due to reasons such as the fact that we had the option to use angular and ionic in previous years modules we had never really delved into the environment in much detail, and thus we were very interested in the environment and learning much about the inner workings and its plugins.
 
 In order to teach our application to recognize hand movements we needed to create a neural networks, having already studied about neural networks in our previous semester it was known to us using python for this would be essential.
 
-Python gave the impression to be perfect for styling the machine learning side of
-our project, because the language contains a vast array of open source libraries
-free for us to use.
+Python gave the impression to be perfect for styling the machine learning side of our project, because the language contains a vast array of open source libraries free for us to use.
 
-We have created our own AWS server hosted on the cloud with the database implemented through Wamp working together with mySql which we learned about in  our second year, this database would create the meals and workouts plans and we would have to connect them to the application.
+We have created our own AWS server hosted on the cloud with the database implemented through Wamp working together with MySql which we learned about in  our second year, this database would create the meals and workouts plans and we would have to connect them to the application.
+
 For the log in we wanted to experiment with some technology we haven't ever heard off therefore the decision to connect an online database to the project. After researching databases we made the decision of going with Firebase main reason was because none of us had experienced this technology before.
 
 \section{Reason for Choosing Project}
 The reasons that we decided to develop this application is because we find this idea very interesting. Sports is a topic that we are all involved in inside of college and out. We came up with this idea when we were at a boxing class when we couldn't decide who had more power. It’s a project that we feel will challenge us in developing it and get it working the way we have designed it.
-\\
-\textbf{The technologies we plan on using are:}
+
+\subsection{Technologies we plan on using}
+Here is a list of technologies that we wanted to try out for the project.
 \begin{itemize}
 \item{Web servers to store our data (AWS)}
 \item{Wearable tracker}
@@ -97,18 +103,17 @@ The reasons that we decided to develop this application is because we find this 
 \end{itemize}
 \section{The Application}
 The application on the phone is going to work with user control. The application is going to count punches, update data sheet, calculate the BPM of user while punching. This app is going to be an alternative to the research of the wearable device.
-\\
+
 \textbf{User will have three options within the application:}
 \begin{itemize}
 \item Calculate the number of punches against time.
 \item Calculate the number of punches and beats per minute against time.
-\item Open data log sheet to view their history. To view their progression.
+\item Open data log sheet to view their history so they can track their progression.
 \end{itemize}
 
 \section{Objectives}
 The objectives of this project are:
 \begin{itemize}
-
 \item Deploy a working application on to the official android store.
 \item Design and Develop a user friendly application which will be easy to understand and use by any given person.
 \item Find a way to integrate neural networks in conjunction with the angular environment and teach the machine learning part of the project to recognize persons hand movements.
@@ -118,11 +123,10 @@ The objectives of this project are:
 \item Allocate the work evenly and fairly between the three of us and set goals for each one of us.
 \item Constantly testing the application will allow for error and bug detection detection as well as advance the development of this application. The application should be tested every time it is updated and documented on the results.  
 \end{itemize}
-\newpage
+
 \section{Chapter Summaries}
 \subsection{Introduction}
 This chapter contains the context of the entire project what we set out to do our objectives for the future, the idea and where it came from technologies we plan to use and the location of different elements of our GitHub Repository. 
-
 \subsection{Research}
 This is a chapter where we show all the research that we had carried out on all the different parts of the project all the way from the beginning of boxing to technology we would use.
 \subsection{Methodology}
@@ -132,27 +136,26 @@ This Chapter gives an insight on how the entire design of system architecture ho
 \subsection{Conclusion}
 The conclusion is a section in where we give a summary of our findings, end results and our experiences while creation development and deployment of this project.
 
-
 \chapter{Research}
-This is where you'll find all the research we did before starting the project. We wanted to have a clear understanding of what we needed for this project before we even started coding. 
 \section{Boxing}
+Boxing is a combat sport in which two people, usually wearing protective gloves, throw punches at each other for a predetermined amount of time in a boxing ring. Boxing is overseen by a referee over a series of one to three minute intervals called rounds.
 \subsection{History}
-Its impossible to say when the idea of boxing had originated we are enlightened with evidence such as the Sumerian relief carvings from the 3rd millennium BC, therefore we know that it has been around for much longer than anyone could imagine.\newline
-It is known to man kind throughout the early sculptures such as the relief sculpture from Egyptian Thebes that in the beginning of boxing gloves were non existent for the people participating in this sport.\newline
-In the beginning it was a basic band supporting the wrist that was used and the first bit of evidence of a boxing glove is available to us through a vase from Minoan Crete 1500BC. It shows boxers wearing helmets and a stiff plate strapped to the fighters fist.
-\cite{Boxing}
-\newpage
+Its impossible to say when the idea of boxing had originated we are enlightened with evidence such as the Sumerian relief carvings from the 3rd millennium BC, therefore we know that it has been around for much longer than anyone could imagine.
 
+It is known to man kind throughout the early sculptures such as the relief sculpture from Egyptian Thebes that in the beginning of boxing gloves were non existent for the people participating in this sport.
 
-It was in 1719 that the term boxing was used for the upcoming sport and in 1743 the first formal rules were developed for the activity. When the Queensberry rules had been expanded in 1891 by the London National Sporting Club and stating how these fights would be scored, this gave the sport a safer name and also formalize the fight so that the result of each contest did not have to end with a knockout.
-\cite{modernBoxing}
+In the beginning it was a basic band supporting the wrist that was used and the first bit of evidence of a boxing glove is available to us through a vase from Minoan Crete 1500BC. It shows boxers wearing helmets and a stiff plate strapped to the fighters fist.\cite{Boxing}
+
+It was in 1719 that the term boxing was used for the upcoming sport and in 1743 the first formal rules were developed for the activity. When the Queensberry rules had been expanded in 1891 by the London National Sporting Club and stating how these fights would be scored, this gave the sport a safer name and also formalize the fight so that the result of each contest did not have to end with a knockout.\cite{modernBoxing}
+
 Due to this update to the sport it would be more accepted for the society to display fights tightly regulated. This meant that boxing would have the opportunity to make it professionally. 
 
 \subsection{Rules}
-At the start of boxing rules were non existent there were no weight classes no timed rounds no gloves the contest would end when an opponent is knocked unconscious or simply could not go on. 
-Rules of boxing can vary depending what competition we decide to look at. Boxing rule book consists of many different constrains on the sport.\linebreak
+At the start of boxing rules were non existent there were no weight classes no timed rounds no gloves the contest would end when an opponent is knocked unconscious or simply could not go on.
 
-Here are just some rules to be mentioned that refer to the Olympic Boxing.
+Rules of boxing can vary depending what competition we decide to look at. Boxing rule book consists of many different constrains on the sport.
+
+\textbf{Here are just some rules to be mentioned that refer to the Olympic Boxing:}
 \begin{itemize}
     \item Each fight will consist of four rounds and each round will be two minutes long with a minute long break in between rounds.
     \item Points can be earned only when a punch is landed with the right part of the glove on the opponents front or side of the head or body above the belt.
@@ -174,20 +177,21 @@ The points scoring system doesn't change and the fight result is determined by k
 These are just a few to name out certain rules and regulations must be followed and obeyed by the participants to make this sport as fair as possible. 
 
 \subsection{How are physics applied to boxing}
-Physics occurs in punching because of energy. Person uses energy in order for a punch to be carried out. That is why, as well as energy we need momentum, work, power, and velocity. Before a boxer punches, he has potential energy which is stored energy. Once, the boxer begins to punch potential energy turns into kinetic energy.\\
-Boxing is more than the brutal beating up of one another; it is a sport that applies many physics laws. If a fighter uses physics correctly, he will likely get the victory; but if he does not, he will probably come out with a defeat.
+Physics occurs in punching because of energy. Person uses energy in order for a punch to be carried out. This is why, as well as energy we need momentum, work, power, and velocity. Before a boxer punches, he has potential energy which is stored energy. Once, the boxer begins to punch potential energy turns into kinetic energy.
 
-As soon as a boxer starts to move his or her shoulders and arms and eventually the fists, his/her potential energy is being converted into kinetic energy.\\
+Boxing is more than the brutal beating up of one another, it is a sport that applies many physics laws. If a fighter uses physics correctly, he will likely get the victory; but if he does not, he will probably come out with a defeat.
+
+As soon as a boxer starts to move his/her shoulders, arms and eventually the fists, his/her potential energy is being converted into kinetic energy.\\
 
 \textbf{Kinetic energy is calculated by using the formula:}
 
-$Kinetic Energy = (1/2)mv^2$\\
+    Kinetic Energy = $(1/2)mv^2$
 
 The fist has its maximum velocity when it hits something. The collision then causes the fist to slow down, eventually the fighter begins applying a force to retract his/her arm.\\
 
 \textbf{This speed is calculated using:}
 
-$Velocity = Distance / Time$
+Velocity = $Distance / Time$
 
 What is Velocity? The speed of something in a given direction.\cite{boxPhysics}
 
@@ -203,30 +207,27 @@ Momentum can be described as "mass in motion" every object has mass therefore if
 
 \textbf{Momentum is calculated by using the formula:}
 
-$Momentum (P) = Mass * Velocity$\\
+Momentum (P) = $Mass * Velocity$\\
 
-Impulse is another factor that can change the power, speed and momentum of a boxers punch.
-\newpage
-When a punch is thrown and as it moves towards the head it has momentum while the head has momentum of zero.
-When the punch is connecting there is a transfer of momentum form arm to fist and then to the opponents head. \\
-Depending on the opponent who your punch is connecting with damage can be decreased even by the slightest movement of his head this would increase the time interval meaning force of the punch is reduced. \\
+Impulse is another factor that can change the power, speed and momentum of a boxers punch. When a punch is thrown and as it moves towards the head it has momentum while the head has momentum of zero. When the punch is connecting there is a transfer of momentum form arm to fist and then to the opponents head.
+
+Depending on the opponent who your punch is connecting with damage can be decreased even by the slightest movement of his head this would increase the time interval meaning force of the punch is reduced.\cite{boxingPhysics}
 
 \textbf{Impulse is calculated by using the formula:}
 
-$Impulse = Force * Time$ \cite{boxingPhysics}\\
+Impulse = $Force * Time$ \\
 
+\subsection{Types of punches}
 The degrees of angles and certain twists of the arm, fist is determined on the different kinds of punches.
-
-\textbf{Jab}\\
+\subsubsection{Jab}
 Starting position hands near your nose with the fingers facing your chin.
-As the punch is thrown extend your hand straight twist your knuckles so when the hand is extended fingertips are pointed at the ground.\\
+As the punch is thrown extend your hand straight twist your knuckles so when the hand is extended fingertips are pointed at the ground.
 
-\textbf{Hook}\\
+\subsubsection{Hook}
 Starting in a boxing stance, hands in the same starting position as the jab.
-With the elbow at 90 degrees bring your forearm in front of you, finishing in the same line as your shoulders. 
-knuckles stay up with fingertips pointing at the ground.\\
+With the elbow at 90 degrees bring your forearm in front of you, finishing in the same line as your shoulders. The knuckles stay up with fingertips pointing at the ground.
 
-\textbf{Upper Cut}\\
+\subsubsection{Upper Cut}
 Starting position is the same a the Hook, boxing stance with hands near the nose. 
 Your hand needs to swipe up from your hip while keeping elbow bent and fingers pointing towards your head. Imagining the punch finishing underneaths the opponents chin.\cite{punchingPhysics}
 
@@ -1340,10 +1341,12 @@ Using something like Firebase really gave us an opportunity to work on the rest 
 
 Tensorflow is a really powerful tool for developing neural networks. This powerful tool is also easy to use and that's why we choose to use Keras with Tensorflow. There is a countless amount of documentation available online for developers to make a neural network for anything a developer desires to use it for. This really helped us get more accurate results for our punches, more specifically the upper-cut that the accelerometer had a issues properly calculating.\\
 
-Paragraph on wamp server and mysql
+Learning about databases is quiet educational. It is very interesting how databases play their part whether it's within an application or a webpage. MySQL is a database software. It used "SQL" language to query the database. The combination of MySQL, WAMP Server and AWS is unique. In this project, one is depending on another. Amazon offers a brilliant hosting service which is called AWS (Amazon Web Services). Creating a virtual machine on Amazon and setting it up for this project was a brilliant moment to learn about the services provides to students from a great company like Amazon.\\
+Wamp/Wamp Server is a software that allows us to use our computers as local servers, and "host" websites or applications on it. It was a very useful tool for us to check how our application would work on a dedicated server, especially for back-end aspects, like MySQL.
+I would personally recommend using MySQL to any developer that wishes to start a new application and plans on using a back-end server. I feel with all the help out there given by experts, SQL is an easy and understanding language to pick up on.
 
 \section{Future Improvements}
-This section of the conclusion has the description of the possible future implementations that we have decided on. We feel these improvements would help this application move forward in the software industry gain popularity and improve the overall user experience while not damaging the applications performance.\\
+This section of the conclusion has the description of the possible future implementations that we have decided on. We feel these improvements would help this application move forward in the software industry gain popularity and improve the overall user exper\bodyience while not damaging the applications performance.\\
 
 \textbf{Applications Improvements}\\
 There are certain aspects of the application that that didn't quite come out as it was planned at the beginning and due to the project time frame certain features were not included.
@@ -1498,6 +1501,32 @@ The following steps are necessary for android users to run the applications apk 
     \item Check \textbf{Unknown Sources} to allow your phone to install apps from sources other than the Google Play. Store.
 \end{itemize}
 More recent versions of Android deal with this situation a bit differently, instead of you doing all the work above when you install an APK for the first time you are prompted to allow your browser or file manager to carry out this process.\cite{apkFiles} 
+
+
+\section{Application images}
+
+\begin{figure}[h]
+    \begin{center}
+    \includegraphics[scale=.1]{images/aplicationImages/application.jpeg}
+    \hspace{1cm}
+    \includegraphics[scale=.1]{images/aplicationImages/splashScreen.jpeg}
+    \caption{Application Installed and splash screen displayed}
+    \label{fig:survey}
+    \end{center}
+\end{figure}
+\begin{figure}[h]
+    \begin{center}
+    \includegraphics[scale=.1]{images/aplicationImages/application.jpeg}
+    \hspace{1cm}
+    \includegraphics[scale=.1]{images/aplicationImages/splashScreen.jpeg}
+    \caption{Application Installed and splash screen displayed}
+    \label{fig:survey}
+    \end{center}
+\end{figure}
+
+
+
+
 
 
 
