@@ -674,12 +674,13 @@ We are allocating this project into three sections.\\
 Firstly we are going to start our research. We are going to deeply research in how this wearable device is going to work and what it takes to develop this new piece of technology. We need to understand what language is going to be used in constructing this. We need to know what sensors are required and how all data is going to be recorded.
 \\
 \textbf{Second Step:}
-During the term our research is going to be a piece of document in how this wearable device can be achieved and possible drawing and animations of how it may work. But to back up our research, we need a physical piece that we can show and present. So we as a group decided to construct an application that is downloadable on mobile phone. This phone application is an alternative to the wearable device. The application is going to record the number of punches. The application is going to record and store data. For example is it going to store the number of punches under a certagin amount of time.
+During the term our research is going to be a piece of document in how this wearable device can be achieved and possible drawing and animations of how it may work. But to back up our research, we need a physical piece that we can show and present. So we as a group decided to construct an application that is downloadable on mobile phone. This phone application is an alternative to the wearable device. The application is going to record the number of punches. The application is going to record and store data. For example is it going to store the number of punches under a certain amount of time.
 \\
 \textbf{Third Step:}
 Whilst two members of the team are constructing the application. One person is going to specifically manage the database. They will have the responsibility to create the AWS account and link it up to the database. Overall, they are responsible for the whole database section of this project and to link it up to the application, that is works efficiently.
 
-\textbf{Work Allocation - Usman Sattar}
+\textbf{Work Allocation - Usman Sattar}\\
+For the development of the project, the following sections were assigned to Usman Sattar. He was in charge 
 
 \textbf{Work Allocation - Sammar Tahir}
 
@@ -779,17 +780,17 @@ ionic cordova platform add ios
 While constructing this application as a team, we required to take some vital steps in designing it. Strong communication is important when it comes to any sort of team working exercise. In this section, we discuss on how we enhanced our application with the following implementations.\\
 The team, product owner and the scrum master discuss the top priority user stories and determine which ones will be implemented within our application. During the stage of planning for the design of the application, we came up with some top features for the design.
 
-backlog- is a list of them
+\begin{itemize}
+  \item Tabs View
+  \item Counting Punches
+  \item Showing The Type of Punches Thrown
+  \item Workout and Meal Plans using MySQL/AWS
+  \item Secure Login/Logout System Using Firebase
+  \item Feedback Report
+\end{itemize}
 
-discuss, sketch, software
+Before these items were implemented to our application, we thought it was best to make sketches like an architecture of the project. This will give us a better overview of how the application functions.
 
-sprint planner
-stage in srum, srum is the methodolofy
-
-1. discuss & opinions
-2. sketch
-\textbf{Rough Design (Tabs/sidemenu/blank)}\\
-\textbf{Possible Features}\\
 
 \section{Sprint 3 - Implementation \& development}
 \subsection{Initial Setup}
@@ -820,7 +821,7 @@ We also have error handling in place for when the user enters the wrong username
 \newpage
 
 \subsection{AWS server, Wamp \& MySQL}
-In order for the user to access information regarding workouts and meal plans, the decision of implementing AWS server, Wamp and MySql was taken. We didn't want to hard code in the information, instead one person went ahead and took the responsibility to set up the database and the AWS account in order to manage the database from cloud server. In chapter four, figure 4.1, you will see a diagram with the implementation of the complete database in the ionic application.\\
+In order for the user to access information regarding workouts and meal plans, the decision of implementing AWS server, Wamp and MySql was taken. We didn't want to hard code in the information, instead one person went ahead and took the responsibility to set up the database and the AWS account in order to manage the database from cloud server. In chapter four, figure 4.1, you will see a diagram with the implementation of the complete database in the ionic application.
 \begin{verbatim}
 app.get('/api/mealday1', function (req, res){
   weekday = 'Monday';
@@ -833,12 +834,27 @@ app.get('/api/mealday1', function (req, res){
 })
 \end{verbatim}
 Above is a piece of code which prints out the meal plan for Monday.
-Respond with all the information regarding 'Monday' when a GET request is made to the mealday1 page. We made the weekday into an unique ID. Although all the weekdays are in the same table with the database, but we access them by the days. For example we call all the information relating to 'Monday' to be printed out.
+Responds with all the information regarding 'Monday' when a GET request is made to the mealday1 page. We made the weekday into an unique ID. Although all the weekdays are in the same table with the database, but we access them by the days. For example we call all the information relating to 'Monday' to be printed out.
+\\
+\textbf{Establishing a connection with AWS}
+\begin{verbatim}
+var connection = mysql.createConnection({
+  host: '18.206.137.252',
+  user: 'admin',
+  password: 'admin',
+  database: 'asuboxing'
+});
+\end{verbatim}
+As you see in the above section of the code snippet, we are successfully making a secure connection with the virtual machine using AWS. To access to the database, we go to phpmyadmin to create a user and password and grant all privileges. This is allow us from us local machines to access the database using the above IP address. 
 \newpage
 
 \section{Sprint 4 - Testing \& Debugging}
+\subsection{Unit Testing}
+Unit testing is a level of software testing where individual units/ components of a software are tested. The purpose is to validate that each unit of the software performs as designed.\cite{unitTesting}
+We applied unit testing in the early stages of development when it came to testing the workout section that is written in HTML, CSS and JavaScript using Visual Studio Code. Workout is the main objective of this application as it requires the user to hold the device and application determines the type of punch thrown according to the user movement.
 \subsection{Integration Testing}
-\textbf{Frameworks SDK's Databases }\\
+Integration Testing is a level of software testing where individual units are combined and tested as a group. The purpose of this level of testing is to expose faults in the interaction between integrated units. Test drivers and test stubs are used to assist in Integration Testing.\cite{integrationTesting}
+Integration testing is applied when carrying out tests between the database which is created in WAMP server and AWS. They both work side by side when it comes to displaying information to the application. Another example of integration testing is Ionic, Angular and Cordova working together which brings an excellent result.
 
 \subsection{System Functionality Testing}
 \textbf{Punch detection}\\
@@ -1073,14 +1089,14 @@ We wanted to use the ideology of "work smarter not harder" we decided to use the
 This feature is designed to eliminate of the following scenario happening for example when a consumer decides to use the application and make plan for the following days, typically this would be saved in the application and only notify the user when accessing that application. This scenario can cause a problem for the user completing workouts as he/she can easily forget about their plans and not open the application in time to follow up on their programs.
 By using the calendar application users will be notified that the workout is due even without accessing the application this will remind them to complete the workout and keep up with their program.
 
+\begin{wrapfigure}{L}{0.3\textwidth}
+\centering
+\includegraphics[width=0.25\textwidth]{images/profilePageBorder.png}
+\caption{\label{fig:pComponent}Days}
+\end{wrapfigure}
 
-\begin{figure}[h]
-    \begin{center}
-    \includegraphics[scale=.5]{images/profilePageBorder.png}
-    \caption{Profile component display.}
-    \label{fig:pComponent}
-    \end{center}
-\end{figure}
+
+
 
 As can be seen in figure \ref{fig:pComponent} it firstly displays the Username and Calendar. This is for the reassurance and a quick simple explanation towards the user of what the component consists of.\\
 As explained above this component is connected to the calendar plugin from the mobile device therefore we designed the applications to present the user with the already made events in his/her calendar.
@@ -1095,35 +1111,48 @@ This section is also designed to give the user an option to add an even for exam
 This button connects to the calendar plugin and brings the applicant to the add section of the calendar application once the event is added user is back in  ASU Boxing with the newly created event present.
 
 \section{Workout Component}
-    
-    \begin{figure}[h]
-    \begin{center}
-        \includegraphics[scale=.5]{images/workoutBorder.png}
-        \caption{Initial stage of Workout component.}
-        \label{fig:isWComponent}
-        \end{center}
-    \end{figure}
+
+\begin{wrapfigure}{R}{0.3\textwidth}
+\centering
+\includegraphics[width=0.25\textwidth]{images/workoutBorder.png}
+\caption{\label{fig:isWComponent}Days}
+\end{wrapfigure}
+
+
+
 
 The workout component is loaded when the bottom right tab is pressed.\\
 This component is designed to carry out and display to the user a lot of the applications functionality.\\
 Figure \ref{fig:isWComponent}  shows this component, at the top the user name is displayed just as a way of connecting the application with the user therefore he/she can be assured that we have loaded in the correct user information.\\
 Below the user name we have a timer for the specified workout time. The costumer has the ability to chose length of time themselves, the timer outputs the time selected and starts timing down when the button at the bottom of the screen $Start-Workout$ is selected. When the time is finished the application is designed to call the vibration plugin, ultimately when the workout is completed the phone should Vibrate.
-The vibration is put in as a reminder to the user when the time has finished we designed this feature because we are well aware that when workouts are carried out applicants would concentrate more so on the workout itself than the application hence the vibration is a finish line for the workout.\\
-
+The vibration is put in as a reminder to the user when the time has finished we designed this feature because we are well aware that when workouts are carried out applicants would concentrate more so on the workout itself than the application hence the vibration is a finish line for the workout.
+\newpage
+\begin{wrapfigure}{L}{0.3\textwidth}
+\centering
+\includegraphics[width=0.25\textwidth]{images/workoutAfterPunch.png}
+\caption{\label{fig:ipWComponent}Workout component during workout.}
+\end{wrapfigure}
 This part of the application is designed to count the number of punches and recorded display the information to the user. In the above image we see the component at its initial stage where the amount of punches are zero.
 The start button will be connected to the accelerometer, gyroscope and the neural network. Working in conjunction they gather the three way axis information to determine if a punch is present, which punch it is and if its a valid punch.
-Another feature in this part of the application is when a punch is thrown it is printed out to the screen as can be seen in figure  \ref{fig:ipWComponent} in red colour the name of the punch is printed to the user and both the number of punches as well as the number of the punch carried out are increased.\\
+Another feature in this part of the application is when a punch is thrown it is printed out to the screen as can be seen in figure  \ref{fig:ipWComponent} in red colour the name of the punch is printed to the user and both the number of punches as well as the number of the punch carried out are increased.
 
-    \begin{figure}[h]
-        \begin{center}
-        \includegraphics[scale=.5]{images/workoutAfterPunch.png}
-        \caption{Workout component during workout.}
-        \label{fig:ipWComponent}
-        \end{center}
-    \end{figure}
+
+
+
+
+
+\begin{wrapfigure}{R}{0.3\textwidth}
+\centering
+\includegraphics[width=0.25\textwidth]{images/afterWorkout.png}
+\caption{\label{fig:ipWComponent}Workout component during workout.}
+\end{wrapfigure}
+
+
+
 
 The application has also the design that gives the user an option to to end a workout at anytime this can be done with the $Stop-Workout$ button shown in figure \ref{fig:ipWComponent}.
 When the workout is finished or stopped the application gives out the results from the exercise.
+
 Shown in figure \ref{fig:aWComponent} is the design of the results displayed out to the user the results will consist of 
 \begin{itemize}
     \item Current Date 
@@ -1134,13 +1163,7 @@ Shown in figure \ref{fig:aWComponent} is the design of the results displayed out
 \end{itemize}
 Workout feedback was designed to summarise the workout for the applicant also for the users to be able to analyse their performance and set goals for future workouts. 
 
-    \begin{figure}[h]
-        \begin{center}
-        \includegraphics[scale=.47]{images/afterWorkout.png}
-        \caption{Workout component after workout.}
-        \label{fig:aWComponent}
-        \end{center}
-    \end{figure}
+
 
 
 \chapter{Conclusion}
