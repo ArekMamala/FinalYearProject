@@ -12,7 +12,7 @@ var cors = require('cors');
 
 // Establishing a connection with AWS
 var connection = mysql.createConnection({
-  host: '18.206.137.252',
+  host: '35.171.161.40',
   user: 'admin',
   password: 'admin',
   database: 'asuboxing'

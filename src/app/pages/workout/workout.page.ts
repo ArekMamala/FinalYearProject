@@ -277,7 +277,7 @@ export class WorkoutPage  {
   punchesPerTime(){
     this.punchespermin = this.totalPunches / this.selectedTime;
     console.log(" punches per minute "+ this.selectedTime + " " + this.punchespermin);
-    return this.punchespermin; 
+    return this.punchespermin.toFixed(2); 
   } 
   
   // calculating all the jabs carried out
