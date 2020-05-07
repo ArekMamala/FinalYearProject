@@ -1,10 +1,37 @@
-# ASU Boxing
+<p align="center">
+  <img width="460" height="300" src="https://github.com/ArekMamala/FinalYearProject/blob/master/src/assets/logo.png?raw=true">
+</p>
+
+## Project Details
+| Details         |               |
+| :------------- |:-------------|
+| **Course**          | BSc (Hons) in Software Development          |
+| **Module**          | Applied Project and Minor Dissertation      |
+| **Institute**       | [Galway-Mayo Institute of Technology](https://www.gmit.ie/)         | 
+| **Authors**          | [Arkadiusz Mamala](https://github.com/ArekMamala), [Sammar Tahir](https://github.com/sammartahir) & [Usman Sattar](https://github.com/Uzzy97)  |
+| **Project Supervisors**          | Gerard Harrison, Kevin OBrien & Martin Kenirons|
 
 ## Introduction
-For our project we wanted to make a wearable wristband that allows a user to keep track of how many punches hit an object, tracking the speed of movement and calculating the beats per minute whilst continuously punching . We also want to connect the wristband to a laptop/phone so the user is able to get all his information tracked and displayed in an elegant and sleek app. 
+This repository contains the code and documentation developed in Galway Mayo Institute of Technology for our fourth year module, Applied Project and Minor Dissertation. ASU Boxing is an application designed specifically aimed for boxers but anyone who wish to begin boxing as a career or exercise are welcome to try it out. This application is developed using the ionic/angular framework and contains a backend server written in SQL, hosted by Amazon Web Services. This application has given each user the ability to create their own account, which is enabled with the implementation of firebase.
+<br><br>
+<b>The main features of this application:</b>
 
-This project is for Applied Project and Minor in BSc in Computing in Software Development at Galway Mayo Institute of Technology 
-###### Authors: <br> Sammar Tahir <br> Usman Sattar <br> Arkadiusz Mamala
+ - Ability to detect and count various different punches in the space of time decided by the user
+ - Displaying the session evalution report at the end of each workout session.
+ - Users can schedule events in their calender through the application and load in their events.
+ ___
+## Dissertation
+A PDF format of our Dissertation for this project is available below. This piece of document contains an in-depth view of all facets of research production, from concept to implementation and final assessment.
+***LINK***
+
+## Video Demonstrations
+The video demonstrations show how each of us have contributed our parts in the development of this project. We give a run through of the coding, front-end and back-end aspect of the application.
+| Links         | 
+| :------------- |
+| [Arkadiusz Mamala](https://github.com/ArekMamala) |
+| [Sammar Tahir](https://github.com/ArekMamala) |
+| [Usman Sattar](https://github.com/ArekMamala) |
+___
 
 ## Reason for Choosing Project
 The reasons that we decided to develop this application is because we find this idea very interesting. Sports is a topic that we are all involved in inside of college and out. We came up with this idea when we were at a boxing class when we  couldn't decide who had more power. It’s a project that we feel will challenge us in developing it and get it working the way we have designed it. 
