@@ -53,7 +53,7 @@ Ionic is built to perform and run fast on the all of the latest mobile devices. 
 Ionic’s components are written in HTML, CSS, and JavaScript, making it easily build beautiful, high quality UI’s that perform great everywhere.
 
 ### Angular
-_Angular Logo_
+![Angular Logo](https://github.com/ArekMamala/FinalYearProject/blob/master/src/assets/Angular.png)
 
 Angular is a web application framework it’s typescript based developed by an Angular
 team at Google. It has been completely rewritten from the same team that built AngularJS. Some languages such as JavaScript, HTML and CSS are used in the framework.The development environment must include both Node JS and npm package manager. The latest **Node JS** version is `14.0.0` and the recommended version is `12.16.2`. To determine the version of Node JS installed on your devices we simply type in `node -v` in the terminal. The npm package manager is required for the downloading and installing of the npm packages.
@@ -66,18 +66,17 @@ To investigate if you have package manager installed you simply run the `npm -v`
 This cloud application is designed by Google to help build. Firebase is a tool-set to “build,improve, and grow your app”, and the tools it gives you cover a large portion of the services that developers would normally have to build themselves, but don’t really want to build, because they’d rather be focusing on the app experience itself. This includes things like analytics, authentication, databases, configuration, file storage, push messaging, and the list goes on. The services are hosted in the cloud, and scale with little to no effort on the part of the developer.
 
 ### Cordova
-_Cordova Logo_
+![Cordova Logo](https://github.com/ArekMamala/FinalYearProject/blob/master/src/assets/Apache_Cordova_Logo.png)
 
 Apache Cordova is an open source framework that allows web developers to use their HTML, CSS, and JavaScript to develop a native application for mobile platforms such as iOS and Android.
 
 ### MySQL
-_MySQL Logo_
+![MySQL Logo](https://github.com/ArekMamala/FinalYearProject/blob/master/src/assets/MySQL.png)
 
 MySQL is a relational database management system based on SQL – Structured Query Language. The application is used for a wide range of purposes, including data warehousing, e-commerce, and logging applications. There are many versions of MySQL, we chose to use version `5.7.24`.
 
 ### Tensorflow
-_Tensorflow Logo_
-
+![Tensorflow Logo](https://github.com/ArekMamala/FinalYearProject/blob/master/src/assets/Tensorflow.png)
 Using Tensorflow with python to do this project. Tensorflow is a symbolic math library which can be used for machine learning. Keras is used to make the neural network. Numpy and pyplot is used to plot the data. This software allows developers to create a large-scale neural networks with many layers. This is used with python and has many uses in predictions and classification.
 
 
