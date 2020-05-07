@@ -30,12 +30,20 @@ ___
 
 ## Overview 
 This repository contains the code and documentation developed in Galway Mayo Institute of Technology for our fourth year module, Applied Project and Minor Dissertation. ASU Boxing is an application designed specifically aimed for boxers but anyone who wish to begin boxing as a career or exercise are welcome to try it out. This application is developed using the ionic/angular framework and contains a backend server written in SQL, hosted by Amazon Web Services. This application has given each user the ability to create their own account, which is enabled with the implementation of firebase.
-<br><br>
-<b>The main features of this application:</b>
 
+### Main Features
  - Ability to detect and count various different punches in the space of time decided by the user
  - Displaying the session evalution report at the end of each workout session.
  - Users can schedule events in their calender through the application and load in their events.
+
+### Reason for Choosing Project
+The reasons that we decided to develop this application is because we find this idea very interesting. Sports is a topic that we are all involved in inside of college and out. We came up with this idea when we were at a boxing class when we  couldn't decide who had more power. It’s a project that we feel will challenge us in developing it and get it working the way we have designed it.
+
+### Fundamental Task
+The application on the phone is going to work with user control. The application is going to count punches, update datasheet, calculate the BPM of user while punching. This app is going to be an alternative to the research of the wearable device. User will have three options within the application.
+1. Calculate the number of punches against time.
+2. Calculate the number of punches and beats per minute against time.
+3. Open data log sheet to view their history. To view their progression.
 
 ## Implementations of Technologies
 ### Ionic
@@ -60,16 +68,18 @@ This cloud application is designed by Google to help build. Firebase is a tool-s
 ### Cordova
 _Cordova Logo_
 
+Apache Cordova is an open source framework that allows web developers to use their HTML, CSS, and JavaScript to develop a native application for mobile platforms such as iOS and Android.
 
-## Reason for Choosing Project
-The reasons that we decided to develop this application is because we find this idea very interesting. Sports is a topic that we are all involved in inside of college and out. We came up with this idea when we were at a boxing class when we  couldn't decide who had more power. It’s a project that we feel will challenge us in developing it and get it working the way we have designed it. 
+### MySQL
+_MySQL Logo_
 
+MySQL is a relational database management system based on SQL – Structured Query Language. The application is used for a wide range of purposes, including data warehousing, e-commerce, and logging applications. There are many versions of MySQL, we chose to use version `5.7.24`.
 
-## Architecture
-The application on the phone is going to work with user control. The application is going to count punches, update datasheet, calculate the BPM of user while punching. This app is going to be an alternative to the research of the wearable device. User will have three options within the application.
-1. Calculate the number of punches against time.
-2. Calculate the number of punches and beats per minute against time.
-3. Open data log sheet to view their history. To view their progression.
+### Tensorflow
+_Tensorflow Logo_
+
+Using Tensorflow with python to do this project. Tensorflow is a symbolic math library which can be used for machine learning. Keras is used to make the neural network. Numpy and pyplot is used to plot the data. This software allows developers to create a large-scale neural networks with many layers. This is used with python and has many uses in predictions and classification.
+
 
 ## Install Guide 
 To run this app you'll need to download and install Cordova, Angular and Ionic using the following links:
@@ -138,3 +148,4 @@ the following command is entered:
 <br>
 `ionic cordova run browser`
 
+###### Authors: <br> Sammar Tahir <br> Usman Sattar <br> Arkadiusz Mamala
