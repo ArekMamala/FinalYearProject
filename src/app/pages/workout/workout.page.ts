@@ -210,13 +210,13 @@ export class WorkoutPage  {
         this.z =  acc.z;      
         
         //if statments determining what punch is carried out
-        if ( (( this.z >=-13  && this.z <=-7 ))) {
+        if ( (this.z >=-13  && this.z <=-7 ) || ((this.zStart - this.z >= 6) && (this.yStart - this.y >= 8)) ) {
           // update the punch values when punch is valid 
           this.punch += 1;   
           this.jab+=1; 
           this.punchName = "JAB";   
           // set the puch name to the punch thrown
-        }else if ((this.y >=-1  && this.y <= 3) && ( this.x >=-12  && this.x <=-8 )) {
+        }else if (((this.y >=-1  && this.y <= 3) && ( this.x >=-12  && this.x <=-8 )||((this.xStart - this.x <= 6) && (this.yStart - this.y >= 7 )))) {
           // update the punch values when punch is valid 
           this.punch += 1;   
           this.uppercut+=1; 
@@ -224,8 +224,8 @@ export class WorkoutPage  {
           this.punchName = "UPPERCUT";   
         }
 
-/*
-        testing if statment for a better punching theory
+        /*  
+        //testing if statment for a better punching theory
         if ((this.zStart - this.z >= 6) && (this.yStart - this.y >= 8) ) {
           this.punch += 1;   
           this.jab+=1; 
@@ -235,7 +235,7 @@ export class WorkoutPage  {
           this.uppercut+=1; 
           this.punchName = "UPPERCUT";   
         }  
-*/
+        */
       // testing purposes printing out to the console 
        console.log(this.punch);
   
