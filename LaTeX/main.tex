@@ -989,7 +989,7 @@ We decided before Tensorflow is implemented into the project we needed a manual 
     \label{tab:jabAfter}
 \end{table}
 
-As we can see above in figure \ref{tab:uppercutBeforet} are the values in boxing ready position and  figure \ref{tab:uppercutBeforet} are the values at the concluding position.
+As we can see above in figure \ref{tab:jabBeforet} are the values in boxing ready position and  figure \ref{tab:jabAfter} are the values at the concluding position.
 The following conclusion from the above data can be drawn 
 \begin{itemize}
     \item The X value usually stays in and around its initial value.
@@ -1040,10 +1040,10 @@ The following conclusion from the above data can be drawn
      \hline
     \end{tabular}
     \caption{Values at the end of the punching process.}
-    \label{tab:vAfter}
+    \label{tab:uppercutAfter}
 \end{table}
 
-As we can see above in figure \ref{tab:uppercutBeforet} are the values in boxing ready position and figure \ref{tab:uppercutBeforet} are the values at the concluding position.
+As we can see above in figure \ref{tab:uppercutBeforet} are the values in boxing ready position and figure \ref{tab:uppercutAfter} are the values at the concluding position.
 The following conclusion from the above data can be drawn 
 \begin{itemize}
     \item The X value decreases by an average value of 8.8.
@@ -1141,7 +1141,7 @@ Following these guidelines, we keep us in good standing with google play store a
 
 
 \chapter{System Design}
-This is where you’ll find all the the designs that we did before starting the project. We needed to have a clear understanding of different levels of the application and the outline of the user UI before we started the coding process.
+This is where you’ll find all the designs that we did before starting the project. We needed to have a clear understanding of different levels of the application and the outline of the user UI before we started the coding process.
 
 \section{Project Design}
 \begin{figure}[h]
@@ -1150,14 +1150,14 @@ This is where you’ll find all the the designs that we did before starting the 
 \label{fig:projectDiagram}
 \end{figure}
 
-Above image is the overall design of the entire project. We have an application working together with two databases one on the Wamp Server based on the AWS Cloud server and an online database for the users login and sign up information.\\
+The above image \ref{fig:projectDiagram} is the overall design of the entire project. We have an application working together with two databases one on the Wamp Server based on the AWS Cloud server and an online database for the user's login and sign up information.\\
 The design shows Tensorflow connecting to the ionic application for the AI punching detection system.\\
 The application applying native functionality using Cordova getting deployed to the device operating system e.g. Mobile Phone. 
 \section{Application Design}
-This is the application design which describes the components that are included and the pattern that we decided to use in the project.
+This is the application design that describes the components that are included and the pattern that we decided to use in the project.
 We finalized the decision of developing the application using the Lazy Loading pattern. This pattern is used for large scale Angular projects.
-Since the application has databases, AI and servers working in line with it this pattern would be the best way increase our applications performance.
-Below image is the application designed in the lazy loading pattern.
+Since the application has databases, AI and servers working in line with it this pattern would be the best way to increase the performance of our applications.
+The below image is the application designed in the lazy loading pattern.\ref{fig:LazyLoading}
 \subsection{Lazy Loading}
 \begin{figure}[h]
 \includegraphics[scale=.5]{images/Lazy-Loading(4).PNG}
@@ -1165,9 +1165,9 @@ Below image is the application designed in the lazy loading pattern.
 \label{fig:LazyLoading}
 \end{figure}
 \newpage
-As you can see in the above design app component is divided into two different components the Home Component and Index Component.
+As you can see in the above \ref{fig:LazyLoading} design app component is divided into two different components the Home Component and Index Component.
 The main idea of lazy loading is for the project to load only the components that are necessary at the time of use. \\
-Our index components is in charge of both the Login and Sign up parts of the application.\\
+Our index components are in charge of both the Login and Sign up parts of the application.\\
 While the Home Component loads the Workout, Profile and Home products of the application which then load only the selected component depending on which product, Workout, Profile and Home components are available to be loaded. 
 
 \section{Log In \& Sign Up}
@@ -1181,9 +1181,9 @@ The Log-in/Sign-up page should be very straight forward for the user to use. We 
 \label{fig:LazyLoading}
 \end{figure}
 
-Having the sign-up feature next to the log-in made it easier to get more users to make an account to store their personal information. From what they choose, we can store and load custom workouts which are unique for every user. 
+Having the sign-up feature next to the log-in made it easier to get more users to make an account to store their personal information. From what they choose, we can store and load custom workouts that are unique for every user. 
 \subsection{Firebase Design}
-For storing passwords, we didn't want to have the passwords available locally. This is where Firebase base comes in. It encrypts the password for us and stores it so we won't be able to know the users passwords either. The safety of users information is very important in this day and age. We all agreed it would be best if we did not have access to the passwords and if any issues occurred the users could contact us and we can send a link for the users to reset their passwords. Shown in figure \ref{fig:firbase} we can see how Firebase handles most of the back-end server maintenance.
+For storing passwords, we didn't want to have the passwords available locally. This is where the Firebase base comes in. It encrypts the password for us and stores it so we won't be able to know the user's passwords either. The safety of users' information is very important in this day and age. We all agreed it would be best if we did not have access to the passwords and if any issues occurred the users could contact us and we can send a link for the users to reset their passwords. Shown in figure \ref{fig:firbase} we can see how Firebase handles most of the back-end server maintenance.
 
 \section{Home Component}
 \begin{wrapfigure}{R}{0.3\textwidth}
@@ -1191,7 +1191,7 @@ For storing passwords, we didn't want to have the passwords available locally. T
 \includegraphics[width=0.25\textwidth]{images/homePageBorder.png}
 \caption{\label{fig:homepage}Home}
 \end{wrapfigure}
-The main homepage is designed to be as simple and elegant with user friendly features. The homepage starts of with a simple slider where the user can slide through three images.
+The main homepage is designed to be as simple and elegant with user-friendly features. The homepage starts of with a simple slider where the user can slide through three images.
 Further below we have the clickable ion-card feature for workouts which brings the user to our workouts page for their 7-day workout plan. Just to break up the page a little, we provide a motivational quote by Winston Churchill. Below that we have another ion-card feature for meals which is also a clickable feature that brings the user to the meals page for meal plan advisory.
 \\
 \newpage
@@ -1201,32 +1201,28 @@ Further below we have the clickable ion-card feature for workouts which brings t
 \includegraphics[width=0.25\textwidth]{images/days.png}
 \caption{\label{fig:homepage}Dashboard}
 \end{wrapfigure}
-Both the meals and workouts page have the similar layout. These pages are designed using ion-cards. The ion-card features image and text in a card like look. For seven days, we create seven separate clickable cards which brings the user to another page which will be described below. It makes it simple for users to understand and navigate back and forth. As seen below in figure 4.6, once the user clicks on one the seven days, it will look somewhat like that in terms of design.\\\\\\\
+Both the meals and workouts page have a similar layout. These pages are designed using ion-cards. The ion-card features image and text in a card like look. For seven days, we create seven separate clickable cards that bring the user to another page which will be described below. It makes it simple for users to understand and navigate back and forth. As seen below in figure 4.6, once the user clicks on one the seven days, it will look somewhat like that in terms of design.\\\\\\\
 \subsection{Workouts}
 \begin{wrapfigure}{R}{0.3\textwidth}
 \centering
 \includegraphics[width=0.25\textwidth]{images/dayWorkouts.png}
 \caption{\label{fig:homepage}Days}
 \end{wrapfigure}
-This is an example of one of the workouts page. This is one way we can format the information from the database to the page. The information is extracted from a cloud hosted database using the combination of MySQL, WAMP and AWS. The information is extracted on the base of the days as the days are set to a unique ID. As seen in the image, there is an ion-button that brings the user back to the workouts dashboard where he/she can choose a different day to view.
-For storing information regarding meals and workouts, we didn’t want to have the information available locally. This is where MySQL, WAMP and AWS comes in. It makes sense that the user can get to this information from anywhere and anytime by us linking the data through an IP address.
+This is an example of one of the workouts page. This is one way we can format the information from the database to the page. The information is extracted from a cloud-hosted database using the combination of MySQL, WAMP and AWS. The information is extracted on the base of the days as the days are set to a unique ID. As seen in the image, there is an ion-button that brings the user back to the workouts dashboard where he/she can choose a different day to view.
+For storing information regarding meals and workouts, we didn't want to have the information available locally. This is where MySQL, WAMP and AWS come in. It makes sense that the user can get to this information from anywhere and anytime by us linking the data through an IP address.
 
 \newpage
 \section{Profile Component}
 We have designed the Profile component as a planner for the user to stick by and follow strictly.
-For this to become possible the idea of a built in planner in the application was crossed out.
+For this to become possible the idea of a built-in planner in the application was crossed out.
 We wanted to use the ideology of "work smarter not harder" we decided to use the already available calendar application on every mobile phone.\\
-This feature is designed to eliminate of the following scenario happening for example when a consumer decides to use the application and make plan for the following days, typically this would be saved in the application and only notify the user when accessing that application. This scenario can cause a problem for the user completing workouts as he/she can easily forget about their plans and not open the application in time to follow up on their programs.
+This feature is designed to eliminate the following scenario happening for example when a consumer decides to use the application and make a plan for the following days, typically this would be saved in the application and only notify the user when accessing that application. This scenario can cause a problem for the user completing workouts as he/she can easily forget about their plans and not open the application in time to follow up on their programs.
 By using the calendar application users will be notified that the workout is due even without accessing the application this will remind them to complete the workout and keep up with their program.
-
 \begin{wrapfigure}{L}{0.3\textwidth}
 \centering
 \includegraphics[width=0.25\textwidth]{images/profilePageBorder.png}
 \caption{\label{fig:pComponent}Days}
 \end{wrapfigure}
-
-
-
 
 As can be seen in figure \ref{fig:pComponent} it firstly displays the Username and Calendar. This is for the reassurance and a quick simple explanation towards the user of what the component consists of.\\
 As explained above this component is connected to the calendar plugin from the mobile device therefore we designed the applications to present the user with the already made events in his/her calendar.
@@ -1238,7 +1234,7 @@ We extract the following information from these events
 \end{itemize}
 we output them to the user as displayed in figure \ref{fig:pComponent}.
 This section is also designed to give the user an option to add an even for example a workout. The applicant can execute this with the $add-event$ button displayed underneath the user information.
-This button connects to the calendar plugin and brings the applicant to the add section of the calendar application once the event is added user is back in  ASU Boxing with the newly created event present.
+This button connects to the calendar plugin and brings the applicant to the additional section of the calendar application once the event is added user is back in  ASU Boxing with the newly created event present.
 
 \section{Workout Component}
 
@@ -1252,9 +1248,9 @@ This button connects to the calendar plugin and brings the applicant to the add 
 
 
 The workout component is loaded when the bottom right tab is pressed.\\
-This component is designed to carry out and display to the user a lot of the applications functionality.\\
+This component is designed to carry out and display to the user a lot of the application's functionality.\\
 Figure \ref{fig:isWComponent}  shows this component, at the top the user name is displayed just as a way of connecting the application with the user therefore he/she can be assured that we have loaded in the correct user information.\\
-Below the user name we have a timer for the specified workout time. The costumer has the ability to chose length of time themselves, the timer outputs the time selected and starts timing down when the button at the bottom of the screen $Start-Workout$ is selected. When the time is finished the application is designed to call the vibration plugin, ultimately when the workout is completed the phone should Vibrate.
+Below the user name we have a timer for the specified workout time. The customer has the ability to chose the length of time themselves, the timer outputs the time selected and starts timing down when the button at the bottom of the screen $Start-Workout$ is selected. When the time is finished the application is designed to call the vibration plugin, ultimately when the workout is completed the phone should Vibrate.
 The vibration is put in as a reminder to the user when the time has finished we designed this feature because we are well aware that when workouts are carried out applicants would concentrate more so on the workout itself than the application hence the vibration is a finish line for the workout.
 \newpage
 \begin{wrapfigure}{L}{0.3\textwidth}
@@ -1262,13 +1258,9 @@ The vibration is put in as a reminder to the user when the time has finished we 
 \includegraphics[width=0.25\textwidth]{images/workoutAfterPunch.png}
 \caption{\label{fig:ipWComponent}Workout component during workout.}
 \end{wrapfigure}
-This part of the application is designed to count the number of punches and recorded display the information to the user. In the above image we see the component at its initial stage where the amount of punches are zero.
-The start button will be connected to the accelerometer, gyroscope and the neural network. Working in conjunction they gather the three way axis information to determine if a punch is present, which punch it is and if its a valid punch.
-Another feature in this part of the application is when a punch is thrown it is printed out to the screen as can be seen in figure  \ref{fig:ipWComponent} in red colour the name of the punch is printed to the user and both the number of punches as well as the number of the punch carried out are increased.
-
-
-
-
+This part of the application is designed to count the number of punches and recorded display the information to the user. In the above image we see the component at its initial stage where the number of punches is zero.
+The start button will be connected to the accelerometer, gyroscope and the neural network. Working in conjunction they gather the three-way axis information to determine if a punch is present, which punch it is and if it's a valid punch.
+Another feature in this part of the application is when a punch is thrown it is printed out to the screen as can be seen in figure  \ref{fig:ipWComponent} in red colour the name of the punch is printed to the user and both the number of punches as well as the number of the punches carried out is increased.
 
 
 \begin{wrapfigure}{R}{0.3\textwidth}
@@ -1280,7 +1272,7 @@ Another feature in this part of the application is when a punch is thrown it is 
 
 
 
-The application has also the design that gives the user an option to to end a workout at anytime this can be done with the $Stop-Workout$ button shown in figure \ref{fig:ipWComponent}.
+The application has also the design that gives the user an option to end a workout at anytime this can be done with the $Stop-Workout$ button shown in figure \ref{fig:ipWComponent}.
 When the workout is finished or stopped the application gives out the results from the exercise.
 
 Shown in figure \ref{fig:aWComponent} is the design of the results displayed out to the user the results will consist of 
@@ -1291,7 +1283,7 @@ Shown in figure \ref{fig:aWComponent} is the design of the results displayed out
     \item Number of Jab punches
     \item Number of Uppercut punches
 \end{itemize}
-Workout feedback was designed to summarise the workout for the applicant also for the users to be able to analyse their performance and set goals for future workouts. 
+Workout feedback was designed to summarise the workout for the applicant also for the users to be able to analyze their performance and set goals for future workouts. 
 
 
 
