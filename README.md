@@ -19,6 +19,19 @@ This repository contains the code and documentation developed in Galway Mayo Ins
  - Ability to detect and count various different punches in the space of time decided by the user
  - Displaying the session evalution report at the end of each workout session.
  - Users can schedule events in their calender through the application and load in their events.
+ ___
+## Dissertation
+A PDF format of our Dissertation for this project is available below. This piece of document contains an in-depth view of all facets of research production, from concept to implementation and final assessment.
+***LINK***
+
+## Video Demonstrations
+The video demonstrations show how each of us have contributed our parts in the development of this project. We give a run through of the coding, front-end and back-end aspect of the application.
+| Links         | 
+| :------------- |
+| [Arkadiusz Mamala](https://github.com/ArekMamala) |
+| [Sammar Tahir](https://github.com/ArekMamala) |
+| [Usman Sattar](https://github.com/ArekMamala) |
+___
 
 ## Reason for Choosing Project
 The reasons that we decided to develop this application is because we find this idea very interesting. Sports is a topic that we are all involved in inside of college and out. We came up with this idea when we were at a boxing class when we  couldn't decide who had more power. It’s a project that we feel will challenge us in developing it and get it working the way we have designed it. 
