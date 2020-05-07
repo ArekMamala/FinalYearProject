@@ -33,13 +33,15 @@ The video demonstrations show how each of us have contributed our parts in the d
 | [Usman Sattar](https://github.com/ArekMamala) |
 ___
 
-## Implementations of Technologies
-### Ionic
-<p align="center">
-  <img width="480" height="220" src="https://github.com/ArekMamala/FinalYearProject/blob/master/src/assets/ionic.png">
-</p>
+# Implementations of Technologies
+## Ionic
+Ionic is built to perform and run fast on the all of the latest mobile devices. Build out-of-the-box blazing fast apps with a small footprint and built-in best practices like hardware accelerated transitions, touch-optimized gestures, pre-rendering, and AOT compiling.
+Ionic’s components are written in HTML, CSS, and JavaScript, making it easily build beautiful, high quality UI’s that perform great everywhere.
+<br><br>
+![Image description](https://github.com/ArekMamala/FinalYearProject/blob/master/src/assets/ionic.png)
 
-
+## Firebase
+![Image description](https://github.com/ArekMamala/FinalYearProject/blob/master/src/assets/firebase.png)
 
 
 ## Reason for Choosing Project
