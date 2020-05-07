@@ -33,6 +33,15 @@ The video demonstrations show how each of us have contributed our parts in the d
 | [Usman Sattar](https://github.com/ArekMamala) |
 ___
 
+## Implementations of Technologies
+### Ionic
+<p align="center">
+  <img width="480" height="220" src="https://github.com/ArekMamala/FinalYearProject/blob/master/src/assets/ionic.png">
+</p>
+
+
+
+
 ## Reason for Choosing Project
 The reasons that we decided to develop this application is because we find this idea very interesting. Sports is a topic that we are all involved in inside of college and out. We came up with this idea when we were at a boxing class when we  couldn't decide who had more power. It’s a project that we feel will challenge us in developing it and get it working the way we have designed it. 
 
@@ -47,7 +56,7 @@ The application on the phone is going to work with user control. The application
 **For Developer use**
 1. Setup Envirement variables
   * ANDROID_HOME
-  * JAVA_HOME
+  * JAVA_HOME 
 2. Run on phone
   * Connect Device via USB
   * Run command 
