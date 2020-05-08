@@ -13,11 +13,13 @@
 
 ## Dissertation
 A PDF format of our Dissertation for this project is available below. This piece of document contains an in-depth view of all facets of research production, from concept to implementation and final assessment.
-Link: https://github.com/ArekMamala/FinalYearProject/blob/master/Dissertation.pdf
+<br>
+**Link:** https://github.com/ArekMamala/FinalYearProject/blob/master/Dissertation.pdf
 
 ## Video Demonstrations
-The video demonstrations show how each of us have contributed our parts in the development of this project. We give a run the front-end and back-end aspect of the application.
-Link: https://github.com/ArekMamala/FinalYearProject/blob/master/ProjectVideos/ProjectVideo.mp4
+The video demonstrations show how each of us have contributed our parts in the development of this project. We give a run through of the coding, front-end and back-end aspect of the application.
+<br>
+**Link:** https://github.com/ArekMamala/FinalYearProject/blob/master/ProjectVideos/ProjectVideo.mp4
 ___
 <h2 align="center">ASU Boxing </h2>
 <p align="center">
@@ -65,6 +67,11 @@ This cloud application is designed by Google to help build. Firebase is a tool-s
 ![Cordova Logo](https://github.com/ArekMamala/FinalYearProject/blob/master/src/assets/Apache_Cordova_Logo.png)
 
 Apache Cordova is an open source framework that allows web developers to use their HTML, CSS, and JavaScript to develop a native application for mobile platforms such as iOS and Android.
+
+### Amazon Web Services
+![AWS](https://github.com/ArekMamala/FinalYearProject/blob/master/src/assets/amazon.jpg)
+Amazon Web Services is a subsidiary of Amazon that provides on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis. Amazon Web Services (AWS) is a secure cloud services platform, offering compute power, database storage, content delivery and other functionality to help businesses scale and grow. Amazon is managed databases like MySQL, PostgreSQL, Oracle or SQL Server to store information.
+
 
 ### MySQL
 ![MySQL Logo](https://github.com/ArekMamala/FinalYearProject/blob/master/src/assets/MySQL.png)
