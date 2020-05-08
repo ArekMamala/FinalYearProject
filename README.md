@@ -13,15 +13,11 @@
 
 ## Dissertation
 A PDF format of our Dissertation for this project is available below. This piece of document contains an in-depth view of all facets of research production, from concept to implementation and final assessment.
-***LINK***
+Link: https://github.com/ArekMamala/FinalYearProject/blob/master/Dissertation.pdf
 
 ## Video Demonstrations
-The video demonstrations show how each of us have contributed our parts in the development of this project. We give a run through of the coding, front-end and back-end aspect of the application.
-| Links         | 
-| :------------- |
-| [Arkadiusz Mamala](https://github.com/ArekMamala) |
-| [Sammar Tahir](https://github.com/ArekMamala) |
-| [Usman Sattar](https://github.com/ArekMamala) |
+The video demonstrations show how each of us have contributed our parts in the development of this project. We give a run the front-end and back-end aspect of the application.
+Link: https://github.com/ArekMamala/FinalYearProject/blob/master/ProjectVideos/ProjectVideo.mp4
 ___
 <h2 align="center">ASU Boxing </h2>
 <p align="center">
